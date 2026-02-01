@@ -1,0 +1,753 @@
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* Colors */
+  --text-primary: #000000;
+  --text-p-grey: #404040;
+  /* Kept Figma value */
+  --text-secondary: #898989;
+  /* Kept Figma value */
+  --link-blue: #3C77CA;
+  /* Kept Figma value */
+  --border-color: #E6E6E6;
+  --border-dark: #8E8E8E;
+
+  /* Fonts */
+  --font-primary: 'Outfit', sans-serif;
+  --font-nav: 'Roboto', sans-serif;
+  --font-ui: 'Inter', sans-serif;
+
+  /* Dimensions */
+  --content-width: 1200px;
+  --page-padding-top: 120px;
+  /* Aligned with design absolute top */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 0;
+  /* Clean edges */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  /* Match Pencil design width */
+  padding: 0 20px;
+  /* Match Pencil Frame padding:[0,20] */
+  position: relative;
+  margin: 0 auto;
+  /* Center container (creates 120px margins on 1440px+ viewports) */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header - 801:157 */
+header {
+  height: 64px;
+  width: 100%;
+  /* Full width of container (which has padding) */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 20px;
+  /* 20px padding on both sides */
+  z-index: 10;
+}
+
+.logo {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--text-primary);
+  text-decoration: none;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  gap: 56px;
+  /* From Figma context gap-[56px] */
+}
+
+nav a {
+  font-family: var(--font-nav);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #A09E9E;
+  /* Inactive color from Figma */
+  text-decoration: none;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--text-primary);
+}
+
+/* Footer - 801:169 */
+footer {
+  width: 100%;
+  /* Full width of container */
+  position: relative;
+  top: auto;
+  margin-top: auto;
+  /* Sticky Bottom */
+  border-top: 1px solid var(--border-color);
+  padding: 49px 20px 48px;
+  /* Vertical padding + 20px horizontal */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: #9F9FA9;
+  /* Text zinc 400 */
+}
+
+.social-links {
+  display: flex;
+  gap: 32px;
+  /* Inferred from frame width */
+}
+
+.social-links a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+/* Home Layout */
+.home-content {
+  position: relative;
+  top: auto;
+  margin-top: 80px;
+  /* Optimized: 64px header + 16px breathing room (8px grid) */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex: 1;
+  margin-bottom: 64px;
+  /* Optimized: 8 * 8px grid for footer spacing */
+  gap: 102px;
+  /* Fixed gap maintains spacing */
+}
+
+.hero-left {
+  width: 49%;
+  /* Responsive width (588/1200 ≈ 49%) */
+  max-width: 588px;
+  /* Cap at Pencil design size */
+  height: 630px;
+  border: 1px solid var(--border-dark);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  flex-shrink: 0;
+  /* Prevent compression */
+}
+
+/* New style for the tagline text */
+.hero-tagline {
+  position: absolute;
+  left: 32px;
+  top: 366px;
+  width: calc(100% - 64px);
+  /* Responsive to parent */
+  max-width: 524px;
+  font-family: var(--font-primary);
+  /* Outfit */
+  font-weight: 500;
+  font-size: 45px;
+  /* Inferred from previous "Rivo" size or generic large size, Figma context usually has this. Original Rivo was 45px. Let's assume this text is large display text. Based on area 524x156, 45px seems plausible for 3 lines. */
+  color: #404040;
+  line-height: 1.2;
+}
+
+.project-list-right {
+  width: 42.5%;
+  /* Responsive width (510/1200 ≈ 42.5%) */
+  max-width: 510px;
+  /* Cap at Pencil design size */
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  /* From Figma gap-[36px] */
+  flex-shrink: 0;
+  /* Prevent compression */
+}
+
+/* Individual Project Item */
+.project-card {
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-bottom: none;
+  height: auto;
+  cursor: pointer;
+}
+
+.company-name {
+  font-family: var(--font-nav);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: var(--text-primary);
+}
+
+.project-details-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.project-title-text {
+  font-family: var(--font-nav);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: var(--text-primary);
+  flex: 1;
+  /* Allow to grow and take available space */
+  min-width: 0;
+  /* Allow text to shrink if needed */
+}
+
+.project-meta-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+  /* Push to right */
+  flex-shrink: 0;
+  /* Never compress tags and arrow */
+}
+
+.project-tags {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-nav);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  color: #898989;
+  white-space: nowrap;
+  /* Keep tags on one line */
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  flex-shrink: 0;
+  /* Never compress arrow */
+}
+
+/* About Layout */
+.about-content {
+  position: relative;
+  top: auto;
+  margin-top: 80px;
+  /* Optimized spacing */
+  width: 100%;
+  margin-bottom: 64px;
+  /* Consistent with other sections (8 * 8px grid) */
+  flex: 1;
+}
+
+/* Playground Layout */
+.playground-grid {
+  position: relative;
+  top: auto;
+  margin-top: 80px;
+  /* Optimized spacing */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 64px;
+  /* Prevent footer overlap */
+  flex: 1;
+}
+
+.playground-item {
+  height: 200px;
+  background-color: #FAFAFA;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+/* V2 Playground Layout */
+.playground-layout-v2 {
+  position: relative;
+  top: auto;
+  margin-top: 80px;
+  /* Optimized spacing */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 64px;
+  /* Prevent footer overlap */
+  flex: 1;
+}
+
+.playground-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 24px;
+}
+
+.playground-card {
+  height: 298px;
+  background-color: #FAFAFA;
+  /* Or gradient as per pencil? Pencil showed gradient fills but disabled? showing white usually. Let's stick to gray placeholder */
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* V2 About Layout */
+.about-layout-v2 {
+  position: relative;
+  top: auto;
+  margin-top: 80px;
+  /* Optimized spacing */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 64px;
+  /* Prevent footer overlap */
+  flex: 1;
+  gap: 102px;
+  /* Fixed gap maintains spacing */
+}
+
+.about-left-col {
+  width: 57.5%;
+  /* Responsive width (690/1200 ≈ 57.5%) */
+  max-width: 690px;
+  /* Cap at Pencil design size */
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  flex-shrink: 0;
+  /* Prevent compression */
+}
+
+/* V2 About Layout */
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.about-text {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.about-links-row {
+  display: flex;
+  gap: 80px;
+  margin-top: 0;
+}
+
+.about-link {
+  font-family: var(--font-nav);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--link-blue);
+  letter-spacing: 0.15px;
+  transition: color 0.2s ease;
+}
+
+.about-link:hover {
+  color: #2563EB;
+  opacity: 1;
+}
+
+.about-experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.section-header {
+  font-family: var(--font-nav);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-primary);
+  letter-spacing: 0.15px;
+}
+
+/* Existing experience items... */
+.about-experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exp-year {
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.exp-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exp-company {
+  font-family: var(--font-nav);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.exp-role {
+  font-family: var(--font-nav);
+  font-weight: 500;
+  font-size: 14px;
+  color: #898989;
+}
+
+.about-right-col-image {
+  width: 34%;
+  /* Responsive width (408/1200 ≈ 34%) */
+  max-width: 408px;
+  /* Cap at Pencil design size */
+  height: 642px;
+  background-color: #FAFAFA;
+  border-radius: 24px;
+  border: 1px solid var(--border-dark);
+  flex-shrink: 0;
+  /* Prevent compression */
+}
+
+/* Desktop Responsive Optimization (1025px+) */
+@media (min-width: 1025px) {
+  /* Container padding and max-width are handled in base .container class */
+
+  /* Ensure responsive widths work properly */
+  .home-content {
+    width: 100%;
+  }
+
+  .about-layout-v2 {
+    width: 100%;
+  }
+
+  /* Playground responsive grid */
+  .playground-layout-v2 {
+    width: 100%;
+  }
+
+  .playground-row {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   Responsive Design (UI UX Pro Max Skill)
+   ========================================= */
+
+/* Tablet (iPad / Portrait Tablets) */
+@media (max-width: 1024px) {
+  :root {
+    --content-width: 100%;
+    /* Fluid width */
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    /* Consistent 20px padding across tablet and mobile */
+  }
+
+  header,
+  footer {
+    width: 100%;
+    /* Full width of container (which has padding) */
+    left: 0;
+    /* Align to container edge */
+  }
+
+  nav {
+    gap: 32px;
+    /* Slightly reduced from desktop */
+  }
+
+  /* Home Tablet - Mobile-style stacked */
+  .home-content {
+    flex-direction: column;
+    /* Stack like mobile */
+    gap: 48px;
+    align-items: flex-start;
+    padding-bottom: 60px;
+  }
+
+  .hero-left {
+    width: 100% !important;
+    /* Override desktop percentage */
+    max-width: none;
+    /* Remove cap */
+    height: 500px;
+    /* Taller than mobile but not full desktop */
+  }
+
+  .hero-tagline {
+    font-size: 36px;
+    /* Between mobile and desktop */
+    width: calc(100% - 48px);
+    left: 24px;
+    top: auto;
+    bottom: 48px;
+  }
+
+  .project-list-right {
+    width: 100% !important;
+    /* Override desktop percentage */
+    max-width: none;
+    /* Remove cap */
+  }
+
+  /* About Tablet - Mobile-style stacked */
+  .about-layout-v2 {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .about-right-col-image {
+    order: -1;
+    /* Image on top */
+    width: 100% !important;
+    /* Override desktop percentage */
+    max-width: none;
+    /* Remove cap */
+    height: 500px;
+  }
+
+  .about-left-col {
+    width: 100% !important;
+    /* Override desktop percentage */
+    max-width: none;
+    /* Remove cap */
+    order: 1;
+  }
+
+  /* Playground Tablet: 2 items per row */
+  .playground-row {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .playground-card {
+    width: calc(50% - 12px) !important;
+    /* 2 per row with gap */
+    min-width: 300px;
+    /* Prevent too narrow */
+  }
+
+  /* Footer adjustments */
+  footer {
+    position: relative;
+    flex-direction: row;
+    /* Keep horizontal on tablet */
+  }
+}
+
+/* Mobile (Phone) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+    /* Maintain base padding on mobile */
+  }
+
+  header,
+  footer {
+    width: 100%;
+    /* Full width of container (which has padding) */
+    left: 0;
+    /* Align to container edge */
+    position: absolute;
+  }
+
+  /* Keep Nav visible, no drawer */
+  nav {
+    gap: 20px;
+  }
+
+  /* Home Mobile */
+  .home-content {
+    flex-direction: column;
+    /* Rectangle (Hero) on top, List below */
+    gap: 40px;
+    align-items: flex-start;
+    padding-bottom: 40px;
+  }
+
+  .hero-left {
+    width: 100% !important;
+    /* Override desktop percentage */
+    max-width: none;
+    /* Remove cap */
+    height: 60vh;
+    /* "Do not occupy full screen", visual breath */
+    max-height: 500px;
+  }
+
+  .hero-tagline {
+    font-size: 32px;
+    /* Scale down font */
+    width: calc(100% - 48px);
+    left: 24px;
+    top: auto;
+    bottom: 40px;
+    /* Position relative to bottom of card */
+  }
+
+  .project-list-right {
+    width: 100% !important;
+    /* Override desktop percentage */
+    max-width: none;
+    /* Remove cap */
+  }
+
+  footer {
+    top: auto;
+    bottom: 0;
+    position: relative;
+    /* Flow after content */
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 60px;
+    align-items: flex-start;
+  }
+
+  /* About Mobile */
+  .about-layout-v2 {
+    flex-direction: column;
+    position: relative;
+    /* Switch to flow */
+    padding-bottom: 40px;
+    gap: 40px;
+    margin-top: 100px;
+    /* Push down below absolute header */
+  }
+
+  .about-right-col-image {
+    /* "Place rectangle on top" */
+    order: -1;
+    width: 100% !important;
+    /* Override desktop percentage */
+    max-width: none;
+    /* Remove cap */
+    height: 400px;
+  }
+
+  .about-left-col {
+    width: 100% !important;
+    /* Override desktop percentage */
+    max-width: none;
+    /* Remove cap */
+    order: 1;
+    /* Follows image */
+  }
+
+  /* Playground Mobile */
+  .playground-layout-v2 {
+    position: relative;
+    margin-top: 100px;
+  }
+
+  .playground-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .playground-card,
+  .playground-card.small,
+  .playground-card.large,
+  .playground-card.medium {
+    width: 100% !important;
+    /* One card per row */
+  }
+
+  /* Resume Mobile */
+  .resume-layout {
+    position: relative;
+    top: auto;
+    margin-top: 100px;
+    /* Below fixed header */
+    padding-bottom: 40px;
+    width: 100%;
+  }
+
+  .resume-name {
+    font-size: 32px;
+  }
+
+  .resume-contact {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .resume-desc {
+    font-size: 16px;
+  }
+
+  .resume-role {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+  }
+}

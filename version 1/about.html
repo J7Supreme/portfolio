@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - James Hou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@500&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-grid {
+            margin-top: 104px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .about-block {
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            align-items: flex-start;
+        }
+
+        .block-label {
+            font-family: var(--font-nav);
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .block-content {
+            font-family: var(--font-body);
+            font-size: 16px;
+            color: #404040;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .exp-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+        }
+
+        .exp-item:last-child {
+            margin-bottom: 0;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <a href="index.html" class="logo">James Hou</a>
+            <nav>
+                <a href="about.html" class="active">About</a>
+                <a href="playground.html">Playground</a>
+            </nav>
+        </header>
+
+        <div class="about-grid">
+            <!-- Frame 3 / Profile -->
+            <div class="about-block">
+                <div class="block-label">Profile</div>
+                <div class="block-content">
+                    I'm a Senior Staff Product Designer with over 10 years of experience building financial and consumer
+                    products. Currently leading design systems at Rivo.
+                </div>
+            </div>
+
+            <!-- Frame 4 - 7 / Experience -->
+            <div class="about-block">
+                <div class="block-label">Experience</div>
+                <div style="width: 100%;">
+                    <div class="exp-item">
+                        <div>
+                            <div style="font-weight: 500;">Rivo</div>
+                            <div style="color: var(--text-secondary); font-size: 14px;">Senior Staff Product Designer
+                            </div>
+                        </div>
+                        <div style="color: var(--text-secondary); font-size: 14px;">2023 - Present</div>
+                    </div>
+                    <div class="exp-item">
+                        <div>
+                            <div style="font-weight: 500;">imToken</div>
+                            <div style="color: var(--text-secondary); font-size: 14px;">Lead Product Designer</div>
+                        </div>
+                        <div style="color: var(--text-secondary); font-size: 14px;">2018 - 2023</div>
+                    </div>
+                    <div class="exp-item">
+                        <div>
+                            <div style="font-weight: 500;">Alipay</div>
+                            <div style="color: var(--text-secondary); font-size: 14px;">Senior Designer</div>
+                        </div>
+                        <div style="color: var(--text-secondary); font-size: 14px;">2015 - 2018</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="copyright">© 2026 James Hou</div>
+            <div class="social-links">
+                <a href="#">Linkedin</a>
+                <a href="#">Email</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

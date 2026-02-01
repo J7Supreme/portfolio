@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Detail - James Hou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500&family=Roboto:wght@400;500;300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .work-detail-layout {
+            position: relative;
+            top: auto;
+            margin-top: 80px;
+            /* Optimized spacing */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 64px;
+            margin-bottom: 64px;
+            /* Prevent footer overlap */
+            flex: 1;
+            /* Sticky footer push */
+        }
+
+        .back-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-nav);
+            font-size: 14px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .back-nav:hover {
+            color: var(--text-primary);
+        }
+
+        .work-hero-v2 {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 800px;
+        }
+
+        .work-icon-v2 {
+            width: 64px;
+            height: 64px;
+            background-color: #FAFAFA;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+        }
+
+        .work-title-v2 {
+            font-family: var(--font-primary);
+            font-size: 48px;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .work-desc-v2 {
+            font-family: var(--font-primary);
+            font-size: 20px;
+            color: var(--text-p-grey);
+            line-height: 1.4;
+            max-width: 680px;
+        }
+
+        .work-content-v2 {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        .content-section-v2 {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 800px;
+        }
+
+        .content-section-v2 h2 {
+            font-family: var(--font-primary);
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .content-section-v2 p {
+            font-family: var(--font-primary);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-p-grey);
+            margin: 0;
+        }
+
+        .media-box-v2 {
+            width: 100%;
+            height: 500px;
+            background-color: #FAFAFA;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-family: var(--font-nav);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="index-v2.html" class="logo">James Hou</a>
+            <nav>
+                <a href="about-v2.html">About</a>
+                <a href="playground-v2.html">Playground</a>
+            </nav>
+        </header>
+
+        <!-- Work Detail Content -->
+        <div class="work-detail-layout">
+            <a href="index-v2.html" class="back-nav">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M5 12L12 5M5 12L12 19" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Back to projects
+            </a>
+
+            <div class="work-hero-v2">
+                <div class="work-icon-v2"></div>
+                <h1 class="work-title-v2">Project Title Name</h1>
+                <p class="work-desc-v2">A brief description of the project impact and role, providing context for the
+                    case study below.</p>
+            </div>
+
+            <div class="work-content-v2">
+                <section class="content-section-v2">
+                    <h2>Challenge</h2>
+                    <p>Description of the problem space and the user needs identified during the discovery phase.
+                        focusing on the core friction points and business objectives.</p>
+                    <div class="media-box-v2">Process Visualization / Research Data</div>
+                </section>
+
+                <section class="content-section-v2">
+                    <h2>Solution</h2>
+                    <p>Detailed breakdown of the design decisions made to resolve the challenge, highlighting the
+                        intersection of technical feasibility and user desirability.</p>
+                    <div class="media-box-v2">High Fidelity Mockup / Prototype</div>
+                </section>
+
+                <section class="content-section-v2">
+                    <h2>Impact</h2>
+                    <p>The results of the project, including metrics, user feedback, or organizational shift caused by
+                        the design intervention.</p>
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <div class="copyright">© 2026 James Hou</div>
+            <div class="social-links">
+                <a href="#">Linkedin</a>
+                <a href="#">Email</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
