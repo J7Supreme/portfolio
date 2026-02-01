@@ -1454,6 +1454,7 @@
           "x": 120,
           "y": 104,
           "name": "Frame 20",
+          "width": 1200,
           "padding": [
             0,
             20
@@ -1464,7 +1465,7 @@
               "type": "frame",
               "id": "1e0u8",
               "name": "Frame 17",
-              "width": 690,
+              "width": 588,
               "stroke": {
                 "align": "inside",
                 "thickness": 1
@@ -1490,7 +1491,7 @@
                       "name": "I’m a product designer who is fascinated with human behaviour, strategic design and pixel-level craft. I’ve designed foundational IBM Cloud services, shaped Alipay’s global localized payment experiences, and explored decentralized, tokenized wallet . Recently, I’m focused on building new experience paradigms at the intersection of AI and cloud. In life, I’m a father, husband and a cat person. Hip-hop and sneakers have been my love since young.",
                       "fill": "#000000ff",
                       "textGrowth": "fixed-width",
-                      "width": 683,
+                      "width": "fill_container",
                       "content": "I’m a product designer who is fascinated with human behaviour, strategic design and pixel-level craft. \nI’ve designed foundational IBM Cloud services, shaped Alipay’s global localized payment experiences, and explored decentralized, tokenized wallet . Recently, I’m focused on building new experience paradigms at the intersection of AI and cloud.\nIn life, I’m a father, husband and a cat person. Hip-hop and sneakers have been my love since young.",
                       "lineHeight": 1.4,
                       "fontFamily": "Outfit",
@@ -1922,7 +1923,7 @@
               "id": "9xwjT",
               "name": "Frame 3",
               "clip": true,
-              "width": 408,
+              "width": 510,
               "height": 642,
               "fill": [
                 {
