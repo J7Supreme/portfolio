@@ -45,11 +45,39 @@
         <footer>
             <div class="copyright">© 2026 James Hou</div>
             <div class="social-links">
-                <a href="#">Linkedin</a>
-                <a href="#">Email</a>
+                <a href="https://www.linkedin.com/in/jameshouux/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                <button class="email-copy-btn" id="emailCopyBtn">Email</button>
             </div>
         </footer>
     </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container">
+        <div class="toast" id="toast">
+            <svg class="toast-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+            </svg>
+            <span class="toast-message">Email copied to clipboard</span>
+        </div>
+    </div>
+
+    <script>
+        // Email copy to clipboard functionality
+        document.getElementById('emailCopyBtn').addEventListener('click', function () {
+            const email = 'j7supreme@gmail.com';
+            navigator.clipboard.writeText(email).then(function () {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(function () {
+                    toast.classList.remove('show');
+                }, 3000);
+            }).catch(function (err) {
+                console.error('Failed to copy email: ', err);
+            });
+        });
+    </script>
 
 </body>
 
