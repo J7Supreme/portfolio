@@ -1,0 +1,3 @@
+**imToken 3.0 website landing page exploration**
+
+To support imToken's strategic pivot toward a "Tokenized World," I led a conceptual redesign of the corporate website that transcends traditional crypto wallet positioning. Through multiple landing page iterations, I developed a new visual language centered on "gradient movement"—using fluid, organic visual metaphors to represent the dynamic nature of digital assets. The design weaves product features into a cohesive narrative, utilizing immersive storytelling techniques to bridge the gap between technical utility and the broader vision of a decentralized future.
