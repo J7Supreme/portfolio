@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@500&family=Roboto:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@400;500&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -27,14 +27,15 @@
 
         <div class="home-content">
             <!-- Hero Left (Frame 3) -->
-            <div class="hero-left">
+            <div class="hero-left" id="heroFrame">
+                <div class="hero-image-container" id="heroImage"></div>
                 <div class="hero-tagline">A Toronto-based Product Designer into AI, Cloud, Web3 and Payment</div>
             </div>
 
             <!-- Project List Right (Frame 9 / 0VXSm) -->
             <div class="project-list-right">
                 <!-- Card 1 (Frame 7) -->
-                <a href="work-detail-v2.html" class="project-card">
+                <a href="work-detail-v2.html" class="project-card" data-image="project1">
                     <div class="company-name">Company name</div>
                     <div class="project-details-row">
                         <div class="project-title-text">Project title name max one line</div>
@@ -53,7 +54,7 @@
                 </a>
 
                 <!-- Card 2 (Frame 8) -->
-                <a href="work-detail-v2.html" class="project-card">
+                <a href="work-detail-v2.html" class="project-card" data-image="project2">
                     <div class="company-name">Company name</div>
                     <div class="project-details-row">
                         <div class="project-title-text">Project title name max one line</div>
@@ -72,7 +73,7 @@
                 </a>
 
                 <!-- Card 3 (Frame 11) -->
-                <a href="work-detail-v2.html" class="project-card">
+                <a href="work-detail-v2.html" class="project-card" data-image="project3">
                     <div class="company-name">Company name</div>
                     <div class="project-details-row">
                         <div class="project-title-text">Project title name max one line</div>
@@ -91,7 +92,7 @@
                 </a>
 
                 <!-- Card 4 (Frame 12) - Detected in Pencil Scan -->
-                <a href="work-detail-v2.html" class="project-card">
+                <a href="work-detail-v2.html" class="project-card" data-image="project4">
                     <div class="company-name">Company name</div>
                     <div class="project-details-row">
                         <div class="project-title-text">Project title name max one line</div>
@@ -119,6 +120,41 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        // Project hover interaction - display images in hero frame
+        const projectCards = document.querySelectorAll('.project-card');
+        const heroImage = document.getElementById('heroImage');
+
+        // Define project images (you can replace these with actual image URLs)
+        const projectImages = {
+            'project1': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            'project2': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+            'project3': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+            'project4': 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
+        };
+
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                const imageKey = this.getAttribute('data-image');
+                const imageValue = projectImages[imageKey];
+
+                if (imageValue) {
+                    // Use backgroundImage for both gradients and images
+                    if (imageValue.startsWith('linear-gradient') || imageValue.startsWith('radial-gradient')) {
+                        heroImage.style.backgroundImage = imageValue;
+                    } else {
+                        heroImage.style.backgroundImage = `url(${imageValue})`;
+                    }
+                    heroImage.style.opacity = '1';
+                }
+            });
+
+            card.addEventListener('mouseleave', function () {
+                heroImage.style.opacity = '0';
+            });
+        });
+    </script>
 
 </body>
 
