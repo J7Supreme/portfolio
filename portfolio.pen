@@ -115,7 +115,6 @@
           ],
           "justifyContent": "space_between",
           "alignItems": "center",
-          "layoutIncludeStroke": true,
           "children": [
             {
               "type": "frame",
@@ -1332,7 +1331,6 @@
           ],
           "justifyContent": "space_between",
           "alignItems": "center",
-          "layoutIncludeStroke": true,
           "children": [
             {
               "type": "frame",
@@ -2000,6 +1998,10 @@
             "thickness": 1
           },
           "gap": 921,
+          "padding": [
+            0,
+            20
+          ],
           "justifyContent": "space_between",
           "alignItems": "center",
           "children": [
@@ -2081,7 +2083,6 @@
           ],
           "justifyContent": "space_between",
           "alignItems": "center",
-          "layoutIncludeStroke": true,
           "children": [
             {
               "type": "frame",

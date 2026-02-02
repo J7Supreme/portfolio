@@ -5,16 +5,20 @@ html {
 }
 
 :root {
-  /* Colors */
+  /* Colors - Light Mode Defaults */
+  --bg-color: #ffffff;
   --text-primary: #000000;
   --text-p-grey: #404040;
-  /* Kept Figma value */
   --text-secondary: #898989;
-  /* Kept Figma value */
+  --text-nav-inactive: #A09E9E;
   --link-blue: #3C77CA;
-  /* Kept Figma value */
   --border-color: #E6E6E6;
   --border-dark: #8E8E8E;
+
+  /* Component Colors */
+  --card-bg: #FAFAFA;
+  --hero-card-bg: #ffffff;
+  --hero-overlay: rgba(0, 0, 0, 0.03);
 
   /* Fonts */
   --font-primary: 'Outfit', sans-serif;
@@ -29,6 +33,21 @@ html {
   --content-width: 1200px;
   --page-padding-top: 120px;
   /* Aligned with design absolute top */
+}
+
+[data-theme="dark"] {
+  --bg-color: #0A0A0A;
+  --text-primary: #EEEEEE;
+  --text-p-grey: #CCCCCC;
+  --text-secondary: #A0A0A0;
+  --text-nav-inactive: #888888;
+  --link-blue: #60A5FA;
+  --border-color: #333333;
+  --border-dark: #555555;
+
+  --card-bg: #1A1A1A;
+  --hero-card-bg: #1A1A1A;
+  --hero-overlay: rgba(255, 255, 255, 0.05);
 }
 
 * {
@@ -46,6 +65,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
   /* Clean edges */
 }
 
@@ -92,6 +112,7 @@ header {
 nav {
   display: flex;
   gap: 56px;
+  align-items: center;
   /* From Figma context gap-[56px] */
 }
 
@@ -101,7 +122,7 @@ nav a {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.1px;
-  color: #A09E9E;
+  color: var(--text-nav-inactive);
   /* Inactive color from Figma */
   text-decoration: none;
 }
@@ -173,7 +194,7 @@ footer {
   border-radius: 24px;
   position: relative;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: var(--hero-card-bg);
   flex-shrink: 0;
   /* Prevent compression */
 }
@@ -185,7 +206,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: var(--hero-overlay);
   /* Subtle black fill at 3% opacity */
   background-size: cover;
   background-position: center;
@@ -208,7 +229,7 @@ footer {
   font-weight: 500;
   font-size: 45px;
   /* Inferred from previous "Rivo" size or generic large size, Figma context usually has this. Original Rivo was 45px. Let's assume this text is large display text. Based on area 524x156, 45px seems plausible for 3 lines. */
-  color: #404040;
+  color: var(--text-p-grey);
   line-height: 1.2;
   z-index: 2;
   /* Keep tagline above image */
@@ -287,7 +308,7 @@ footer {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.1px;
-  color: #898989;
+  color: var(--text-secondary);
   white-space: nowrap;
   /* Keep tags on one line */
 }
@@ -329,7 +350,7 @@ footer {
 
 .playground-item {
   height: 200px;
-  background-color: #FAFAFA;
+  background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
 }
@@ -358,7 +379,7 @@ footer {
 
 .playground-card {
   height: 298px;
-  background-color: #FAFAFA;
+  background-color: var(--card-bg);
   /* Or gradient as per pencil? Pencil showed gradient fills but disabled? showing white usually. Let's stick to gray placeholder */
   border: 1px solid var(--border-color);
   border-radius: 24px;
@@ -489,7 +510,7 @@ footer {
   max-width: 408px;
   /* Cap at Pencil design size */
   height: 642px;
-  background-color: #FAFAFA;
+  background-color: var(--card-bg);
   border-radius: 24px;
   flex-shrink: 0;
   /* Prevent compression */
@@ -539,7 +560,7 @@ footer {
 .work-icon-v2 {
   width: 64px;
   height: 64px;
-  background-color: #FAFAFA;
+  background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   flex-shrink: 0;
@@ -603,7 +624,7 @@ footer {
   width: 100%;
   /* Full container width for impact */
   height: 500px;
-  background-color: #FAFAFA;
+  background-color: var(--card-bg);
   border-radius: 24px;
   border: 1px solid var(--border-color);
   display: flex;
