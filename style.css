@@ -19,6 +19,8 @@ html {
   --card-bg: #FAFAFA;
   --hero-card-bg: #ffffff;
   --hero-overlay: rgba(0, 0, 0, 0.03);
+  --music-player-bg: #1E1B4B;
+  /* Deep indigo - premium audio vibe */
 
   /* Fonts */
   --font-primary: 'Outfit', sans-serif;
@@ -48,6 +50,8 @@ html {
   --card-bg: #1A1A1A;
   --hero-card-bg: #1A1A1A;
   --hero-overlay: rgba(255, 255, 255, 0.05);
+  --music-player-bg: #0F0F23;
+  /* Near-black with hint of blue */
 }
 
 * {
@@ -788,6 +792,22 @@ footer {
     /* Prevent too narrow */
   }
 
+  /* Large cards (AI Tool, Music Player) - Full width on tablet */
+  .playground-card.large,
+  .music-player-card {
+    width: 100% !important;
+    min-width: unset;
+  }
+
+  .playlist-panel {
+    width: 180px;
+  }
+
+  .player-main {
+    padding-top: 20px;
+    /* Space for the MUSIC chip tag */
+  }
+
   /* Work Detail Tablet */
   .work-detail-layout {
     gap: 48px;
@@ -939,6 +959,56 @@ footer {
   .playground-card.medium {
     width: 100% !important;
     /* One card per row */
+  }
+
+  /* Music Player Mobile - Stack layout */
+  .music-player-card {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 350px;
+  }
+
+  .custom-audio-player {
+    padding: 24px;
+  }
+
+  .player-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .playlist-panel {
+    width: 100% !important;
+    order: 2;
+    /* Playlist below controls on mobile */
+  }
+
+  .playlist-header {
+    margin-bottom: 8px;
+  }
+
+  .playlist-items {
+    max-height: 120px;
+  }
+
+  .player-main {
+    width: 100%;
+    order: 1;
+    /* Controls on top */
+    padding-top: 40px;
+    /* Space for the MUSIC chip tag */
+  }
+
+  .player-info {
+    margin-bottom: 16px;
+  }
+
+  .song-title {
+    font-size: 20px;
+  }
+
+  .artist-name {
+    font-size: 14px;
   }
 
   /* Work Detail Mobile */
@@ -1112,17 +1182,188 @@ footer {
 .custom-audio-player {
   width: 100%;
   height: 100%;
-  background: #000;
-  /* or var(--card-bg) for light mode? kept dark for contrast */
+  background: var(--card-bg);
+  /* Aligned with other cards on the page */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 32px;
   position: relative;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop');
-  /* Placeholder cover art */
-  background-size: cover;
-  background-position: center;
+}
+
+/* Audio Visualizer Canvas */
+.audio-visualizer-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.audio-visualizer-canvas.active {
+  opacity: 1;
+}
+
+/* Music Player Card Sizing */
+.music-player-card {
+  width: 690px;
+  height: 298px;
+}
+
+/* Large Card Sizing (AI Tool, etc.) */
+.playground-card.large {
+  width: 690px;
+}
+
+/* Player Layout - Two Column Grid */
+.player-layout {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Playlist Panel */
+.playlist-panel {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.playlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playlist-title {
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.playlist-count {
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  font-size: 12px;
+}
+
+.playlist-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+  flex: 1;
+  /* Firefox scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.playlist-items:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* Webkit scrollbar - hidden by default, shows on hover */
+.playlist-items::-webkit-scrollbar {
+  width: 4px;
+}
+
+.playlist-items::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.playlist-items::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.playlist-items:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.playlist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.playlist-item:hover {
+  background: rgba(128, 128, 128, 0.08);
+}
+
+.playlist-item.active {
+  background: rgba(128, 128, 128, 0.12);
+}
+
+[data-theme="dark"] .playlist-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .playlist-item.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.playlist-item.active .track-name {
+  color: var(--text-primary);
+}
+
+.track-number {
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  font-size: 12px;
+  width: 16px;
+  flex-shrink: 0;
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.track-name {
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-artist {
+  color: var(--text-secondary);
+  font-family: var(--font-primary);
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Player Main - Right Side */
+.player-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
 }
 
 .player-info {
@@ -1131,7 +1372,7 @@ footer {
 }
 
 .song-title {
-  color: #fff;
+  color: var(--text-primary);
   font-family: var(--font-primary);
   font-size: 24px;
   font-weight: 500;
@@ -1139,7 +1380,7 @@ footer {
 }
 
 .artist-name {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-secondary);
   font-family: var(--font-primary);
   font-size: 16px;
 }
@@ -1155,13 +1396,17 @@ footer {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--text-primary);
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: transform 0.2s;
+}
+
+.play-btn svg path {
+  fill: var(--bg-color);
 }
 
 .play-btn:hover {
@@ -1171,7 +1416,7 @@ footer {
 .progress-container {
   flex: 1;
   height: 4px;
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--border-color);
   border-radius: 2px;
   cursor: pointer;
   position: relative;
@@ -1181,13 +1426,13 @@ footer {
   width: 30%;
   /* Demo progress */
   height: 100%;
-  background: #fff;
+  background: var(--text-primary);
   border-radius: 2px;
   position: relative;
 }
 
 .time-stamp {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-secondary);
   font-size: 12px;
   font-family: monospace;
 }
@@ -1196,7 +1441,7 @@ footer {
   background: none;
   border: none;
   cursor: pointer;
-  color: #fff;
+  color: var(--text-primary);
   opacity: 0.7;
   transition: opacity 0.2s;
   padding: 8px;
@@ -1255,12 +1500,30 @@ footer {
   border-color: rgba(165, 180, 252, 0.2);
 }
 
-/* Music - Neutral Glass (for dark backgrounds) */
+/* Music - Aurora Gradient Glass */
 .chip-music {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
-  color: #FFFFFF;
-  border-color: rgba(255, 255, 255, 0.15);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(107, 143, 175, 0.25) 0%, rgba(155, 143, 187, 0.2) 100%);
+  color: #6B8FAF;
+  border-color: rgba(107, 143, 175, 0.2);
+  animation: chip-shimmer 3s ease-in-out infinite;
+}
+
+[data-theme="dark"] .chip-music {
+  background: linear-gradient(135deg, rgba(107, 143, 175, 0.3) 0%, rgba(155, 143, 187, 0.25) 100%);
+  color: #A5C4E0;
+  border-color: rgba(165, 196, 224, 0.25);
+}
+
+@keyframes chip-shimmer {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.85;
+  }
 }
 
 /* Life/Blog - Teal/Calm Blue Glass */

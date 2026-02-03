@@ -31,7 +31,7 @@
             <div class="playground-row">
                 <!-- Featured Tool (Large) -->
                 <div class="playground-card large"
-                    style="width: 690px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden;">
+                    style="display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden;">
                     <span class="chip chip-ai">AI Tool</span>
                     <div class="card-content" style="padding: 40px; text-align: center; z-index: 2;">
                         <h2 style="font-size: 32px; font-weight: 500; margin: 0 0 10px 0; color: var(--text-primary);">
@@ -42,41 +42,61 @@
                     </div>
                 </div>
 
-                <!-- Music (Custom Player) -->
-                <div class="playground-card medium" style="width: 486px; overflow: hidden; border: none;">
+                <!-- Music Player with Playlist -->
+                <div class="playground-card music-player-card" style="overflow: hidden; border: none;">
                     <div class="custom-audio-player">
-                        <span class="chip chip-music">Song</span>
-                        <div class="player-info">
-                            <h3 class="song-title">Midnight Ideas</h3>
-                            <p class="artist-name">James Hou • Original Mix</p>
-                        </div>
-                        <div class="player-controls">
-                            <!-- Prev Button -->
-                            <button class="btn-control" id="prevBtn">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
-                                </svg>
-                            </button>
+                        <!-- Audio Visualization Canvas -->
+                        <canvas id="audioVisualizer" class="audio-visualizer-canvas"></canvas>
+                        <span class="chip chip-music">Music</span>
 
-                            <!-- Play Button -->
-                            <button class="play-btn" id="playBtn">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 5V19L19 12L8 5Z" fill="black" />
-                                </svg>
-                            </button>
+                        <!-- Main Player Layout -->
+                        <div class="player-layout">
+                            <!-- Current Track Info + Controls (Left) -->
+                            <div class="player-main">
+                                <div class="player-info">
+                                    <h3 class="song-title">Midnight Ideas</h3>
+                                    <p class="artist-name">James Hou • Original Mix</p>
+                                </div>
+                                <div class="player-controls">
+                                    <!-- Prev Button -->
+                                    <button class="btn-control" id="prevBtn">
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+                                        </svg>
+                                    </button>
 
-                            <!-- Next Button -->
-                            <button class="btn-control" id="nextBtn">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
-                                </svg>
-                            </button>
+                                    <!-- Play Button -->
+                                    <button class="play-btn" id="playBtn">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 5V19L19 12L8 5Z" fill="black" />
+                                        </svg>
+                                    </button>
 
-                            <div class="progress-container" style="margin-left: 12px;">
-                                <div class="progress-bar"></div>
+                                    <!-- Next Button -->
+                                    <button class="btn-control" id="nextBtn">
+                                        <svg viewBox="0 0 24 24">
+                                            <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                                        </svg>
+                                    </button>
+
+                                    <div class="progress-container" style="margin-left: 12px;">
+                                        <div class="progress-bar"></div>
+                                    </div>
+                                    <span class="time-stamp" id="timeDisplay">0:00</span>
+                                </div>
                             </div>
-                            <span class="time-stamp" id="timeDisplay">0:00</span>
+
+                            <!-- Playlist Panel (Right) -->
+                            <div class="playlist-panel">
+                                <div class="playlist-header">
+                                    <span class="playlist-title">Playlist</span>
+                                    <span class="playlist-count">4 tracks</span>
+                                </div>
+                                <ul class="playlist-items" id="playlistItems">
+                                    <!-- Populated by JavaScript -->
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -152,7 +172,7 @@
         });
     </script>
 
-    <!-- Custom Audio Player Script -->
+    <!-- Custom Audio Player Script with Visualization -->
     <script>
         const tracks = [
             { title: "Midnight Ideas", artist: "James Hou • Original Mix", src: "assets/music/song1.mp3" },
@@ -162,8 +182,14 @@
         ];
 
         let currentTrackIndex = 0;
-        // const audio = new Audio(); // Uncomment when real files present
+        let isPlaying = false;
+        let animationId = null;
 
+        // Canvas setup for visualization
+        const canvas = document.getElementById('audioVisualizer');
+        const ctx = canvas.getContext('2d');
+
+        // DOM Elements
         const titleEl = document.querySelector('.song-title');
         const artistEl = document.querySelector('.artist-name');
         const playBtnEl = document.getElementById('playBtn');
@@ -171,39 +197,187 @@
         const nextBtn = document.getElementById('nextBtn');
         const timeDisplay = document.getElementById('timeDisplay');
 
+        // Resize canvas to match container
+        function resizeCanvas() {
+            const container = canvas.parentElement;
+            canvas.width = container.offsetWidth;
+            canvas.height = container.offsetHeight;
+        }
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // ======================================
+        // Stripe-Style Gradient Mesh Flow Visualization
+        // ======================================
+        // Inspired by Stripe & danield.design aurora gradients
+        let animTime = 0;
+
+        // Gradient blob configuration - Faster flow for more dynamic effect
+        const gradientBlobs = [
+            { x: 0.3, y: 0.3, size: 0.6, color: [0, 255, 255], speed: 0.004, phase: 0 },        // Cyan
+            { x: 0.7, y: 0.6, size: 0.5, color: [255, 0, 255], speed: 0.006, phase: 2 },        // Magenta
+            { x: 0.5, y: 0.8, size: 0.55, color: [139, 92, 246], speed: 0.005, phase: 4 },      // Purple
+            { x: 0.2, y: 0.6, size: 0.45, color: [59, 130, 246], speed: 0.007, phase: 1 },      // Blue
+            { x: 0.8, y: 0.2, size: 0.4, color: [0, 255, 102], speed: 0.0045, phase: 3 }        // Green
+        ];
+
+        function drawGradientMesh() {
+            if (!isPlaying) return;
+
+            animTime += 1;
+
+            // Create off-screen canvas for blur effect (performance optimization)
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw each gradient blob
+            gradientBlobs.forEach((blob, i) => {
+                // Morph position using sine waves for organic movement
+                const offsetX = Math.sin(animTime * blob.speed + blob.phase) * 0.25;
+                const offsetY = Math.cos(animTime * blob.speed * 0.8 + blob.phase) * 0.2;
+
+                const centerX = (blob.x + offsetX) * canvas.width;
+                const centerY = (blob.y + offsetY) * canvas.height;
+                const radius = blob.size * Math.max(canvas.width, canvas.height);
+
+                // Pulsing size effect - faster pulse
+                const pulse = 1 + Math.sin(animTime * 0.008 + i) * 0.15;
+                const finalRadius = radius * pulse;
+
+                // Create radial gradient for each blob
+                const gradient = ctx.createRadialGradient(
+                    centerX, centerY, 0,
+                    centerX, centerY, finalRadius
+                );
+
+                const [r, g, b] = blob.color;
+                gradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, 0.35)`);
+                gradient.addColorStop(0.4, `rgba(${r}, ${g}, ${b}, 0.2)`);
+                gradient.addColorStop(0.7, `rgba(${r}, ${g}, ${b}, 0.08)`);
+                gradient.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            });
+
+            // Add subtle noise texture overlay for premium feel
+            drawNoiseOverlay();
+
+            animationId = requestAnimationFrame(drawGradientMesh);
+        }
+
+        // Subtle noise overlay for texture
+        function drawNoiseOverlay() {
+            const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
+
+            for (let i = 0; i < data.length; i += 4) {
+                // Very subtle noise (2% variance)
+                const noise = (Math.random() - 0.5) * 5;
+                data[i] = Math.max(0, Math.min(255, data[i] + noise));
+                data[i + 1] = Math.max(0, Math.min(255, data[i + 1] + noise));
+                data[i + 2] = Math.max(0, Math.min(255, data[i + 2] + noise));
+            }
+
+            ctx.putImageData(imageData, 0, 0);
+        }
+
+        // ======================================
+        // Player Controls
+        // ======================================
+        const playlistContainer = document.getElementById('playlistItems');
+
+        // Render Playlist
+        function renderPlaylist() {
+            playlistContainer.innerHTML = '';
+            tracks.forEach((track, index) => {
+                const li = document.createElement('li');
+                li.className = `playlist-item ${index === currentTrackIndex ? 'active' : ''}`;
+                li.innerHTML = `
+                    <span class="track-number">${index + 1}</span>
+                    <div class="track-info">
+                        <span class="track-name">${track.title}</span>
+                        <span class="track-artist">${track.artist.split('•')[0].trim()}</span>
+                    </div>
+                `;
+                li.addEventListener('click', () => {
+                    selectTrack(index);
+                });
+                playlistContainer.appendChild(li);
+            });
+        }
+
+        function selectTrack(index) {
+            currentTrackIndex = index;
+            loadTrack(currentTrackIndex);
+            renderPlaylist(); // Update active state
+
+            // Auto-play on selection
+            if (!isPlaying) {
+                playBtnEl.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" fill="black"/></svg>';
+                startVisualization();
+            } else {
+                animTime = 0; // Reset animation for new track feel
+            }
+        }
+
         function loadTrack(index) {
             titleEl.textContent = tracks[index].title;
             artistEl.textContent = tracks[index].artist;
-            // audio.src = tracks[index].src; // Uncomment
-
-            // Simulating track start for demo
             timeDisplay.innerHTML = "0:00";
         }
 
+        function startVisualization() {
+            canvas.classList.add('active');
+            isPlaying = true;
+            animTime = 0;
+            drawGradientMesh();
+        }
+
+        function stopVisualization() {
+            canvas.classList.remove('active');
+            isPlaying = false;
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+        }
+
         // Initial Load
+        renderPlaylist();
         loadTrack(currentTrackIndex);
 
         playBtnEl.addEventListener('click', () => {
-            // Toggle UI only for demo
-            const isPlaying = playBtnEl.innerHTML.includes('M6 4h4v16H6V4zm8 0h4v16h-4V4z');
-            if (!isPlaying) {
+            const currentlyPlaying = playBtnEl.innerHTML.includes('M6 4h4v16H6V4zm8 0h4v16h-4V4z');
+
+            if (!currentlyPlaying) {
+                // Start playing
                 playBtnEl.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" fill="black"/></svg>';
-                // audio.play();
+                startVisualization();
             } else {
+                // Pause
                 playBtnEl.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="black"/></svg>';
-                // audio.pause();
+                stopVisualization();
             }
         });
 
         nextBtn.addEventListener('click', () => {
-            // Reset UI to play state when changing track, or keep playing if autoplay
             currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
             loadTrack(currentTrackIndex);
+            renderPlaylist();
+            // Keep visualization running if already playing
+            if (isPlaying) {
+                animTime = 0; // Reset animation for new track feel
+            }
         });
 
         prevBtn.addEventListener('click', () => {
             currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
             loadTrack(currentTrackIndex);
+            renderPlaylist();
+            if (isPlaying) {
+                animTime = 0;
+            }
         });
     </script>
 </body>
