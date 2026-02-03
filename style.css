@@ -1079,3 +1079,199 @@ footer {
 .email-copy-btn:hover {
   opacity: 0.7;
 }
+
+/* Components added for Playground Content */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s, transform 0.2s;
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.tag {
+  background-color: var(--border-color);
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Custom Audio Player Styles */
+.custom-audio-player {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  /* or var(--card-bg) for light mode? kept dark for contrast */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+  position: relative;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop');
+  /* Placeholder cover art */
+  background-size: cover;
+  background-position: center;
+}
+
+.player-info {
+  margin-bottom: 24px;
+  z-index: 2;
+}
+
+.song-title {
+  color: #fff;
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.artist-name {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-primary);
+  font-size: 16px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 2;
+}
+
+.play-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+}
+
+.progress-container {
+  flex: 1;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress-bar {
+  width: 30%;
+  /* Demo progress */
+  height: 100%;
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+}
+
+.time-stamp {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.btn-control {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-control:hover {
+  opacity: 1;
+}
+
+.btn-control svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* Tag/Chip System - Liquid Glass Aesthetic */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+  width: fit-content;
+
+  /* Glassmorphism Base */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+
+  /* Positioning */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  margin: 0;
+}
+
+/* AI Tool - Indigo Tint Glass */
+.chip-ai {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(139, 92, 246, 0.15) 100%);
+  color: #6366F1;
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+[data-theme="dark"] .chip-ai {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(139, 92, 246, 0.2) 100%);
+  color: #A5B4FC;
+  border-color: rgba(165, 180, 252, 0.2);
+}
+
+/* Music - Neutral Glass (for dark backgrounds) */
+.chip-music {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.15);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Life/Blog - Teal/Calm Blue Glass */
+.chip-life {
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(34, 211, 238, 0.12) 100%);
+  color: #0D9488;
+  border-color: rgba(20, 184, 166, 0.15);
+}
+
+[data-theme="dark"] .chip-life {
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.25) 0%, rgba(34, 211, 238, 0.15) 100%);
+  color: #5EEAD4;
+  border-color: rgba(94, 234, 212, 0.2);
+}

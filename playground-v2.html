@@ -26,19 +26,92 @@
             </nav>
         </header>
 
-        <!-- Playground Content (Specific Grid from Pencil MVTRv) -->
         <div class="playground-layout-v2">
-            <!-- Row 1: Frame 3 (690px) + Frame 4 (486px) -->
+            <!-- Row 1: App Showcase + Music -->
             <div class="playground-row">
-                <div class="playground-card large" style="width: 690px;"></div>
-                <div class="playground-card medium" style="width: 486px;"></div>
+                <!-- Featured Tool (Large) -->
+                <div class="playground-card large"
+                    style="width: 690px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden;">
+                    <span class="chip chip-ai">AI Tool</span>
+                    <div class="card-content" style="padding: 40px; text-align: center; z-index: 2;">
+                        <h2 style="font-size: 32px; font-weight: 500; margin: 0 0 10px 0; color: var(--text-primary);">
+                            Color Generator</h2>
+                        <p style="color: var(--text-p-grey); margin-bottom: 30px; font-size: 16px;">A simple tool
+                            generated entirely by Gemini to create random color palettes.</p>
+                        <a href="apps/color-generator/index.html" target="_blank" class="btn-primary">Try it Out ↗</a>
+                    </div>
+                </div>
+
+                <!-- Music (Custom Player) -->
+                <div class="playground-card medium" style="width: 486px; overflow: hidden; border: none;">
+                    <div class="custom-audio-player">
+                        <span class="chip chip-music">Song</span>
+                        <div class="player-info">
+                            <h3 class="song-title">Midnight Ideas</h3>
+                            <p class="artist-name">James Hou • Original Mix</p>
+                        </div>
+                        <div class="player-controls">
+                            <!-- Prev Button -->
+                            <button class="btn-control" id="prevBtn">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+                                </svg>
+                            </button>
+
+                            <!-- Play Button -->
+                            <button class="play-btn" id="playBtn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 5V19L19 12L8 5Z" fill="black" />
+                                </svg>
+                            </button>
+
+                            <!-- Next Button -->
+                            <button class="btn-control" id="nextBtn">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+                                </svg>
+                            </button>
+
+                            <div class="progress-container" style="margin-left: 12px;">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <span class="time-stamp" id="timeDisplay">0:00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Row 2: Frame 5 (384px) + Frame 7 (384px) + Frame 6 (384px) -->
+            <!-- Row 2: Blog + Others -->
             <div class="playground-row">
-                <div class="playground-card small" style="width: 384px;"></div>
-                <div class="playground-card small" style="width: 384px;"></div>
-                <div class="playground-card small" style="width: 384px;"></div>
+                <!-- Blog Post (Small) -->
+                <a href="posts/welcome.html" class="playground-card small"
+                    style="width: 384px; text-decoration: none; display: block; transition: box-shadow 0.2s; overflow: hidden; position: relative;">
+                    <span class="chip chip-life">Life</span>
+                    <div
+                        style="padding: 24px; padding-top: 56px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3
+                                style="font-size: 20px; font-weight: 500; margin: 0 0 12px 0; color: var(--text-primary);">
+                                Welcome to my Playground</h3>
+                            <p style="font-size: 14px; color: var(--text-p-grey); line-height: 1.5;">A space for my
+                                experiments, thoughts, and "plays" during life.</p>
+                        </div>
+                        <span style="font-size: 14px; font-weight: 500; color: var(--text-primary);">Read More →</span>
+                    </div>
+                </a>
+
+                <!-- Placeholder 1 (Small) -->
+                <div class="playground-card small"
+                    style="width: 384px; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: var(--text-secondary);">More Coming Soon</span>
+                </div>
+
+                <!-- Placeholder 2 (Small) -->
+                <div class="playground-card small"
+                    style="width: 384px; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: var(--text-secondary);">More Coming Soon</span>
+                </div>
             </div>
         </div>
 
@@ -79,6 +152,60 @@
         });
     </script>
 
+    <!-- Custom Audio Player Script -->
+    <script>
+        const tracks = [
+            { title: "Midnight Ideas", artist: "James Hou • Original Mix", src: "assets/music/song1.mp3" },
+            { title: "Neon Drive", artist: "James Hou • Synthwave", src: "assets/music/song2.mp3" },
+            { title: "Deep Focus", artist: "James Hou • Ambient", src: "assets/music/song3.mp3" },
+            { title: "Voice Memo 001", artist: "James Hou • Raw Clip", src: "assets/music/clip1.mp3" }
+        ];
+
+        let currentTrackIndex = 0;
+        // const audio = new Audio(); // Uncomment when real files present
+
+        const titleEl = document.querySelector('.song-title');
+        const artistEl = document.querySelector('.artist-name');
+        const playBtnEl = document.getElementById('playBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const timeDisplay = document.getElementById('timeDisplay');
+
+        function loadTrack(index) {
+            titleEl.textContent = tracks[index].title;
+            artistEl.textContent = tracks[index].artist;
+            // audio.src = tracks[index].src; // Uncomment
+
+            // Simulating track start for demo
+            timeDisplay.innerHTML = "0:00";
+        }
+
+        // Initial Load
+        loadTrack(currentTrackIndex);
+
+        playBtnEl.addEventListener('click', () => {
+            // Toggle UI only for demo
+            const isPlaying = playBtnEl.innerHTML.includes('M6 4h4v16H6V4zm8 0h4v16h-4V4z');
+            if (!isPlaying) {
+                playBtnEl.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" fill="black"/></svg>';
+                // audio.play();
+            } else {
+                playBtnEl.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="black"/></svg>';
+                // audio.pause();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            // Reset UI to play state when changing track, or keep playing if autoplay
+            currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+            loadTrack(currentTrackIndex);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+            loadTrack(currentTrackIndex);
+        });
+    </script>
 </body>
 
 </html>
