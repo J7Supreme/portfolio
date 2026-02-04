@@ -229,7 +229,7 @@ footer {
 .hero-tagline {
   position: absolute;
   left: 32px;
-  top: 366px;
+  bottom: 32px;
   width: calc(100% - 64px);
   /* Responsive to parent */
   max-width: 524px;
@@ -704,6 +704,13 @@ footer {
   /* Ensure responsive widths work properly */
   .home-content {
     width: 100%;
+    align-items: flex-start;
+  }
+
+  .hero-left {
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 104px);
   }
 
   .about-layout-v2 {
