@@ -2454,6 +2454,687 @@
           "layout": "none"
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "xE51W",
+      "x": 5738,
+      "y": 1129,
+      "name": "Home V2",
+      "width": 1440,
+      "height": 1200,
+      "fill": "#FFFFFF",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "TcftZ",
+          "name": "Header Area",
+          "width": 1440,
+          "height": 80,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "W8uH5",
+              "name": "Header Content",
+              "width": 1200,
+              "height": 64,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pBRaf",
+                  "name": "logo",
+                  "content": "James Hou",
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "MDAK6",
+                  "name": "nav",
+                  "gap": 56,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "uE6fK",
+                      "name": "link1",
+                      "content": "About",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3e9RN",
+                      "name": "link2",
+                      "content": "Playground",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "GJlsS",
+          "name": "Home Content",
+          "width": 1200,
+          "gap": 102,
+          "children": [
+            {
+              "type": "frame",
+              "id": "U7DPu",
+              "name": "Hero Left",
+              "width": 588,
+              "height": 630,
+              "fill": "#FFFFFF",
+              "cornerRadius": 24,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "aKJHk",
+                  "name": "tagline",
+                  "content": "A Toronto-based Product Designer into AI, Cloud, Web3 and Payment",
+                  "lineHeight": 54,
+                  "fontFamily": "Inter",
+                  "fontSize": 45,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "j4g8I",
+              "name": "Project List",
+              "width": 510,
+              "layout": "vertical",
+              "gap": 36,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "BSkjT",
+                  "name": "card1",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mfQFh",
+                      "name": "c1Name",
+                      "content": "Alipay+",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "EJ7u3",
+                      "name": "c1Row",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "azrRT",
+                          "name": "c1Title",
+                          "content": "Designing for a disruptive payment network",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Y0RRE",
+                          "name": "c1Meta",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "N1bV4",
+                              "name": "c1Tags",
+                              "content": "Fintech   UX",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "46b5S",
+                              "name": "c1Arrow",
+                              "content": "↗",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "2lzvN",
+                  "name": "card2",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gePSC",
+                      "name": "c1Name",
+                      "content": "Alipay",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rioiA",
+                      "name": "c1Row",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "HwV4N",
+                          "name": "c1Title",
+                          "content": "Internalization of Alipay",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IKVLA",
+                          "name": "c1Meta",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "sfTPl",
+                              "name": "c1Tags",
+                              "content": "Fintech   Globalization",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "k7ZHD",
+                              "name": "c1Arrow",
+                              "content": "↗",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nG3HX",
+                  "name": "card3",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iWZ5P",
+                      "name": "c1Name",
+                      "content": "Alipay+",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "u41Nq",
+                      "name": "c1Row",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "iWrlY",
+                          "name": "c1Title",
+                          "content": "Creating a \"holographic\" environment for localized design",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "pchtk",
+                          "name": "c1Meta",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "kWMEw",
+                              "name": "c1Tags",
+                              "content": "Promotions   Research",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "QaaH3",
+                              "name": "c1Arrow",
+                              "content": "↗",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Sb5JJ",
+                  "name": "card4",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "D6p7M",
+                      "name": "c1Name",
+                      "content": "Lazada",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "HrYxl",
+                      "name": "c1Row",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "2iPnc",
+                          "name": "c1Title",
+                          "content": "Local payment enablement in Southeast Asia and Latin America",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "F1IXG",
+                          "name": "c1Meta",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "f7adX",
+                              "name": "c1Tags",
+                              "content": "Fintech   Research",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "g6JZm",
+                              "name": "c1Arrow",
+                              "content": "↗",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QxvG2",
+                  "name": "card5",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "0FILU",
+                      "name": "c1Name",
+                      "content": "AliExpress",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "2NDVY",
+                      "name": "c1Row",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "gEeZC",
+                          "name": "c1Title",
+                          "content": "User acquisition of AliExpress Wallet in Europe",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "XYaeg",
+                          "name": "c1Meta",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nVHXZ",
+                              "name": "c1Tags",
+                              "content": "Fintech   Research",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "wA9Xh",
+                              "name": "c1Arrow",
+                              "content": "↗",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Ox2q3",
+                  "name": "card6",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "l5hMo",
+                      "name": "c1Name",
+                      "content": "Lazada",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "thXh7",
+                      "name": "c1Row",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ozetb",
+                          "name": "c1Title",
+                          "content": "Value enhancement of Lazada Wallet in Southeast Asia",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "pIRiC",
+                          "name": "c1Meta",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "SFY2T",
+                              "name": "c1Tags",
+                              "content": "Fintech   UX",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "v6NXc",
+                              "name": "c1Arrow",
+                              "content": "↗",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZsdWF",
+                  "name": "card7",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NY3Rj",
+                      "name": "c1Name",
+                      "content": "GE",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DJdh6",
+                      "name": "c1Row",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SD103",
+                          "name": "c1Title",
+                          "content": "Client case visualization for GE brilliant manufacturing",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "yjclS",
+                          "name": "c1Meta",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ARkTK",
+                              "name": "c1Tags",
+                              "content": "Manufacturing   UI",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Zz5bY",
+                              "name": "c1Arrow",
+                              "content": "↗",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "iHKJF",
+                  "name": "card8",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DfqWs",
+                      "name": "c1Name",
+                      "content": "IBM Cloud",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "2UPTY",
+                      "name": "c1Row",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bhkNA",
+                          "name": "c1Title",
+                          "content": "Cloud Automation Manager in IBM Cloud",
+                          "fontFamily": "Inter",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ow4ip",
+                          "name": "c1Meta",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "NEj02",
+                              "name": "c1Tags",
+                              "content": "Cloud   UX",
+                              "fontFamily": "Inter",
+                              "fontSize": 14,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "rlVQo",
+                              "name": "c1Arrow",
+                              "content": "↗",
+                              "fontFamily": "Inter",
+                              "fontSize": 18,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "OPkc6",
+          "name": "Footer Area",
+          "width": 1440,
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "i6lRM",
+              "name": "Border Top",
+              "width": 1440,
+              "height": 1,
+              "fill": "#E6E6E6"
+            },
+            {
+              "type": "frame",
+              "id": "mzHIE",
+              "name": "footerContainer",
+              "width": 1440,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "te5if",
+                  "name": "Footer Content",
+                  "width": 1200,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xJRyO",
+                      "name": "copyright",
+                      "content": "© 2026 James Hou",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Q7126",
+                      "name": "socials",
+                      "gap": 32,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lrGAQ",
+                          "name": "flink1",
+                          "content": "Linkedin",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "KF9CV",
+                          "name": "flink2",
+                          "content": "Email",
+                          "fontFamily": "Inter",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
