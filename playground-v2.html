@@ -27,6 +27,13 @@
         </header>
 
         <div class="playground-layout-v2">
+            <!-- Intro Section -->
+            <div class="playground-intro">
+                <p class="playground-description">A space for experiments, side projects, and creative explorations.
+                    Here you'll find tools I've built, music I've created, and thoughts I've written down along the way.
+                </p>
+            </div>
+
             <!-- Row 1: App Showcase + Music -->
             <div class="playground-row">
                 <!-- Featured Tool (Large) -->
@@ -43,7 +50,7 @@
                 </div>
 
                 <!-- Music Player with Playlist -->
-                <div class="playground-card music-player-card" style="overflow: hidden; border: none;">
+                <div class="playground-card music-player-card" style="overflow: hidden;">
                     <div class="custom-audio-player">
                         <!-- Audio Visualization Canvas -->
                         <canvas id="audioVisualizer" class="audio-visualizer-canvas"></canvas>
@@ -54,8 +61,8 @@
                             <!-- Current Track Info + Controls (Left) -->
                             <div class="player-main">
                                 <div class="player-info">
-                                    <h3 class="song-title">Midnight Ideas</h3>
-                                    <p class="artist-name">James Hou • Original Mix</p>
+                                    <h3 class="song-title">Luv & Experience</h3>
+                                    <p class="artist-name">James Hou • Nujabes Beat</p>
                                 </div>
                                 <div class="player-controls">
                                     <!-- Prev Button -->
@@ -91,7 +98,7 @@
                             <div class="playlist-panel">
                                 <div class="playlist-header">
                                     <span class="playlist-title">Playlist</span>
-                                    <span class="playlist-count">4 tracks</span>
+                                    <span class="playlist-count">1 track</span>
                                 </div>
                                 <ul class="playlist-items" id="playlistItems">
                                     <!-- Populated by JavaScript -->
@@ -175,15 +182,16 @@
     <!-- Custom Audio Player Script with Visualization -->
     <script>
         const tracks = [
-            { title: "Midnight Ideas", artist: "James Hou • Original Mix", src: "assets/music/song1.mp3" },
-            { title: "Neon Drive", artist: "James Hou • Synthwave", src: "assets/music/song2.mp3" },
-            { title: "Deep Focus", artist: "James Hou • Ambient", src: "assets/music/song3.mp3" },
-            { title: "Voice Memo 001", artist: "James Hou • Raw Clip", src: "assets/music/clip1.mp3" }
+            { title: "Luv & Experience", artist: "James Hou • Nujabes Beat", src: "assets/music/Luv & Experience on Nujabes beat.mp3" }
         ];
 
         let currentTrackIndex = 0;
         let isPlaying = false;
         let animationId = null;
+
+        // Create Audio element for actual playback
+        const audio = new Audio();
+        audio.src = tracks[currentTrackIndex].src;
 
         // Canvas setup for visualization
         const canvas = document.getElementById('audioVisualizer');
@@ -196,6 +204,8 @@
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         const timeDisplay = document.getElementById('timeDisplay');
+        const progressContainer = document.querySelector('.progress-container');
+        const progressBar = document.querySelector('.progress-bar');
 
         // Resize canvas to match container
         function resizeCanvas() {
@@ -210,29 +220,23 @@
         // ======================================
         // Stripe-Style Gradient Mesh Flow Visualization
         // ======================================
-        // Inspired by Stripe & danield.design aurora gradients
         let animTime = 0;
 
-        // Gradient blob configuration - Faster flow for more dynamic effect
         const gradientBlobs = [
-            { x: 0.3, y: 0.3, size: 0.6, color: [0, 255, 255], speed: 0.004, phase: 0 },        // Cyan
-            { x: 0.7, y: 0.6, size: 0.5, color: [255, 0, 255], speed: 0.006, phase: 2 },        // Magenta
-            { x: 0.5, y: 0.8, size: 0.55, color: [139, 92, 246], speed: 0.005, phase: 4 },      // Purple
-            { x: 0.2, y: 0.6, size: 0.45, color: [59, 130, 246], speed: 0.007, phase: 1 },      // Blue
-            { x: 0.8, y: 0.2, size: 0.4, color: [0, 255, 102], speed: 0.0045, phase: 3 }        // Green
+            { x: 0.3, y: 0.3, size: 0.6, color: [0, 255, 255], speed: 0.004, phase: 0 },
+            { x: 0.7, y: 0.6, size: 0.5, color: [255, 0, 255], speed: 0.006, phase: 2 },
+            { x: 0.5, y: 0.8, size: 0.55, color: [139, 92, 246], speed: 0.005, phase: 4 },
+            { x: 0.2, y: 0.6, size: 0.45, color: [59, 130, 246], speed: 0.007, phase: 1 },
+            { x: 0.8, y: 0.2, size: 0.4, color: [0, 255, 102], speed: 0.0045, phase: 3 }
         ];
 
         function drawGradientMesh() {
             if (!isPlaying) return;
 
             animTime += 1;
-
-            // Create off-screen canvas for blur effect (performance optimization)
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Draw each gradient blob
             gradientBlobs.forEach((blob, i) => {
-                // Morph position using sine waves for organic movement
                 const offsetX = Math.sin(animTime * blob.speed + blob.phase) * 0.25;
                 const offsetY = Math.cos(animTime * blob.speed * 0.8 + blob.phase) * 0.2;
 
@@ -240,11 +244,9 @@
                 const centerY = (blob.y + offsetY) * canvas.height;
                 const radius = blob.size * Math.max(canvas.width, canvas.height);
 
-                // Pulsing size effect - faster pulse
                 const pulse = 1 + Math.sin(animTime * 0.008 + i) * 0.15;
                 const finalRadius = radius * pulse;
 
-                // Create radial gradient for each blob
                 const gradient = ctx.createRadialGradient(
                     centerX, centerY, 0,
                     centerX, centerY, finalRadius
@@ -260,19 +262,15 @@
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
             });
 
-            // Add subtle noise texture overlay for premium feel
             drawNoiseOverlay();
-
             animationId = requestAnimationFrame(drawGradientMesh);
         }
 
-        // Subtle noise overlay for texture
         function drawNoiseOverlay() {
             const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
             const data = imageData.data;
 
             for (let i = 0; i < data.length; i += 4) {
-                // Very subtle noise (2% variance)
                 const noise = (Math.random() - 0.5) * 5;
                 data[i] = Math.max(0, Math.min(255, data[i] + noise));
                 data[i + 1] = Math.max(0, Math.min(255, data[i + 1] + noise));
@@ -283,9 +281,48 @@
         }
 
         // ======================================
-        // Player Controls
+        // Audio Playback Controls
         // ======================================
         const playlistContainer = document.getElementById('playlistItems');
+
+        // Format time as M:SS
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // Update progress bar and time display
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                const progress = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = `${progress}%`;
+                timeDisplay.textContent = formatTime(audio.currentTime);
+            }
+        });
+
+        // Handle track ending
+        audio.addEventListener('ended', () => {
+            // Move to next track or stop if only one track
+            if (tracks.length > 1) {
+                currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+                loadTrack(currentTrackIndex);
+                renderPlaylist();
+                audio.play();
+            } else {
+                // Reset to beginning for single track
+                audio.currentTime = 0;
+                stopPlayback();
+            }
+        });
+
+        // Click on progress bar to seek
+        progressContainer.addEventListener('click', (e) => {
+            const rect = progressContainer.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const percentage = clickX / rect.width;
+            audio.currentTime = percentage * audio.duration;
+        });
 
         // Render Playlist
         function renderPlaylist() {
@@ -310,33 +347,35 @@
         function selectTrack(index) {
             currentTrackIndex = index;
             loadTrack(currentTrackIndex);
-            renderPlaylist(); // Update active state
-
-            // Auto-play on selection
-            if (!isPlaying) {
-                playBtnEl.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" fill="black"/></svg>';
-                startVisualization();
-            } else {
-                animTime = 0; // Reset animation for new track feel
-            }
+            renderPlaylist();
+            startPlayback();
         }
 
         function loadTrack(index) {
             titleEl.textContent = tracks[index].title;
             artistEl.textContent = tracks[index].artist;
-            timeDisplay.innerHTML = "0:00";
+            audio.src = tracks[index].src;
+            timeDisplay.textContent = "0:00";
+            progressBar.style.width = '0%';
         }
 
-        function startVisualization() {
-            canvas.classList.add('active');
-            isPlaying = true;
-            animTime = 0;
-            drawGradientMesh();
+        function startPlayback() {
+            audio.play().then(() => {
+                isPlaying = true;
+                canvas.classList.add('active');
+                playBtnEl.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" fill="black"/></svg>';
+                animTime = 0;
+                drawGradientMesh();
+            }).catch(err => {
+                console.error('Playback failed:', err);
+            });
         }
 
-        function stopVisualization() {
-            canvas.classList.remove('active');
+        function stopPlayback() {
+            audio.pause();
             isPlaying = false;
+            canvas.classList.remove('active');
+            playBtnEl.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="black"/></svg>';
             if (animationId) {
                 cancelAnimationFrame(animationId);
                 animationId = null;
@@ -347,35 +386,33 @@
         renderPlaylist();
         loadTrack(currentTrackIndex);
 
+        // Play/Pause button
         playBtnEl.addEventListener('click', () => {
-            const currentlyPlaying = playBtnEl.innerHTML.includes('M6 4h4v16H6V4zm8 0h4v16h-4V4z');
-
-            if (!currentlyPlaying) {
-                // Start playing
-                playBtnEl.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" fill="black"/></svg>';
-                startVisualization();
+            if (isPlaying) {
+                stopPlayback();
             } else {
-                // Pause
-                playBtnEl.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 5V19L19 12L8 5Z" fill="black"/></svg>';
-                stopVisualization();
+                startPlayback();
             }
         });
 
+        // Next button
         nextBtn.addEventListener('click', () => {
             currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
             loadTrack(currentTrackIndex);
             renderPlaylist();
-            // Keep visualization running if already playing
             if (isPlaying) {
-                animTime = 0; // Reset animation for new track feel
+                audio.play();
+                animTime = 0;
             }
         });
 
+        // Previous button
         prevBtn.addEventListener('click', () => {
             currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
             loadTrack(currentTrackIndex);
             renderPlaylist();
             if (isPlaying) {
+                audio.play();
                 animTime = 0;
             }
         });
