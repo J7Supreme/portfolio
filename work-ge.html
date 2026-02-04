@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client case visualization for GE brilliant manufacturing solutions - James Hou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500&family=Roboto:wght@400;500;300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="index-v2.html" class="logo">James Hou</a>
+            <nav>
+                <a href="about-v2.html">About</a>
+                <a href="playground-v2.html">Playground</a>
+            </nav>
+        </header>
+
+        <!-- Work Detail Content -->
+        <div class="work-detail-layout">
+            <a href="index-v2.html" class="back-nav">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M5 12L12 5M5 12L12 19" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Back to projects
+            </a>
+
+            <div class="work-hero-v2">
+                <div class="work-icon-v2"></div>
+                <h1 class="work-title-v2">Client case visualization for GE brilliant manufacturing solutions</h1>
+                <p class="work-desc-v2">Demonstrate digitalization in traditional manufacturing through interactive data
+                    visualization.</p>
+            </div>
+
+            <div class="work-content-v2">
+                <section class="content-section-v2">
+                    <h2>About the project</h2>
+                    <p>I created client facing data visualization to demonstrate the strength and mechanism of GE
+                        Digital solution applications in traditional manufacturing. Clients' cases are showed in a
+                        curved screen with interactions so they can be guided through details of each section.</p>
+                    <img src="assets/images/projects/ge/637ba4639093ce8ecfb2f808_feature.png" alt="Project overview"
+                        class="content-image-v2">
+                </section>
+
+                <section class="content-section-v2">
+                    <h2>Approaches and results</h2>
+                    <p>In this project, I collected and transformed all key business data. Based on understanding of
+                        technological and business terms, I visualized them and animated them with front end engineer,
+                        to make it straightforward and persuasive.</p>
+                    <p>The visualization helped clients understand the complex manufacturing data and GE's digital
+                        solutions in an intuitive and engaging way.</p>
+                    <img src="assets/images/projects/ge/637ba536a7a872339c442ccd_description-result-1.png"
+                        alt="Data visualization" class="content-image-v2">
+                </section>
+            </div>
+        </div>
+
+        <footer>
+            <div class="copyright">© 2026 James Hou</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/jameshouux/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                <button class="email-copy-btn" id="emailCopyBtn">Email</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container">
+        <div class="toast" id="toast">
+            <svg class="toast-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+            </svg>
+            <span class="toast-message">Email copied to clipboard</span>
+        </div>
+    </div>
+
+    <script>
+        // Email copy to clipboard functionality
+        document.getElementById('emailCopyBtn').addEventListener('click', function () {
+            const email = 'j7supreme@gmail.com';
+            navigator.clipboard.writeText(email).then(function () {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(function () {
+                    toast.classList.remove('show');
+                }, 3000);
+            }).catch(function (err) {
+                console.error('Failed to copy email: ', err);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

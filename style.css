@@ -689,6 +689,14 @@ footer {
   font-family: var(--font-nav);
 }
 
+.content-image-v2 {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin-top: 24px;
+  object-fit: cover;
+}
+
 /* Desktop Responsive Optimization (1025px+) */
 @media (min-width: 1025px) {
   /* Container padding and max-width are handled in base .container class */
