@@ -292,6 +292,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  gap: 8px;
 }
 
 .project-title-text {
@@ -624,10 +625,18 @@ footer {
 .work-icon {
   width: 64px;
   height: 64px;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
+  background-color: #ffffff;
   flex-shrink: 0;
+  object-fit: contain;
+}
+
+.work-icon.huawei-icon {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.work-icon.imtoken-icon {
+  background-color: transparent;
 }
 
 .work-title {
