@@ -18,7 +18,7 @@ imToken Card aims to disrupt this by offering a **true credit card experience** 
 *   **Competitive Economics:** Leveraging DCS partnership to offer fees lower than or comparable to standard off-ramp solutions.
 
 ## 3. Global Design Strategy
-**Philosophy:** "Trustworthy & Economic"
+**Strategy:** "Trustworthy & Economic"
 In a market saturated with high-fee, unreliable "crypto cards," the design strategy focused on building immediate trust and highlighting economic value.
 
 **Strategic Principles:**

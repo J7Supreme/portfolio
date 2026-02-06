@@ -22,7 +22,7 @@ The existing Huawei Cloud mobile console app was previously developed with a lot
 *   Design devliery
 
 ## 2. Key Strategies & Decisions
-**Philosophy:**
+**Strategy:**
 Move from technical orientation to prioritized attention.
 
 **Strategic Principles:**
