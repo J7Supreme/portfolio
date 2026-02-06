@@ -1,4 +1,6 @@
 # Huawei Cloud Mobile Console App
+ Cloud | Product Revamp
+
 **Empowering scattered cloud operation on the go with prioritized attention**
 
 ---
@@ -43,8 +45,3 @@ Move from technical orientation to prioritized attention.
 *   **Working with dev across culture and pace:** Find multual benefits and workarounds to make sure each party gain credits for product.
 *   **Working with users:** Clearly position each platform and leverage the advatage to boost up instead of adding non-useful features.
 *   **As platform experience:** Provide default set up for common mental model while remain flexibility for personalization in UX architecuture.
-
----
-
-## References
-**Timeline & Research:** [Project Background](project%20knowledge/mobile%20console%20project%20bkg.md)

@@ -1,5 +1,5 @@
 # imToken Card: The First Crypto-Native Credit Card
-**Lead Product Designer** | Fintech & Web3 | 0-1 Product Strategy
+Fintech & Web3 | 0-1 Product
 
 ---
 

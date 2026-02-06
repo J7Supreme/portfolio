@@ -1,17 +1,12 @@
 # RIVO: Crypto-Native Payment Network
-**Lead Product Designer** | Fintech & Web3 | 0-1 Product Strategy
+ Fintech & Web3 | 0-1 Product 
 
 
 **Bridging the gap between digital assets and real-world utility.**  
 While the crypto ecosystem has matured, enabling seamless, regulatory-compliant payments for everyday goods remains a complex hurdle. RIVO was conceived to build a ground-up crypto-native payment network. The mission: allow users to pay directly in any asset while offering merchants instant settlement in their preferred currency.
 
 
-## 2. Core Value Proposition
-*   **Crypto-Agnostic:** Pay in crypto, settle in fiat — removing volatility risk for merchants.
-*   **Regulatory-First:** A phased roadmap starting with an E-Money (fiat) license before evolving into a full Digital Payment Token (DPT) ecosystem.
-*   **Invisible Integration:** Deeply embedded within the non-custodial imToken wallet, leveraging an existing user base of millions.
-
-## 3. Strategy
+### 3. Strategy
 **"Fintuitive" (Financially Intuitive)**  
 Financial products are often dense and intimidating. I established a design language rooted in **Simplicity** and **"Stream-like" fluidity**, aiming to make Web3 payments feel as familiar as tapping a credit card.
 
@@ -24,22 +19,21 @@ Financial products are often dense and intimidating. I established a design lang
 I designed the customer experience as well as merchant end experience, with a public facing landing site for RIVO.network.
 
 ### A. Consumer Wallet (RIVO App)
-*   **Awareness-First Onboarding:** Created non-intrusive entry points within imToken that use intriguing micro-animations to invite exploration rather than forcing adoption. 
-
-Example
-*   **"Action-Free" Payment Flow:** Minimized inputs by leveraging system intelligence. Prioritized **Gestures (Swipe-to-pay)** over taps to prevent accidental transfers and create a satisfying tactile confirmation.
-*   **Proactive Assurance:** Designed "interactive dialogs" that inform users of asynchronous blockchain statuses (e.g., "Confirming on-chain...") in real-time, preventing drop-off during wait times.
- 
+    *   **Awareness-First Onboarding:** Created non-intrusive entry points within imToken that use intriguing micro-animations to invite exploration rather than forcing adoption.
+    example: splash screen animation
+    *   **"Action-Free" Payment Flow:** Minimized inputs by leveraging system intelligence. Prioritized **Gestures (Swipe-to-pay)** over taps to prevent accidental transfers and create a satisfying tactile confirmation.
+    example: swipe to pay to merchant
+    *   **Proactive Assurance:** Designed "interactive dialogs" that inform users of asynchronous blockchain statuses (e.g., "Confirming on-chain...") in real-time, preventing drop-off during wait times.
+    example: interactive dialog demo
 
 ### B. Merchant POS Experience
     *   **Streamlined Operations:** Designed a high-contrast, large-type interface optimized for busy environments, allowing merchants to input amounts and generate QR codes in under 3 seconds.
-    *   **Instant Feedback Loops:** Visual and haptic confirmation of payment success to provide confidence during peak hours.
-    *   **Ergonomic Scanning:** Optimized QR code density and contrast for varying lighting conditions in physical retail stores.
+    example: merchant pos static page
 
 ### C. Landing Site
     *   **Visual Narrative:** Developed the "Stream" brand identity—vibrant, fluid, and transforming—representing the seamless flow of value.
-    *   **Storytelling:** The website moves beyond features to tell the story of "Unleashing the power of blockchain," using high-impact motion design (Dune/SpaceX inspiration) to visualize the transition from rigid fiat systems to a fluid tokenized world.
-
+    *   **Storytelling:** The website moves beyond features to tell the story of "Unleashing the power of blockchain," using high-impact motion design (Dune/SpaceX inspiration) to visualize the transition from rigid fiat systems to a fluid tokenized world.    
+    example: RIVO.network
 
 
 **Media & Press:**
