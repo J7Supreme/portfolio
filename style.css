@@ -646,8 +646,7 @@ footer {
   color: var(--text-primary);
   margin: 0;
   line-height: 1.1;
-  max-width: 800px;
-  /* Optimal reading width */
+  max-width: 100%;
 }
 
 .work-desc {
@@ -655,8 +654,7 @@ footer {
   font-size: 20px;
   color: var(--text-p-grey);
   line-height: 1.4;
-  max-width: 680px;
-  /* Narrower for better readability */
+  max-width: 100%;
 }
 
 .work-content {
@@ -689,8 +687,7 @@ footer {
   line-height: 1.6;
   color: var(--text-p-grey);
   margin: 0;
-  max-width: 680px;
-  /* Readable line length */
+  max-width: 100%;
 }
 
 .media-box {
