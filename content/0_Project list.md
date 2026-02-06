@@ -8,30 +8,30 @@ imToken
 imToken Webapp
 
 imToken
+RIVO: Crypto-Native Payment Network
+
+imToken
 imToken Card
 
 imToken
 imToken 3.0 website landing page exploration
 
-imToken
-RIVO: Crypto-Native Payment Network
-
-Alipay+
-Designing for a disruptive payment network
+Alipay 
+Antom: Designing for a disruptive payment network
 
 Alipay
 Internalization of Alipay
 
-Alipay+
-Creating a "holographic" environment for localized design during Covid
+Alipay
+Antom: Creating a "holographic" environment for localized design during Covid
 
-Antom
-Local payment enablement in Southeast Asia and Latin America
+Alipay 
+Antom: Local payment enablement in Southeast Asia and Latin America
 
-AliExpress
+Alipay 
 User acquisition of AliExpress Wallet in Europe
 
-Lazada
+Alipay 
 Value enhancement of Lazada Wallet in Southeast Asia
 
 GE

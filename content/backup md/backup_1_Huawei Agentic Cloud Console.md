@@ -23,7 +23,7 @@ This project focuses on Huawei Cloud (HWC) Console, the core portal for enterpri
 *   Cross department / region collaboration and alignment
 
 ## 2. Key Strategies & Decisions
-**Philosophy: Human-like Collaboration**
+**Strategy: Human-like Collaboration**
 Establish overall human like collaborator mental modal (autonomous + ambient in the loop).
 
 **Strategic Principles:**

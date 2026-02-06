@@ -16,7 +16,7 @@ While the crypto ecosystem has matured, enabling seamless, regulatory-compliant 
 *   **Invisible Integration:** Deeply embedded within the non-custodial imToken wallet, leveraging an existing user base of millions.
 
 ## 3. Global Design Strategy
-**Philosophy: "Fintuitive" (Financially Intuitive)**  
+**Strategy: "Fintuitive" (Financially Intuitive)**  
 Financial products are often dense and intimidating. I established a design language rooted in **"Apple-like" simplicity** and **"Stream-like" fluidity**, aiming to make Web3 payments feel as familiar as tapping a credit card.
 
 **Strategic Principles:**

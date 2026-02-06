@@ -41,7 +41,7 @@ Starting from the internally aligned **Token-centric initiative**, the design wa
 
 ## 2. Accessible decentrazation for everyone
 **Design Rationales**
-*   **Just-in-Time Access**: Adopting the "Open Web" philosophy (Web Browser + Connection = Access) to eliminate the friction of pre-installing wallet apps, with account abstraction based on smart contract, no more seed phrase memorization or backup. 
+*   **Just-in-Time Access**: Adopting the "Open Web" strategy (Web Browser + Connection = Access) to eliminate the friction of pre-installing wallet apps, with account abstraction based on smart contract, no more seed phrase memorization or backup. 
     Example: Sign up demo 
 
 *   **Permissionless Interaction**: Enabling a "Claim via Link" flow where users can receive value immediately, bridging the gap between Web2 behaviors and Web3 technology. Link can also be easily made tangible in a variely of forms like NFC tag, QR code and more blend in real life scenarios like red pocket or secret evenlope. This made tokens 0 barrier to acess, interact and spread.
