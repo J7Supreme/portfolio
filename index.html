@@ -42,6 +42,15 @@
                     <div class="monitor-stand"></div>
                     <div class="monitor-base"></div>
                 </div>
+                <!-- Mobile Wrapper for Huawei Mobile Console App Demo -->
+                <div class="phone-wrapper" id="mobilePhone">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <video id="mobileVideo" src="assets/images/projects/huawei-mobile/project_cover.webm" loop
+                                muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Project List Right (Frame 9 / 0VXSm) -->
@@ -330,6 +339,8 @@
         const projectCards = document.querySelectorAll('.project-card');
         const heroImage = document.getElementById('heroImage');
         const huaweiMonitor = document.getElementById('huaweiMonitor');
+        const mobilePhone = document.getElementById('mobilePhone');
+        const mobileVideo = document.getElementById('mobileVideo');
 
         // Define project images (you can replace these with actual image URLs)
         const projectImages = {
@@ -352,10 +363,19 @@
                 if (imageKey === 'project-new-1') {
                     // Special case for Huawei Agentic Cloud Console
                     huaweiMonitor.style.opacity = '1';
+                    mobilePhone.style.opacity = '0';
                     heroImage.style.opacity = '0';
+                } else if (imageKey === 'project-new-2') {
+                    // Special case for Huawei Cloud Mobile Console App
+                    mobilePhone.style.opacity = '1';
+                    huaweiMonitor.style.opacity = '0';
+                    heroImage.style.opacity = '0';
+                    mobileVideo.play();
                 } else {
                     // Standard behavior for other projects
                     huaweiMonitor.style.opacity = '0';
+                    mobilePhone.style.opacity = '0';
+                    mobileVideo.pause();
                     const imageValue = projectImages[imageKey];
                     if (imageValue) {
                         if (imageValue.startsWith('linear-gradient') || imageValue.startsWith('radial-gradient')) {
@@ -371,6 +391,9 @@
             card.addEventListener('mouseleave', function () {
                 heroImage.style.opacity = '0';
                 huaweiMonitor.style.opacity = '0';
+                mobilePhone.style.opacity = '0';
+                mobileVideo.pause();
+                mobileVideo.currentTime = 0;
             });
         });
 
