@@ -51,6 +51,31 @@
                         </div>
                     </div>
                 </div>
+                <!-- RIVO Devices Wrapper -->
+                <div class="rivo-devices-wrapper" id="rivoDevices"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; gap: 12px; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 5; width: 90%;">
+                    <!-- Monitor: RIVO Website -->
+                    <div class="monitor-wrapper" style="flex: 0 1 auto; width: 70%; max-width: 500px; margin: 0;">
+                        <div class="monitor-frame">
+                            <div class="monitor-screen">
+                                <video id="rivoWebsiteVideo" src="assets/images/projects/rivo/rivo-website.webm" loop
+                                    muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                        <div class="monitor-stand"></div>
+                        <div class="monitor-base"></div>
+                    </div>
+                    <!-- Phone: Onboarding -->
+                    <div class="phone-wrapper"
+                        style="flex: 0 1 auto; position: relative; opacity: 1; top: auto; left: auto; transform: none; pointer-events: auto; width: 18%; max-width: 120px; min-width: 80px;">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <video id="rivoOnboardingVideo" src="assets/images/projects/rivo/onboarding.webm" loop
+                                    muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Project List Right (Frame 9 / 0VXSm) -->
@@ -146,23 +171,7 @@
                     </div>
                 </a>
 
-                <!-- Card: imToken 3.0 website -->
-                <a href="work-imtoken-website.html" class="project-card" data-image="project-new-5">
-                    <div class="company-name">imToken</div>
-                    <div class="project-details-row">
-                        <div class="project-title-text">imToken 3.0 website landing page exploration</div>
-                        <div class="project-meta-right">
-                            <div class="project-tags">
-                                <span>Web3</span>
-                            </div>
-                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
+
 
                 <!-- Card 1: Antom Designing -->
                 <a href="work-alipay-plus.html" class="project-card" data-image="project1">
@@ -200,24 +209,7 @@
                     </div>
                 </a>
 
-                <!-- Card 3: Antom Holographic -->
-                <a href="work-alipay-plus-rewards.html" class="project-card" data-image="project3">
-                    <div class="company-name">Alipay</div>
-                    <div class="project-details-row">
-                        <div class="project-title-text">Antom: Creating a "holographic" environment for localized design
-                            during Covid</div>
-                        <div class="project-meta-right">
-                            <div class="project-tags">
-                                <span>Research</span>
-                            </div>
-                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
+
 
                 <!-- Card 4: Antom Local Payment -->
                 <a href="work-antom.html" class="project-card" data-image="project4">
@@ -341,6 +333,9 @@
         const huaweiMonitor = document.getElementById('huaweiMonitor');
         const mobilePhone = document.getElementById('mobilePhone');
         const mobileVideo = document.getElementById('mobileVideo');
+        const rivoDevices = document.getElementById('rivoDevices');
+        const rivoWebsiteVideo = document.getElementById('rivoWebsiteVideo');
+        const rivoOnboardingVideo = document.getElementById('rivoOnboardingVideo');
 
         // Define project images (you can replace these with actual image URLs)
         const projectImages = {
@@ -348,11 +343,11 @@
             'project-new-2': 'linear-gradient(135deg, #4E65FF 0%, #92EFFD 100%)',   // Huawei Mobile
             'project-new-3': 'linear-gradient(135deg, #00C6FF 0%, #0072FF 100%)',   // imToken Web
             'project-new-4': 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',   // imToken Card
-            'project-new-5': 'linear-gradient(135deg, #FC466B 0%, #3F5EFB 100%)',   // imToken Site
+
             'project-new-6': 'linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)',   // RIVO
             'project1': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
             'project2': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-            'project3': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+
             'project4': 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
         };
 
@@ -364,18 +359,31 @@
                     // Special case for Huawei Agentic Cloud Console
                     huaweiMonitor.style.opacity = '1';
                     mobilePhone.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
                     heroImage.style.opacity = '0';
                 } else if (imageKey === 'project-new-2') {
                     // Special case for Huawei Cloud Mobile Console App
                     mobilePhone.style.opacity = '1';
                     huaweiMonitor.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     mobileVideo.play();
+                } else if (imageKey === 'project-new-6') {
+                    // Special case for RIVO
+                    rivoDevices.style.opacity = '1';
+                    huaweiMonitor.style.opacity = '0';
+                    mobilePhone.style.opacity = '0';
+                    heroImage.style.opacity = '0';
+                    rivoWebsiteVideo.play();
+                    rivoOnboardingVideo.play();
                 } else {
                     // Standard behavior for other projects
                     huaweiMonitor.style.opacity = '0';
                     mobilePhone.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
                     mobileVideo.pause();
+                    rivoWebsiteVideo.pause();
+                    rivoOnboardingVideo.pause();
                     const imageValue = projectImages[imageKey];
                     if (imageValue) {
                         if (imageValue.startsWith('linear-gradient') || imageValue.startsWith('radial-gradient')) {
@@ -392,8 +400,13 @@
                 heroImage.style.opacity = '0';
                 huaweiMonitor.style.opacity = '0';
                 mobilePhone.style.opacity = '0';
+                rivoDevices.style.opacity = '0';
                 mobileVideo.pause();
                 mobileVideo.currentTime = 0;
+                rivoWebsiteVideo.pause();
+                rivoWebsiteVideo.currentTime = 0;
+                rivoOnboardingVideo.pause();
+                rivoOnboardingVideo.currentTime = 0;
             });
         });
 
