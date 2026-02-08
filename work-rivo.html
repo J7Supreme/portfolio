@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RIVO: Crypto-Native Payment Network - James Hou</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@400;500;300&display=swap"
-        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <script src="theme.js"></script>
 </head>
@@ -39,24 +35,62 @@
             <div class="work-hero">
                 <img src="assets/images/logos/RIVO%20logo.svg" alt="RIVO" class="work-icon">
                 <h1 class="work-title">RIVO: Crypto-Native Payment Network</h1>
-                <div class="work-tags"
-                    style="margin-bottom: 16px; color: var(--text-secondary); font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.05em;">
+                <div class="work-tags">
                     Fintech & Web3 | 0-1 Product
                 </div>
-                <p class="work-desc">Bridging the gap between digital assets and real-world utility.</p>
+                <p class="work-desc centered">Bridging the gap between digital assets and real-world utility.</p>
+
+                <!-- Hero Devices Section - Unified Composition -->
+                <div class="hero-devices-composition"
+                    style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 48px; width: 100%; padding: 0 20px; box-sizing: border-box;">
+                    <!-- Left Monitor: RIVO Website -->
+                    <div class="monitor-wrapper"
+                        style="flex: 0 1 auto; z-index: 1; margin: 0; width: 65%; max-width: 700px; min-width: 280px;">
+                        <div class="monitor-frame">
+                            <div class="monitor-screen">
+                                <video src="assets/images/projects/rivo/rivo-website.webm" autoplay loop muted
+                                    playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                        <div class="monitor-stand"></div>
+                        <div class="monitor-base"></div>
+                    </div>
+
+                    <!-- Center Phone: Onboarding -->
+                    <div class="phone-wrapper"
+                        style="flex: 0 1 auto; position: relative; z-index: 10; opacity: 1; top: auto; left: auto; transform: none; pointer-events: auto; width: 16%; max-width: 180px; min-width: 100px;">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <video src="assets/images/projects/rivo/onboarding.webm" autoplay loop muted playsinline
+                                    style="width: 100%; height: 100%; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="work-content">
 
                 <section class="content-section">
-                    <h2>3. Strategy</h2>
+                    <p>
+                        While the crypto ecosystem has matured, enabling seamless, regulatory-compliant payments for
+                        everyday goods remains a complex hurdle. RIVO was conceived to build a ground-up crypto-native
+                        payment network. The mission: allow users to pay directly in any asset while offering merchants
+                        instant settlement in their preferred currency.
+                    </p>
+
+
+                </section>
+
+                <section class="content-section">
                     <h3>"Fintuitive" (Financially Intuitive)</h3>
                     <p>Financial products are often dense and intimidating. I established a design language rooted in
                         <strong>Simplicity</strong> and <strong>"Stream-like" fluidity</strong>, aiming to make Web3
-                        payments feel as familiar as tapping a credit card.</p>
+                        payments feel as familiar as tapping a credit card.
+                    </p>
 
-                    <h3>Principles:</h3>
-                    <ul style="margin-left: 20px; margin-bottom: 16px;">
+                    <ul>
                         <li><strong>Motivation > Distraction:</strong> Acknowledging the friction of blockchain (e.g.,
                             block times, app switching) and countering it with high-touch, proactive status updates to
                             reduce cognitive load.</li>
@@ -70,50 +104,107 @@
                 </section>
 
                 <section class="content-section">
-                    <h2>4. Execution Across the Ecosystem</h2>
+                    <h3>Execution Across the Ecosystem</h3>
                     <p>I designed the customer experience as well as merchant end experience, with a public facing
                         landing site for RIVO.network.</p>
 
-                    <h3>A. Consumer Wallet (RIVO App)</h3>
-                    <ul style="margin-left: 20px; margin-bottom: 16px;">
+                    <h4>A. Consumer Wallet (RIVO App)</h4>
+                    <ul>
                         <li><strong>Awareness-First Onboarding:</strong> Created non-intrusive entry points within
                             imToken that use intriguing micro-animations to invite exploration rather than forcing
                             adoption.</li>
                     </ul>
-                    <div class="media-box"
-                        style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); color: var(--text-secondary); border-radius: 12px; margin: 24px 0; text-align: center; padding: 20px; border: 1px dashed var(--border-color); cursor: pointer;">
-                        [PLACEHOLDER: splash screen animation]</div>
+                    <div class="phone-mock-container" style="display: flex; justify-content: center; margin: 24px 0;">
+                        <div class="phone-wrapper"
+                            style="position: relative; opacity: 1; top: auto; left: auto; transform: none; pointer-events: auto; width: 100%; max-width: 180px; min-width: 100px;">
+                            <div class="phone-frame" style="border-radius: 20px; padding: 4px; border: 2px solid #222;">
+                                <div class="phone-screen" style="border-radius: 16px;">
+                                    <video src="assets/images/projects/rivo/onboarding.webm" autoplay loop muted
+                                        playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <ul style="margin-left: 20px; margin-bottom: 16px;">
+                    <ul>
                         <li><strong>"Action-Free" Payment Flow:</strong> Minimized inputs by leveraging system
                             intelligence. Prioritized <strong>Gestures (Swipe-to-pay)</strong> over taps to prevent
                             accidental transfers and create a satisfying tactile confirmation.</li>
                     </ul>
-                    <div class="media-box"
-                        style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); color: var(--text-secondary); border-radius: 12px; margin: 24px 0; text-align: center; padding: 20px; border: 1px dashed var(--border-color); cursor: pointer;">
-                        [PLACEHOLDER: swipe to pay to merchant]</div>
+                    <div class="phone-mock-container" style="display: flex; justify-content: center; margin: 24px 0;">
+                        <div class="phone-wrapper"
+                            style="position: relative; opacity: 1; top: auto; left: auto; transform: none; pointer-events: auto; width: 100%; max-width: 180px; min-width: 100px;">
+                            <div class="phone-frame" style="border-radius: 20px; padding: 4px; border: 2px solid #222;">
+                                <div class="phone-screen" style="border-radius: 16px;">
+                                    <video src="assets/images/projects/rivo/rivopayment.webm" autoplay loop muted
+                                        playsinline
+                                        style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.05);"></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <ul style="margin-left: 20px; margin-bottom: 16px;">
+                    <ul>
                         <li><strong>Proactive Assurance:</strong> Designed "interactive dialogs" that inform users of
                             asynchronous blockchain statuses (e.g., "Confirming on-chain...") in real-time, preventing
                             drop-off during wait times.</li>
                     </ul>
-                    <div class="media-box"
-                        style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); color: var(--text-secondary); border-radius: 12px; margin: 24px 0; text-align: center; padding: 20px; border: 1px dashed var(--border-color); cursor: pointer;">
-                        [PLACEHOLDER: interactive dialog demo]</div>
+                    <div class="interactive-dialog-demo"
+                        style="display: flex; justify-content: center; margin: 24px 0;">
+                        <img src="assets/images/projects/rivo/rivointeractivedialog.svg" alt="Interactive Dialogs"
+                            class="interactive-dialog-img">
+                    </div>
 
-                    <h3>B. Merchant POS Experience</h3>
-                    <ul style="margin-left: 20px; margin-bottom: 16px;">
+                    <h4>B. Merchant POS Experience</h4>
+                    <ul>
                         <li><strong>Streamlined Operations:</strong> Designed a high-contrast, large-type interface
                             optimized for busy environments, allowing merchants to input amounts and generate QR codes
                             in under 3 seconds.</li>
                     </ul>
-                    <div class="media-box"
-                        style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); color: var(--text-secondary); border-radius: 12px; margin: 24px 0; text-align: center; padding: 20px; border: 1px dashed var(--border-color); cursor: pointer;">
-                        [PLACEHOLDER: merchant pos static page]</div>
+                    <div class="carousel-wrapper" style="position: relative;">
+                        <button class="carousel-nav prev" aria-label="Previous">❮</button>
+                        <div class="merchant-carousel"
+                            style="display: flex; overflow-x: auto; gap: 24px; padding: 4px 4px 24px 4px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: smooth;">
+                            <div class="carousel-item"
+                                style="flex: 0 0 auto; width: 85%; max-width: 500px; scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                                <img src="assets/images/projects/rivo/merchant%20login.svg" alt="Merchant Login"
+                                    style="width: 100%; display: block;">
+                            </div>
+                            <div class="carousel-item"
+                                style="flex: 0 0 auto; width: 85%; max-width: 500px; scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                                <img src="assets/images/projects/rivo/rivomerchanthome.svg" alt="Merchant Home"
+                                    style="width: 100%; display: block;">
+                            </div>
+                            <div class="carousel-item"
+                                style="flex: 0 0 auto; width: 85%; max-width: 500px; scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                                <img src="assets/images/projects/rivo/merchanttxn%20history.svg"
+                                    alt="Transaction History" style="width: 100%; display: block;">
+                            </div>
+                            <div class="carousel-item"
+                                style="flex: 0 0 auto; width: 85%; max-width: 500px; scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                                <img src="assets/images/projects/rivo/merchantmanangement.svg" alt="Merchant Management"
+                                    style="width: 100%; display: block;">
+                            </div>
+                        </div>
+                        <button class="carousel-nav next" aria-label="Next">❯</button>
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const wrapper = document.querySelector('.carousel-wrapper');
+                            if (wrapper) {
+                                const carousel = wrapper.querySelector('.merchant-carousel');
+                                const prev = wrapper.querySelector('.prev');
+                                const next = wrapper.querySelector('.next');
+                                if (carousel && prev && next) {
+                                    prev.addEventListener('click', () => carousel.scrollBy({ left: -300, behavior: 'smooth' }));
+                                    next.addEventListener('click', () => carousel.scrollBy({ left: 300, behavior: 'smooth' }));
+                                }
+                            }
+                        });
+                    </script>
 
                     <h3>C. Landing Site</h3>
-                    <ul style="margin-left: 20px; margin-bottom: 16px;">
+                    <ul>
                         <li><strong>Visual Narrative:</strong> Developed the "Stream" brand identity—vibrant, fluid, and
                             transforming—representing the seamless flow of value.</li>
                         <li><strong>Storytelling:</strong> The website moves beyond features to tell the story of
@@ -121,9 +212,18 @@
                             inspiration) to visualize the transition from rigid fiat systems to a fluid tokenized world.
                         </li>
                     </ul>
-                    <div class="media-box"
-                        style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); color: var(--text-secondary); border-radius: 12px; margin: 24px 0; text-align: center; padding: 20px; border: 1px dashed var(--border-color); cursor: pointer;">
-                        [PLACEHOLDER: RIVO.network]</div>
+                    <div class="monitor-mock-container" style="display: flex; justify-content: center; margin: 24px 0;">
+                        <div class="monitor-wrapper" style="width: 100%; max-width: 800px;">
+                            <div class="monitor-frame">
+                                <div class="monitor-screen">
+                                    <video src="assets/images/projects/rivo/rivo-website.webm" autoplay loop muted
+                                        playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                                </div>
+                            </div>
+                            <div class="monitor-stand"></div>
+                            <div class="monitor-base"></div>
+                        </div>
+                    </div>
                 </section>
 
             </div>

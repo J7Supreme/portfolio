@@ -689,6 +689,12 @@ footer {
   max-width: 960px;
 }
 
+.work-desc.centered {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .work-content {
   display: flex;
   flex-direction: column;
@@ -706,6 +712,7 @@ footer {
 
 .content-section h2,
 .content-section h3,
+.content-section h4,
 .content-section p,
 .content-section ul,
 .content-section ol {
@@ -721,12 +728,60 @@ footer {
   color: var(--text-primary);
 }
 
+.content-section h3 {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.content-section h4 {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
 .content-section p {
   font-family: var(--font-primary);
   font-size: 16px;
   line-height: 1.6;
   color: var(--text-p-grey);
   margin: 0;
+}
+
+.content-section ul,
+.content-section ol {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-p-grey);
+  margin: 0 0 0 20px;
+  /* Left margin for bullets */
+  padding: 0;
+}
+
+.content-section li {
+  margin-bottom: 8px;
+  /* Breathing room between items */
+}
+
+.content-section li:last-child {
+  margin-bottom: 0;
+}
+
+/* Style for work tags formerly inline */
+.work-tags {
+  font-family: var(--font-primary);
+  font-size: 0.9em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
 }
 
 .media-box {
@@ -1650,8 +1705,8 @@ footer {
 
 .monitor-frame {
   background: #111;
-  border-radius: 14px;
-  padding: 10px;
+  border-radius: clamp(8px, 1.5%, 14px);
+  padding: clamp(4px, 1%, 10px);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.1),
     0 20px 40px rgba(0, 0, 0, 0.3);
@@ -1667,7 +1722,7 @@ footer {
 
 .monitor-screen {
   background: #000;
-  border-radius: 6px;
+  border-radius: clamp(4px, 0.8%, 6px);
   overflow: hidden;
   position: relative;
   aspect-ratio: 2751 / 1540;
@@ -1726,21 +1781,21 @@ footer {
 
 .phone-frame {
   background: #111;
-  border-radius: 20px;
-  padding: 4px;
+  border-radius: clamp(12px, 8%, 20px);
+  padding: clamp(2px, 1.5%, 4px);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.1),
     0 20px 40px rgba(0, 0, 0, 0.5);
   position: relative;
   width: 100%;
   aspect-ratio: 928 / 2060;
-  border: 2px solid #222;
+  border: clamp(1px, 0.8%, 2px) solid #222;
   overflow: hidden;
 }
 
 .phone-screen {
   background: #000;
-  border-radius: 16px;
+  border-radius: clamp(8px, 6%, 16px);
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -1754,18 +1809,9 @@ footer {
   display: block;
 }
 
-/* Speaker/Notch area */
+/* Speaker/Notch area - hidden for cleaner look */
 .phone-frame::after {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 4px;
-  background: #2a2a2a;
-  border-radius: 10px;
-  z-index: 11;
+  display: none;
 }
 
 /* =========================================
@@ -1791,4 +1837,76 @@ footer {
   border-radius: 12px;
   border: 1px solid var(--border-color);
   display: block;
+}
+
+/* Custom class for interactive dialog scaling */
+.interactive-dialog-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .interactive-dialog-img {
+    width: 60%;
+  }
+}
+
+/* Carousel Navigation */
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+}
+
+.carousel-nav:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #000;
+  border-color: transparent;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-nav.prev {
+  left: 10px;
+}
+
+.carousel-nav.next {
+  right: 10px;
+}
+
+@media (min-width: 1024px) {
+  .carousel-nav {
+    display: flex;
+  }
+
+  .carousel-nav.prev {
+    left: -24px;
+  }
+
+  .carousel-nav.next {
+    right: -24px;
+  }
 }
