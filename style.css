@@ -1230,6 +1230,18 @@ footer {
     gap: 4px;
     align-items: flex-start;
   }
+
+  /* Phone mocks 80% size on mobile */
+  .phone-wrapper {
+    transform: scale(0.8);
+    transform-origin: center center;
+  }
+
+  .phone-mock-container .phone-wrapper,
+  .side-by-side-mocks .phone-wrapper {
+    transform: scale(0.8);
+    transform-origin: center center;
+  }
 }
 
 /* =========================================
