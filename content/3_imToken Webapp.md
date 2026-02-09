@@ -22,7 +22,7 @@
 # imToken Webapp
  Web3 | 0-1 Product
 
-imToken Webapp is a web-based application built with Account Abstraction, allowing everyone to have equal, quick and interactive access to tokens. It is part of imToken's vidion as traditional crypto wallet provider, to bridge the gap between web2 and web3. 
+imToken Webapp is a web-based application built with smart contract, allowing everyone to have equal, quick and interactive access to tokens. It is part of imToken's vision as traditional crypto wallet provider, to bridge the gap between web2 and web3. 
 I was the sole designer for this project from scratch, and had worked on transforming business intent to design strategy, IA and final delivery.
 Website link
 Medial link
