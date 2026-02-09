@@ -1231,16 +1231,22 @@ footer {
     align-items: flex-start;
   }
 
-  /* Phone mocks 80% size on mobile */
+  /* Phone mocks reduced size on mobile - use actual max-width reduction instead of scale */
   .phone-wrapper {
-    transform: scale(0.8);
-    transform-origin: center center;
+    max-width: 140px !important;
+    min-width: 80px !important;
   }
 
   .phone-mock-container .phone-wrapper,
   .side-by-side-mocks .phone-wrapper {
-    transform: scale(0.8);
-    transform-origin: center center;
+    max-width: 140px !important;
+    min-width: 80px !important;
+  }
+
+  /* Side-by-side mocks container adjustments for mobile */
+  .side-by-side-mocks .mock-item {
+    min-width: 140px !important;
+    max-width: 180px !important;
   }
 }
 
