@@ -54,6 +54,8 @@ button,
   --hero-overlay: rgba(0, 0, 0, 0.03);
   --music-player-bg: #1E1B4B;
   /* Deep indigo - premium audio vibe */
+  --bg-claim-link: #ffffff;
+
 
   /* Fonts */
   --font-primary: 'Outfit', sans-serif;
@@ -85,6 +87,8 @@ button,
   --hero-overlay: rgba(255, 255, 255, 0.05);
   --music-player-bg: #0F0F23;
   /* Near-black with hint of blue */
+  --bg-claim-link: #F0F0F0;
+
 }
 
 * {
@@ -796,6 +800,15 @@ footer {
   justify-content: center;
   color: var(--text-secondary);
   font-family: var(--font-nav);
+}
+
+/* Weblink Preview Card */
+.weblink-preview:hover {
+  border-color: var(--border-dark);
+}
+
+.weblink-preview:hover .weblink-arrow {
+  color: var(--text-primary);
 }
 
 .content-image {
