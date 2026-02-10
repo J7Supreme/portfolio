@@ -1725,17 +1725,19 @@ footer {
   }
 }
 
-/* Life/Blog - Teal/Calm Blue Glass */
-.chip-life {
-  background: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(34, 211, 238, 0.12) 100%);
-  color: #0D9488;
-  border-color: rgba(20, 184, 166, 0.15);
+/* Social - Teal/Calm Blue Glass */
+.chip-social {
+  background: rgba(13, 148, 136, 0.9);
+  /* Solid Teal */
+  color: #FFFFFF;
+  border-color: transparent;
 }
 
-[data-theme="dark"] .chip-life {
-  background: linear-gradient(135deg, rgba(20, 184, 166, 0.25) 0%, rgba(34, 211, 238, 0.15) 100%);
-  color: #5EEAD4;
-  border-color: rgba(94, 234, 212, 0.2);
+[data-theme="dark"] .chip-social {
+  background: rgba(20, 184, 166, 0.9);
+  /* Lighter Teal */
+  color: #FFFFFF;
+  border-color: transparent;
 }
 
 /* =========================================
@@ -1836,7 +1838,7 @@ footer {
     0 20px 40px rgba(0, 0, 0, 0.5);
   position: relative;
   width: 100%;
-  aspect-ratio: 928 / 2060;
+  aspect-ratio: auto;
   border: clamp(1px, 0.8%, 2px) solid #222;
   overflow: hidden;
 }
@@ -1847,12 +1849,12 @@ footer {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .phone-screen video {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
 }
