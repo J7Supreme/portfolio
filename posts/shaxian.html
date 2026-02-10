@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沙县小吃里的人 - James Hou</title>
+    <meta name="description" content="我在陆家嘴工作，最近花了一个月的时间，每天在沙县小吃里观察不同的人">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../theme.js"></script>
+    <style>
+        .blog-post {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 20px 60px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 40px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        .blog-hero-image {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .blog-hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .blog-meta .chip {
+            position: static;
+        }
+
+        .blog-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 0 0 24px 0;
+            color: var(--text-primary);
+        }
+
+        .blog-subtitle {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.8;
+            color: var(--text-primary);
+            margin: 0 0 40px 0;
+            padding: 24px;
+            border-left: 3px solid var(--text-primary);
+            background: var(--card-bg);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .blog-body {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 2;
+            color: var(--text-primary);
+        }
+
+        .blog-body p {
+            margin: 0 0 20px 0;
+        }
+
+        .blog-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--border-color);
+            margin: 48px auto;
+        }
+
+        /* Observation card */
+        .observation-card {
+            margin: 48px 0;
+        }
+
+        .observation-number {
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .observation-order {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .observation-quote {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+
+        .observation-image {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--card-bg);
+        }
+
+        .observation-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Ending section */
+        .blog-ending {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 2;
+            color: var(--text-primary);
+            margin-top: 48px;
+        }
+
+        .blog-ending p {
+            margin: 0 0 16px 0;
+        }
+
+        @media (max-width: 768px) {
+            .blog-post {
+                padding: 60px 20px 40px;
+            }
+
+            .blog-title {
+                font-size: 24px;
+            }
+
+            .blog-subtitle {
+                font-size: 16px;
+                padding: 20px;
+            }
+
+            .observation-number {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="../index.html" class="logo">James Hou</a>
+            <nav>
+                <a href="../about.html">About</a>
+                <a href="../playground.html" class="active">Playground</a>
+            </nav>
+        </header>
+
+        <article class="blog-post">
+            <a href="../playground.html" class="back-link">← Back to Playground</a>
+
+            <!-- Hero Image -->
+            <div class="blog-hero-image">
+                <img src="../assets/images/blog/shaxian/header.webp" alt="沙县小吃里的人 - 陆家嘴观察">
+            </div>
+
+            <!-- Meta -->
+            <div class="blog-meta">
+                <span class="chip chip-life" style="position: static;">Life</span>
+                <span>J7Supreme</span>
+                <span>·</span>
+                <span>2021</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="blog-title">我在陆家嘴工作，最近花了一个月的时间，每天在沙县小吃里观察不同的人</h1>
+
+            <!-- Lead -->
+            <div class="blog-body">
+                <p>我在互联网公司工作，是一位话不太多的体验设计师。</p>
+                <p>和大多数话不多的人一样，我喜欢观察，特别是那些聚光灯外带有矛盾对比的社会局部。</p>
+                <p>11年北京，我刚到北京最着迷的是大钟寺那里的城中村；</p>
+                <p>12年春运，我搭了4辆车，和卡车司机聊天着回了江苏；</p>
+                <p>14年纽约，我在法拉盛地铁上假扮留学生和一位黑户聊到了曼哈顿；</p>
+                <p>上班之后，消费主义以及自己的面子让我一度以为成为了小布尔乔亚，直到最近，</p>
+            </div>
+
+            <!-- Bold Intro Statement -->
+            <p class="blog-subtitle">
+                我花了将近一个月的时间，每个工作日中午都在陆家嘴的一家沙县小吃里就餐，观察了这一个月，这个不那么高大上的小餐馆里的人来人往。这些人是社会的主体，是社会的物理根基，而三六九等和主流价值观让我们和他们些许隔离。
+            </p>
+
+            <div class="blog-divider"></div>
+
+            <div class="blog-body">
+                <p>公司位于上海2号线东昌路，地铁出来即是，边临陆家嘴中心，老佛爷百货，以及附近的第一八佰伴，华润时代广场等商场，吃喝选择很多。平时我们经常会去这些商业体里的餐馆就餐，走路2分钟楼下的Baker&Spice来一份河粉，吃完去旁边Tim's买一杯拿铁，再日常不过。
+                </p>
+                <p>离我们公司不远处，有一条东昌路，短短的几百米，汇聚了五湖四海的小餐馆，各种口味如驴肉火烧，酸辣粉，牛肉拉面等，当然，也少不了齐名的沙县小吃。</p>
+                <p>在公司楼下，看多了西装革履和瑜伽裤，总觉得这不是世界的全部。而东昌路这条街上，沙县这个店里，有另外一片平时我的圈子不会涉足的世界。</p>
+                <p>这里的每一个人，都有着自己独特的故事，小资和他们不怎么有缘，马斯洛三角里他们还在最下面两层。往往是这个世界里的人，支撑起了我们社会的物理根基，让我们有道德精神层面的优越感和生活。</p>
+                <p>对于我，他们就是最迷人的展览。</p>
+                <p>在这个沙县小小的展览空间里，在有限的10多分钟时间内，菜品，价格和行为便是他们的介绍。</p>
+            </div>
+
+            <div class="blog-divider"></div>
+
+            <!-- Observation #1 -->
+            <div class="observation-card">
+                <div class="observation-number">#1</div>
+                <div class="observation-order">鸡腿饭套餐 18元</div>
+                <div class="observation-quote">"全程没有看手机"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yBiaRuPH8Tge7zdeQQW0vAYb79p3ol5qZgXx2bY5vwWbaoMbnYibjH5toyGY9BxuBeQLX8WmT5gdtg/640?wx_fmt=png"
+                        alt="#1 鸡腿饭套餐" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #2 -->
+            <div class="observation-card">
+                <div class="observation-number">#2</div>
+                <div class="observation-order">炒面 13元</div>
+                <div class="observation-quote">"这位CDG袜子的姑娘，左手的手机一直没有放下过"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8GurXdvaegc8PcOcOfGJhOMW6TCehzn38cwhTnWib21BxnpWGyTfnkicaJ8g/640?wx_fmt=jpeg"
+                        alt="#2 炒面" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #3 -->
+            <div class="observation-card">
+                <div class="observation-number">#3</div>
+                <div class="observation-order">青菜面 9元</div>
+                <div class="observation-quote">"激烈地批判着政治和历史的年轻人"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8GurGcNLsJ4yXPdWPtcWK7QX2ibLYxETXibr8BRicAJqxrL4m52huzfZyPMkg/640?wx_fmt=png"
+                        alt="#3 青菜面" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #4 -->
+            <div class="observation-card">
+                <div class="observation-number">#4</div>
+                <div class="observation-order">乌鸡汤+炒饭+鸡腿饭 39元</div>
+                <div class="observation-quote">"销售小情侣的恋爱初期，互相的对话还是带着架子"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8Gur7ZEhm0X8SkAvFCVuMakDsiaXyibW0D7w1MJGEY7icHt3xoyttxTYLgV2A/640?wx_fmt=png"
+                        alt="#4 乌鸡汤+炒饭+鸡腿饭" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #5 -->
+            <div class="observation-card">
+                <div class="observation-number">#5</div>
+                <div class="observation-order">门口经过的行人</div>
+                <div class="observation-quote">"附近的东昌和东园新村居民，那里的房价去年有18万一平"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8GurV0ysHPibE0O8uxGCmUPqicKnx0EicFBZwbAPGsPS1juNzjgvckOzRibvcQ/640?wx_fmt=png"
+                        alt="#5 门口经过的行人" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #6 -->
+            <div class="observation-card">
+                <div class="observation-number">#6</div>
+                <div class="observation-order">门口经过的行人</div>
+                <div class="observation-quote">"隔壁理发店的老师忙里偷闲抽了根烟"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yBiaRuPH8Tge7zdeQQW0vAYhWsm6xLRJMSgrGQ1a0fcw4slBnND3HNDGYGzmUWAwCQ4iaia7ibLUGMpw/640?wx_fmt=png"
+                        alt="#6 隔壁理发店" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #7 -->
+            <div class="observation-card">
+                <div class="observation-number">#7</div>
+                <div class="observation-order">拌面+蒸饺 18元</div>
+                <div class="observation-quote">"吃前摆拍了一下"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yBiaRuPH8Tge7zdeQQW0vAYeicJ6LpuIBAARfafiaGBticz7TnYpWzwa4Co3wOjQHicF2nxFtGN7tL00Q/640?wx_fmt=png"
+                        alt="#7 拌面+蒸饺" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #8 -->
+            <div class="observation-card">
+                <div class="observation-number">#8</div>
+                <div class="observation-order">牛肉面 20元</div>
+                <div class="observation-quote">"这位老外结账的时候，用中文说了声谢谢"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yBiaRuPH8Tge7zdeQQW0vAYPbxSmZ51pAg0mff5Xw3drybkicZLzjCialiaLibjpDRahWqp5PlSzA4DAg/640?wx_fmt=png"
+                        alt="#8 牛肉面" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #9 -->
+            <div class="observation-card">
+                <div class="observation-number">#9</div>
+                <div class="observation-order">蒸饺和鸡腿饭 27元</div>
+                <div class="observation-quote">"饿了么小哥和他的AJ1"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yBiaRuPH8Tge7zdeQQW0vAYILlofLLQwVELa10EGNfA9B3dNT2icM3OEE0ZrjDniaBmLJ949HMVXmtQ/640?wx_fmt=png"
+                        alt="#9 蒸饺和鸡腿饭" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #10 -->
+            <div class="observation-card">
+                <div class="observation-number">#10</div>
+                <div class="observation-order">乌鸡汤+炒饭 22元</div>
+                <div class="observation-quote">"大哥的大金戒指很old money"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8Gur1v4nRol3vB4UTTgScu9lyzibpmBB8a669yCybibu89EnI3qibGutsIblA/640?wx_fmt=png"
+                        alt="#10 乌鸡汤+炒饭" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #11 -->
+            <div class="observation-card">
+                <div class="observation-number">#11</div>
+                <div class="observation-order">鸡腿饭 18元</div>
+                <div class="observation-quote">"下雨天刚派完单的他，在群里语音交流今天的派送心得"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8GurZSz3zomILOMicQu59MfDO3jU6c6j36Aw2VZia9rxDiaoNnadqSy373xXg/640?wx_fmt=png"
+                        alt="#11 鸡腿饭" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #12 -->
+            <div class="observation-card">
+                <div class="observation-number">#12</div>
+                <div class="observation-order">炒饭 13元 + 鸭腿饭 20元</div>
+                <div class="observation-quote">"抱怨上个月的工资太少的小年轻，穿的Qiaodan鞋和LV的Trainer很像"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8Guric7WBSE7VXbor8qDQ6giarCds0TT6gKcibaxr6eV4SqjLaIF1ibH41I1pw/640?wx_fmt=png"
+                        alt="#12 炒饭+鸭腿饭" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #13 -->
+            <div class="observation-card">
+                <div class="observation-number">#13</div>
+                <div class="observation-order">怡宝矿泉水 2元</div>
+                <div class="observation-quote">"专门走进来买水"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yBiaRuPH8Tge7zdeQQW0vAYYq9KOUfHfnpzdKNazNQa7TuaqclJbaQpAyriaicu8o12Iz0PRvtWm2jg/640?wx_fmt=png"
+                        alt="#13 怡宝矿泉水" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #14 -->
+            <div class="observation-card">
+                <div class="observation-number">#14</div>
+                <div class="observation-order">飘香拌面 9元</div>
+                <div class="observation-quote">"销售们讨论着建微信群拉人的技巧"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8GurPh5RBQYAOPTDyuOZN58ADZOvAsaCJQm0dpPNPjAWv7ibAA7ywpYVdiag/640?wx_fmt=png"
+                        alt="#14 飘香拌面" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #15 -->
+            <div class="observation-card">
+                <div class="observation-number">#15</div>
+                <div class="observation-order">没有消费</div>
+                <div class="observation-quote">"从马路对面穿过来的大妈们，进来看了价格之后便离开了"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8GurYkAdcwpYxRyBbnCsekBxEAc4icicfUwK4NxQ6hrDETgYXticVk6Avkibow/640?wx_fmt=png"
+                        alt="#15 没有消费" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #16 -->
+            <div class="observation-card">
+                <div class="observation-number">#16</div>
+                <div class="observation-order">蒸饺+青菜面 18元</div>
+                <div class="observation-quote">"大声的放着抖音名曲"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8GurzRIvcJMOPDpmibzLoCqWrt1B8xsRcRyhoQGWEq64T0rvd3iaTqyGQzoQ/640?wx_fmt=jpeg"
+                        alt="#16 蒸饺+青菜面" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #17 -->
+            <div class="observation-card">
+                <div class="observation-number">#17</div>
+                <div class="observation-order">美团外卖员</div>
+                <div class="observation-quote">"这家店的美团订单很多"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8GurYCuVBodgUspswqyatrwfoa1W1a5qlVcHoj4AhicQFl8SsU6TUDLFXYQ/640?wx_fmt=png"
+                        alt="#17 美团外卖员" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #18 -->
+            <div class="observation-card">
+                <div class="observation-number">#18</div>
+                <div class="observation-order">乌鸡汤饭 20元</div>
+                <div class="observation-quote">"他，每天下午1点出头来，吃同一个菜。"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8Gur1dXFeDX3TqKc1R2dN9rDRlfyuO0btbjciaicQ5B2UggAibNgDWTsdgyIg/640?wx_fmt=png"
+                        alt="#18 乌鸡汤饭" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #19 -->
+            <div class="observation-card">
+                <div class="observation-number">#19</div>
+                <div class="observation-order">鸡腿面 18元</div>
+                <div class="observation-quote">"华为的手机和手表？"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8GurvUR3sw0uibMFT3ibVic3fu052JibNMHcDukkp8ib9tcScRjSP4ECVMPUV4g/640?wx_fmt=png"
+                        alt="#19 鸡腿面" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Observation #20 -->
+            <div class="observation-card">
+                <div class="observation-number">#20</div>
+                <div class="observation-order">辛苦的店员们</div>
+                <div class="observation-quote">"纯正的闽南话，虽然听不懂"</div>
+                <div class="observation-image">
+                    <img src="https://mmbiz.qpic.cn/mmbiz_png/dEClz61618yu97O4gnhxW4DosAmh8GurfAHXfm7qTruHvO1ehTn8xBX0wawAVrLwaCmZFsiaibrib708ssgwo86Ng/640?wx_fmt=png"
+                        alt="#20 辛苦的店员们" loading="lazy">
+                </div>
+            </div>
+
+            <div class="blog-divider"></div>
+
+            <!-- Ending -->
+            <div class="blog-ending">
+                <p><strong style="font-size: 18px;">在最后</strong></p>
+                <p>记录这些我不带任何目的，纯粹因为我们追求的情调和向上，会让基尼系数越来越大。</p>
+                <p>每个人都值得被温柔对待。</p>
+                <p>庆幸的是，像我们公司这样的大厂已经开始服务更多的人群，让我们少一些消费主义，让互联网多一些实质性的帮助，只有共同富裕了，才能可持续发展。</p>
+            </div>
+        </article>
+
+        <footer>
+            <div class="copyright">© 2026 James Hou</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/jameshouux/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                <button class="email-copy-btn" id="emailCopyBtn">Email</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container">
+        <div class="toast" id="toast">
+            <svg class="toast-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+            </svg>
+            <span class="toast-message">Email copied to clipboard</span>
+        </div>
+    </div>
+
+    <script>
+        // Email copy to clipboard functionality
+        document.getElementById('emailCopyBtn').addEventListener('click', function () {
+            const email = 'j7supreme@gmail.com';
+            navigator.clipboard.writeText(email).then(function () {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(function () {
+                    toast.classList.remove('show');
+                }, 3000);
+            }).catch(function (err) {
+                console.error('Failed to copy email: ', err);
+            });
+        });
+    </script>
+</body>
+
+</html>

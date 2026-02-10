@@ -76,6 +76,21 @@
                         </div>
                     </div>
                 </div>
+                <!-- imToken Webapp Devices Wrapper -->
+                <div class="webapp-devices-wrapper" id="webappDevices"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 5;">
+                    <!-- Phone: Tangible -->
+                    <div class="phone-wrapper"
+                        style="position: relative; opacity: 1; top: auto; left: auto; transform: none; pointer-events: auto; width: 160px; max-width: 160px; min-width: 80px;">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <video id="webappTangibleVideo"
+                                    src="assets/images/projects/imtoken-webapp/webapp_on_home.webm" loop muted
+                                    playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Project List Right (Frame 9 / 0VXSm) -->
@@ -336,6 +351,8 @@
         const rivoDevices = document.getElementById('rivoDevices');
         const rivoWebsiteVideo = document.getElementById('rivoWebsiteVideo');
         const rivoOnboardingVideo = document.getElementById('rivoOnboardingVideo');
+        const webappDevices = document.getElementById('webappDevices');
+        const webappTangibleVideo = document.getElementById('webappTangibleVideo');
 
         // Define project images (you can replace these with actual image URLs)
         const projectImages = {
@@ -360,19 +377,30 @@
                     huaweiMonitor.style.opacity = '1';
                     mobilePhone.style.opacity = '0';
                     rivoDevices.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
                     heroImage.style.opacity = '0';
                 } else if (imageKey === 'project-new-2') {
                     // Special case for Huawei Cloud Mobile Console App
                     mobilePhone.style.opacity = '1';
                     huaweiMonitor.style.opacity = '0';
                     rivoDevices.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     mobileVideo.play();
+                } else if (imageKey === 'project-new-3') {
+                    // Special case for imToken Webapp
+                    webappDevices.style.opacity = '1';
+                    huaweiMonitor.style.opacity = '0';
+                    mobilePhone.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
+                    heroImage.style.opacity = '0';
+                    webappTangibleVideo.play();
                 } else if (imageKey === 'project-new-6') {
                     // Special case for RIVO
                     rivoDevices.style.opacity = '1';
                     huaweiMonitor.style.opacity = '0';
                     mobilePhone.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     rivoWebsiteVideo.play();
                     rivoOnboardingVideo.play();
@@ -381,9 +409,11 @@
                     huaweiMonitor.style.opacity = '0';
                     mobilePhone.style.opacity = '0';
                     rivoDevices.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
                     mobileVideo.pause();
                     rivoWebsiteVideo.pause();
                     rivoOnboardingVideo.pause();
+                    webappTangibleVideo.pause();
                     const imageValue = projectImages[imageKey];
                     if (imageValue) {
                         if (imageValue.startsWith('linear-gradient') || imageValue.startsWith('radial-gradient')) {
@@ -401,12 +431,15 @@
                 huaweiMonitor.style.opacity = '0';
                 mobilePhone.style.opacity = '0';
                 rivoDevices.style.opacity = '0';
+                webappDevices.style.opacity = '0';
                 mobileVideo.pause();
                 mobileVideo.currentTime = 0;
                 rivoWebsiteVideo.pause();
                 rivoWebsiteVideo.currentTime = 0;
                 rivoOnboardingVideo.pause();
                 rivoOnboardingVideo.currentTime = 0;
+                webappTangibleVideo.pause();
+                webappTangibleVideo.currentTime = 0;
             });
         });
 
