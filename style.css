@@ -811,6 +811,23 @@ footer {
   color: var(--text-primary);
 }
 
+/* Webapp Splash Video - Responsive Width */
+.webapp-splash-video {
+  width: 100%;
+  /* Mobile: full width (20px padding from container) */
+  display: block;
+  margin: 24px auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+@media (min-width: 768px) {
+  .webapp-splash-video {
+    width: 80%;
+    /* Desktop/Tablet: 80% width */
+  }
+}
+
 .content-image {
   width: 100%;
   height: auto;
