@@ -2015,12 +2015,9 @@ footer {
 .pinterest-feed {
   display: flex;
   gap: 12px;
-  overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
-  /* Default mobile: 2 columns, taller ratio */
-  height: 360px;
+  /* Default mobile: 2 columns, auto height */
+  height: auto;
 }
 
 .pinterest-column {
@@ -2043,57 +2040,18 @@ footer {
   flex: 2;
 }
 
-/* Column animation - scrolling vertically */
+/* Column animation - scrolling vertically - REMOVED */
 .pinterest-column-inner {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
 }
 
-/* Scroll down */
-.pinterest-column.flow-down .pinterest-column-inner {
-  animation-name: pinterestScrollDown;
-}
+/* Scroll down - REMOVED */
+/* Scroll up - REMOVED */
+/* Speed variations - REMOVED */
 
-/* Scroll up */
-.pinterest-column.flow-up .pinterest-column-inner {
-  animation-name: pinterestScrollUp;
-}
-
-/* Speed variations */
-.pinterest-column.speed-slow .pinterest-column-inner {
-  animation-duration: 35s;
-}
-
-.pinterest-column.speed-medium .pinterest-column-inner {
-  animation-duration: 28s;
-}
-
-.pinterest-column.speed-fast .pinterest-column-inner {
-  animation-duration: 22s;
-}
-
-@keyframes pinterestScrollDown {
-  0% {
-    transform: translateY(-50%);
-  }
-
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-@keyframes pinterestScrollUp {
-  0% {
-    transform: translateY(0%);
-  }
-
-  100% {
-    transform: translateY(-50%);
-  }
-}
+/* Keyframes removed */
 
 .pinterest-item {
   border-radius: 12px;
@@ -2108,10 +2066,7 @@ footer {
   border-radius: 12px;
 }
 
-/* Pause animation on hover */
-.pinterest-feed:hover .pinterest-column-inner {
-  animation-play-state: paused;
-}
+
 
 /* Mobile: 2 columns (pad + mobile), compact height */
 @media (max-width: 767px) {
@@ -2135,7 +2090,7 @@ footer {
 
   .pinterest-feed {
     gap: 8px;
-    height: 320px;
+    height: auto;
   }
 
   .pinterest-column-inner {
@@ -2154,7 +2109,7 @@ footer {
 /* Tablet: 3 columns, mid-range height */
 @media (min-width: 768px) and (max-width: 1023px) {
   .pinterest-feed {
-    height: 420px;
+    height: auto;
     gap: 10px;
   }
 
@@ -2170,6 +2125,6 @@ footer {
 /* Desktop: 3 columns, generous height */
 @media (min-width: 1024px) {
   .pinterest-feed {
-    height: 560px;
+    height: auto;
   }
 }
