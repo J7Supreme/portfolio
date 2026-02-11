@@ -802,6 +802,13 @@ footer {
   font-family: var(--font-nav);
 }
 
+.project-highlight-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  vertical-align: text-bottom;
+}
+
 /* Weblink Preview Card */
 .weblink-preview:hover {
   border-color: var(--border-dark);
