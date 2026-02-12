@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>imToken Card - James Hou</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css?v=1.1">
     <script src="theme.js"></script>
 </head>
 
@@ -39,14 +40,44 @@
                 </div>
                 <p class="work-desc centered">Solving the "Last Mile" problem for crypto wealth. A crypto-native credit
                     card
-                    experience allowing spend first, pay later with crypto.</p>
+                    experience allowing spend first, pay later with crypto</p>
+
+                <!-- Media Box 3: Monitor + Phone -->
+                <div class="hero-devices-composition"
+                    style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 48px; width: 100%; padding: 0 20px; box-sizing: border-box;">
+                    <!-- Monitor: Website -->
+                    <div class="monitor-wrapper"
+                        style="flex: 0 1 auto; z-index: 1; margin: 0; width: 65%; max-width: 700px; min-width: 280px;">
+                        <div class="monitor-frame">
+                            <div class="monitor-screen">
+                                <video src="assets/images/projects/imtoken-card/v3/imtokencardwebsite.webm" autoplay
+                                    loop muted playsinline
+                                    style="width: 100%; height: 100%; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                        <div class="monitor-stand"></div>
+                        <div class="monitor-base"></div>
+                    </div>
+
+                    <!-- Phone: App -->
+                    <div class="phone-wrapper"
+                        style="flex: 0 1 auto; position: relative; z-index: 10; opacity: 1; top: auto; left: auto; transform: none; pointer-events: auto; width: 16%; max-width: 180px; min-width: 100px;">
+                        <div class="phone-frame"
+                            style="border-radius: 12% / 6%; padding: 3%; border: 2px solid #222; aspect-ratio: auto;">
+                            <div class="phone-screen" style="border-radius: 10% / 5%; height: auto;">
+                                <video src="assets/images/projects/imtoken-card/v3/imtokencard.webm" autoplay loop muted
+                                    playsinline style="width: 100%; height: auto; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="work-content">
 
                 <section class="content-section">
-                    <h3>1. The Challenge</h3>
-                    <h4>Solving the "Last Mile" problem for crypto wealth.</h4>
+                    <h2>Solving the "Last Mile" problem for crypto wealth.</h2>
                     <p>Despite the growth of digital assets, "off-ramping"—converting crypto to fiat for daily
                         spend—remains a high-friction, high-fee pain point. Users are often forced onto prepaid debit
                         cards with limited acceptance or clunky top-up flows.</p>
@@ -54,34 +85,13 @@
                         allows users to spend first and pay bills later with their crypto assets, bridging the gap
                         between Web3 wealth and the Web2 payment infrastructure (Mastercard/Visa network).</p>
 
-                    <p><strong>Timeline:</strong> 4-Week Rapid Design Sprint</p>
-                    <p><strong>Role:</strong> Lead Product Designer (Strategy, UX, UI)</p>
                 </section>
 
                 <section class="content-section">
-                    <h3>2. Core Value Proposition</h3>
-                    <ul>
-                        <li><strong>True Credit Model:</strong> Unlike market competitors (mostly prepaid debit), this
-                            card offers pre-given credit limits, allowing for seamless usage without constant top-ups.
-                        </li>
-                        <li><strong>Crypto Bill Payment:</strong> Users settle their monthly statements directly with
-                            crypto, effectively "spending" their assets without immediate liquidation at the Point of
-                            Sale.</li>
-                        <li><strong>Global Accessibility:</strong> Targeted initially at underserved Asian markets
-                            (e.g., Mainland China users needing global payment rails) with a roadmap for global
-                            expansion.</li>
-                        <li><strong>Competitive Economics:</strong> Leveraging DCS partnership to offer fees lower than
-                            or comparable to standard off-ramp solutions.</li>
-                    </ul>
-                </section>
-
-                <section class="content-section">
-                    <h3>3. Global Design Strategy</h3>
-                    <h4>Strategy: "Trustworthy & Economic"</h4>
+                    <h2>"Trustworthy & Economic"</h2>
                     <p>In a market saturated with high-fee, unreliable "crypto cards," the design strategy focused on
                         building immediate trust and highlighting economic value.</p>
 
-                    <h4>Strategic Principles:</h4>
                     <ul>
                         <li><strong>Trustworthy:</strong> Visuals and copy that align with established banking standards
                             (Partnered with DCS/Mastercard) to reduce user anxiety about fund safety.</li>
@@ -93,79 +103,124 @@
                     </ul>
                 </section>
 
-                <section class="content-section">
-                    <h3>4. Execution Across the Ecosystem</h3>
-                    <h4>A. Card Application Flow</h4>
-                    <ul>
-                        <li><strong>Objective:</strong> Maximize conversion for a high-intent user base.</li>
-                        <li><strong>Solution:</strong>
-                            <ul>
-                                <li><strong>Tiered KYC:</strong> Designed a flexible flow that differentiates between
-                                    "Lite" (Instant, lower limit) and "Full" (Higher limit) verification, catering to
-                                    users' varying comfort levels with data privacy.</li>
-                                <li><strong>Instant Issuance:</strong> Digital card details are available immediately
-                                    upon approval within the imToken/RIVO app, enabling instant online spending while
-                                    the physical card ships.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="media-box"
-                        style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); color: var(--text-secondary); border-radius: 12px; margin: 24px 0; text-align: center; padding: 20px; border: 1px dashed var(--border-color); cursor: pointer;">
-                        [PLACEHOLDER: Card Application Flow]</div>
-
-                    <h4>B. Bill Payment & Management</h4>
-                    <ul>
-                        <li><strong>Objective:</strong> Make "paying with crypto" feel empowering, not a chore.</li>
-                        <li><strong>Solution:</strong>
-                            <ul>
-                                <li><strong>Crypto-Native Bill Interface:</strong> A dashboard that doesn't just show a
-                                    fiat amount due, but dynamically calculates the equivalent in user's preferred
-                                    assets (ETH, USDT, DUSD), making the "cost" tangible.</li>
-                                <li><strong>Limit Order Payments:</strong> A pro-feature (roadmap) allowing users to set
-                                    target exchange rates for bill payments, optimizing their "off-ramp" value—a feature
-                                    unique to crypto-native users.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="media-box"
-                        style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); color: var(--text-secondary); border-radius: 12px; margin: 24px 0; text-align: center; padding: 20px; border: 1px dashed var(--border-color); cursor: pointer;">
-                        [PLACEHOLDER: Bill Payment Dashboard]</div>
-
-                    <h4>C. Visual Identity</h4>
-                    <ul>
-                        <li><strong>Objective:</strong> Differentiate from "Prepaid" cards.</li>
-                        <li><strong>Solution:</strong>
-                            <ul>
-                                <li><strong>Premium Aesthetics:</strong> The card design leverages sleek, metallic
-                                    visual cues (Silver/Gold/Black tiers) to signal its status as a credit product,
-                                    contrasting with the often playful or "techy" look of competitor debit cards.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="media-box"
-                        style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--bg-secondary); color: var(--text-secondary); border-radius: 12px; margin: 24px 0; text-align: center; padding: 20px; border: 1px dashed var(--border-color); cursor: pointer;">
-                        [PLACEHOLDER: Premium Card Aesthetics]</div>
-                </section>
-
-                <section class="content-section">
-                    <h3>5. Overview (Brief)</h3>
-                    <h4>Context</h4>
-                    <p>A 0-1 initiative to launch the first <strong>Crypto Credit Card</strong> (not prepaid) for the
-                        Asian market, enabling users to spend fiat instantly and settle bills later with crypto assets.
-                    </p>
-
-                    <h4>Design Strategy & Directions</h4>
-                    <ul>
-                        <li><strong>Trust & Legitimacy:</strong> Used premium, banking-standard aesthetics
-                            (Metallic/Sleek) to signal "Credit" status vs. competitor "Prepaid" looks.</li>
-                        <li><strong>Economic Motivation:</strong> Highlighted cost savings and "Limit Order" bill
-                            payments to incentivize crypto usage over fiat.</li>
-                        <li><strong>Frictionless Adoption:</strong> Designed a **Tiered KYC** flow for instant virtual
-                            issuance, removing the 2-week physical card barrier.</li>
-                    </ul>
-                </section>
 
             </div>
+            <!-- Media Box 1: v1 Carousel -->
+            <section style="display: flex; flex-direction: column; gap: 24px; width: 100%;">
+                <h2
+                    style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; color: var(--text-p-grey); margin: 0; line-height: 1.6;">
+                    First release of DCS co-branded card</h2>
+                <div class="carousel-wrapper" style="position: relative;">
+                    <button class="carousel-nav prev" aria-label="Previous">❮</button>
+                    <div class="merchant-carousel"
+                        style="display: flex; overflow-x: auto; gap: 24px; padding: 4px 4px 24px 4px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: smooth;">
+                        <!-- v0 Images -->
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v0-1.png" alt="imToken Card v0-1"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v0-2.png" alt="imToken Card v0-2"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v0-3.png" alt="imToken Card v0-3"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <!-- v1 Images -->
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v1-1.png" alt="imToken Card v1-1"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v1-2.png" alt="imToken Card v1-2"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v1-3.png" alt="imToken Card v1-3"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v1-4.png" alt="imToken Card v1-4"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v1-5.png" alt="imToken Card v1-5"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v1-6.png" alt="imToken Card v1-6"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v1-7.png" alt="imToken Card v1-7"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v1/v1-8.png" alt="imToken Card v1-8"
+                                style="width: 100%; display: block;">
+                        </div>
+                    </div>
+                    <button class="carousel-nav next" aria-label="Next">❯</button>
+                </div>
+            </section>
+
+            <!-- Media Box 2: v2 Carousel -->
+            <section style="display: flex; flex-direction: column; gap: 24px; width: 100%;">
+                <h2
+                    style="font-family: var(--font-primary); font-size: 16px; font-weight: 400; color: var(--text-p-grey); margin: 0; line-height: 1.6;">
+                    Second release of DCS co-branded card</h2>
+                <div class="carousel-wrapper" style="position: relative;">
+                    <button class="carousel-nav prev" aria-label="Previous">❮</button>
+                    <div class="merchant-carousel"
+                        style="display: flex; overflow-x: auto; gap: 24px; padding: 4px 4px 24px 4px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: smooth;">
+                        <!-- v2 Images -->
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v2/v2-1.png" alt="imToken Card v2-1"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v2/v2-2.png" alt="imToken Card v2-2"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v2/v2-3.png" alt="imToken Card v2-3"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v2/v2-4.png" alt="imToken Card v2-4"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v2/v2-5.png" alt="imToken Card v2-5"
+                                style="width: 100%; display: block;">
+                        </div>
+                        <div class="carousel-item"
+                            style="flex: 0 0 auto; width: 42%; max-width: 210px; padding: 16px; background-color: var(--card-bg); scroll-snap-align: center; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06); border: 1px solid var(--border-color);">
+                            <img src="assets/images/projects/imtoken-card/v2/v2-6.png" alt="imToken Card v2-6"
+                                style="width: 100%; display: block;">
+                        </div>
+                    </div>
+                    <button class="carousel-nav next" aria-label="Next">❯</button>
+                </div>
+
+
         </div>
 
         <footer>
@@ -201,6 +256,20 @@
                 }, 3000);
             }).catch(function (err) {
                 console.error('Failed to copy email: ', err);
+            });
+        });
+
+        // Carousel Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const wrappers = document.querySelectorAll('.carousel-wrapper');
+            wrappers.forEach(wrapper => {
+                const carousel = wrapper.querySelector('.merchant-carousel');
+                const prev = wrapper.querySelector('.prev');
+                const next = wrapper.querySelector('.next');
+                if (carousel && prev && next) {
+                    prev.addEventListener('click', () => carousel.scrollBy({ left: -300, behavior: 'smooth' }));
+                    next.addEventListener('click', () => carousel.scrollBy({ left: 300, behavior: 'smooth' }));
+                }
             });
         });
     </script>
