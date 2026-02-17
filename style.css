@@ -813,6 +813,26 @@ footer {
   font-family: var(--font-nav);
 }
 
+/* Alipay Intl Hero Media Box */
+.alipay-intl-hero-media {
+  height: auto;
+  padding: 24px 24px 0;
+  gap: 16px;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.alipay-intl-hero-media img {
+  flex: 1;
+  min-width: 0;
+  max-width: calc(33.333% - 11px);
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px 12px 0 0;
+  display: block;
+}
+
 .project-highlight-icon {
   width: 20px;
   height: 20px;
@@ -1270,6 +1290,17 @@ footer {
   .media-box {
     height: 280px;
     border-radius: 16px;
+  }
+
+  .alipay-intl-hero-media {
+    height: auto;
+    padding: 16px 16px 0;
+    gap: 8px;
+  }
+
+  .alipay-intl-hero-media img {
+    max-width: calc(33.333% - 6px);
+    border-radius: 8px 8px 0 0;
   }
 
   .back-nav {
