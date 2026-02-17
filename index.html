@@ -120,6 +120,22 @@
                         </div>
                     </div>
                 </div>
+                <!-- Alipay Intl Screenshots Wrapper -->
+                <div class="alipay-intl-wrapper" id="alipayIntlDevices"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: flex-end; justify-content: center; gap: 12px; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 5; width: 90%; padding: 0 20px;">
+                    <img src="assets/images/projects/alipay-intl/screenshot/2.png" alt="Alipay Intl Screenshot 1"
+                        style="flex: 1; min-width: 0; max-width: 33%; height: auto; object-fit: contain; border-radius: 12px 12px 0 0;">
+                    <img src="assets/images/projects/alipay-intl/screenshot/3.png" alt="Alipay Intl Screenshot 2"
+                        style="flex: 1; min-width: 0; max-width: 33%; height: auto; object-fit: contain; border-radius: 12px 12px 0 0;">
+                    <img src="assets/images/projects/alipay-intl/screenshot/6 .png" alt="Alipay Intl Screenshot 3"
+                        style="flex: 1; min-width: 0; max-width: 33%; height: auto; object-fit: contain; border-radius: 12px 12px 0 0;">
+                </div>
+                <!-- Alipay Plus Image Wrapper -->
+                <div class="alipay-plus-wrapper" id="alipayPlusImage"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 5; width: 90%; padding: 0 20px;">
+                    <img src="assets/images/projects/alipay-plus/antom-2.png" alt="Alipay Plus"
+                        style="width: 100%; height: auto; object-fit: contain; border-radius: 12px;">
+                </div>
             </div>
 
             <!-- Project List Right (Frame 9 / 0VXSm) -->
@@ -376,6 +392,8 @@
         const cardDevices = document.getElementById('cardDevices');
         const cardWebsiteVideo = document.getElementById('cardWebsiteVideo');
         const cardAppVideo = document.getElementById('cardAppVideo');
+        const alipayIntlDevices = document.getElementById('alipayIntlDevices');
+        const alipayPlusImage = document.getElementById('alipayPlusImage');
 
         // Define project images (you can replace these with actual image URLs)
         const projectImages = {
@@ -386,7 +404,7 @@
 
             'project-new-6': 'linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)',   // RIVO
             'project1': 'assets/images/projects/alipay-plus/antom-2.png',
-            'project2': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+            'project2': 'alipay-intl',  // Special handler
 
             'project4': 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
         };
@@ -402,6 +420,8 @@
                     rivoDevices.style.opacity = '0';
                     webappDevices.style.opacity = '0';
                     cardDevices.style.opacity = '0';
+                    alipayIntlDevices.style.opacity = '0';
+                    alipayPlusImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                 } else if (imageKey === 'project-new-2') {
                     // Special case for Huawei Cloud Mobile Console App
@@ -410,6 +430,8 @@
                     rivoDevices.style.opacity = '0';
                     webappDevices.style.opacity = '0';
                     cardDevices.style.opacity = '0';
+                    alipayIntlDevices.style.opacity = '0';
+                    alipayPlusImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     mobileVideo.play();
                 } else if (imageKey === 'project-new-3') {
@@ -419,6 +441,8 @@
                     mobilePhone.style.opacity = '0';
                     rivoDevices.style.opacity = '0';
                     cardDevices.style.opacity = '0';
+                    alipayIntlDevices.style.opacity = '0';
+                    alipayPlusImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     webappTangibleVideo.play();
                 } else if (imageKey === 'project-new-6') {
@@ -428,6 +452,8 @@
                     mobilePhone.style.opacity = '0';
                     webappDevices.style.opacity = '0';
                     cardDevices.style.opacity = '0';
+                    alipayIntlDevices.style.opacity = '0';
+                    alipayPlusImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     rivoWebsiteVideo.play();
                     rivoOnboardingVideo.play();
@@ -438,9 +464,31 @@
                     mobilePhone.style.opacity = '0';
                     rivoDevices.style.opacity = '0';
                     webappDevices.style.opacity = '0';
+                    alipayIntlDevices.style.opacity = '0';
+                    alipayPlusImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     cardWebsiteVideo.play();
                     cardAppVideo.play();
+                } else if (imageKey === 'project2') {
+                    // Special case for Alipay Intl
+                    alipayIntlDevices.style.opacity = '1';
+                    huaweiMonitor.style.opacity = '0';
+                    mobilePhone.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
+                    cardDevices.style.opacity = '0';
+                    alipayPlusImage.style.opacity = '0';
+                    heroImage.style.opacity = '0';
+                } else if (imageKey === 'project1') {
+                    // Special case for Alipay Plus
+                    alipayPlusImage.style.opacity = '1';
+                    huaweiMonitor.style.opacity = '0';
+                    mobilePhone.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
+                    cardDevices.style.opacity = '0';
+                    alipayIntlDevices.style.opacity = '0';
+                    heroImage.style.opacity = '0';
                 } else {
                     // Standard behavior for other projects
                     huaweiMonitor.style.opacity = '0';
@@ -448,6 +496,8 @@
                     rivoDevices.style.opacity = '0';
                     webappDevices.style.opacity = '0';
                     cardDevices.style.opacity = '0';
+                    alipayIntlDevices.style.opacity = '0';
+                    alipayPlusImage.style.opacity = '0';
                     mobileVideo.pause();
                     rivoWebsiteVideo.pause();
                     rivoOnboardingVideo.pause();
@@ -458,8 +508,10 @@
                     if (imageValue) {
                         if (imageValue.startsWith('linear-gradient') || imageValue.startsWith('radial-gradient')) {
                             heroImage.style.backgroundImage = imageValue;
+                            heroImage.style.backgroundColor = ''; // Reset to default
                         } else {
                             heroImage.style.backgroundImage = `url(${imageValue})`;
+                            heroImage.style.backgroundColor = 'transparent'; // Remove background for images
                         }
                         heroImage.style.opacity = '1';
                     }
@@ -472,6 +524,8 @@
                 mobilePhone.style.opacity = '0';
                 rivoDevices.style.opacity = '0';
                 webappDevices.style.opacity = '0';
+                alipayIntlDevices.style.opacity = '0';
+                alipayPlusImage.style.opacity = '0';
                 mobileVideo.pause();
                 mobileVideo.currentTime = 0;
                 rivoWebsiteVideo.pause();
