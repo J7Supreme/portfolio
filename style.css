@@ -258,7 +258,12 @@ footer {
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
+  z-index: 2;
+}
+
+/* Aurora shader background transition */
+#auroraShaderBg {
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* New style for the tagline text */
@@ -268,17 +273,17 @@ footer {
   bottom: 32px;
   width: calc(100% - 64px);
   /* Responsive to parent */
-  max-width: 524px;
+  max-width: 540px;
   font-family: var(--font-primary);
   /* Outfit */
   font-weight: 500;
-  font-size: 45px;
-  /* Inferred from previous "Rivo" size or generic large size, Figma context usually has this. Original Rivo was 45px. Let's assume this text is large display text. Based on area 524x156, 45px seems plausible for 3 lines. */
-  color: var(--text-p-grey);
-  line-height: 1.2;
-  z-index: 2;
-  /* Keep tagline above image */
-  transition: color 300ms ease;
+  font-size: 48px;
+  color: #FFFFFF;
+  line-height: 1.1;
+  z-index: 1;
+  /* Above the shader (0), but below the project preview layer (2) */
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
 }
 
 .project-list-right {
