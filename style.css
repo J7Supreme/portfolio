@@ -251,16 +251,17 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 0 20px;
+  /* 20px padding on left and right */
+  background-origin: content-box;
+  /* Ensures background respects padding */
   background-color: var(--hero-overlay);
-  /* Subtle black fill at 3% opacity */
   background-size: contain;
-  /* Changed from cover to fit properly into the container */
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
-  /* Increased z-index to stay visible over base overlays */
 }
 
 /* New style for the tagline text */
@@ -675,6 +676,14 @@ footer {
 
 .work-icon.imtoken-icon {
   background-color: transparent;
+}
+
+.work-icon.antom-icon {
+  border-radius: 12px;
+}
+
+.work-icon.alipay-icon {
+  border-radius: 12px;
 }
 
 .work-title {
