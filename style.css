@@ -253,12 +253,14 @@ footer {
   height: 100%;
   background-color: var(--hero-overlay);
   /* Subtle black fill at 3% opacity */
-  background-size: cover;
+  background-size: contain;
+  /* Changed from cover to fit properly into the container */
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
+  z-index: 2;
+  /* Increased z-index to stay visible over base overlays */
 }
 
 /* New style for the tagline text */
@@ -840,7 +842,33 @@ footer {
   height: auto;
   border-radius: 16px;
   margin-top: 24px;
-  object-fit: cover;
+  display: block;
+  object-fit: contain;
+  /* Changed from cover to contain for better UI mockup fitting */
+}
+
+/* Image Grid for side-by-side screenshots */
+.image-grid {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.image-grid .content-image {
+  margin-top: 0;
+  flex: 1;
+  min-width: 280px;
+  max-width: calc(50% - 12px);
+  /* Default to 2 columns if space allows */
+}
+
+@media (max-width: 768px) {
+  .image-grid .content-image {
+    max-width: 100%;
+  }
 }
 
 /* Desktop Responsive Optimization (1025px+) */
@@ -2134,4 +2162,33 @@ footer {
   .pinterest-feed {
     height: auto;
   }
+}
+
+/* Responsive Video Container for YouTube Embeds */
+.video-embed-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 48px auto;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.video-aspect-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-aspect-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
