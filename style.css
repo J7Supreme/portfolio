@@ -251,9 +251,12 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 0 20px;
+  /* 20px padding on left and right */
+  background-origin: content-box;
+  /* Ensures background respects padding */
   background-color: var(--hero-overlay);
-  /* Subtle black fill at 3% opacity */
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
@@ -660,6 +663,7 @@ footer {
   flex-direction: column;
   gap: 24px;
   width: 100%;
+  background-color: transparent;
   /* Full container width */
 }
 
@@ -678,6 +682,18 @@ footer {
 
 .work-icon.imtoken-icon {
   background-color: transparent;
+}
+
+.work-icon.ibm-icon {
+  background-color: transparent;
+}
+
+.work-icon.antom-icon {
+  border-radius: 12px;
+}
+
+.work-icon.alipay-icon {
+  border-radius: 12px;
 }
 
 .work-title {
@@ -807,11 +823,32 @@ footer {
   font-family: var(--font-nav);
 }
 
+/* Alipay Intl Hero Media Box */
+.alipay-intl-hero-media {
+  height: auto;
+  padding: 24px 24px 0;
+  gap: 16px;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.alipay-intl-hero-media img {
+  flex: 1;
+  min-width: 0;
+  max-width: calc(33.333% - 11px);
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px 12px 0 0;
+  display: block;
+}
+
 .project-highlight-icon {
   width: 20px;
   height: 20px;
   margin-right: 6px;
   vertical-align: text-bottom;
+  color: var(--text-secondary);
 }
 
 /* Weblink Preview Card */
@@ -845,7 +882,33 @@ footer {
   height: auto;
   border-radius: 16px;
   margin-top: 24px;
-  object-fit: cover;
+  display: block;
+  object-fit: contain;
+  /* Changed from cover to contain for better UI mockup fitting */
+}
+
+/* Image Grid for side-by-side screenshots */
+.image-grid {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.image-grid .content-image {
+  margin-top: 0;
+  flex: 1;
+  min-width: 280px;
+  max-width: calc(50% - 12px);
+  /* Default to 2 columns if space allows */
+}
+
+@media (max-width: 768px) {
+  .image-grid .content-image {
+    max-width: 100%;
+  }
 }
 
 /* Desktop Responsive Optimization (1025px+) */
@@ -1238,6 +1301,17 @@ footer {
   .media-box {
     height: 280px;
     border-radius: 16px;
+  }
+
+  .alipay-intl-hero-media {
+    height: auto;
+    padding: 16px 16px 0;
+    gap: 8px;
+  }
+
+  .alipay-intl-hero-media img {
+    max-width: calc(33.333% - 6px);
+    border-radius: 8px 8px 0 0;
   }
 
   .back-nav {
@@ -1928,7 +2002,6 @@ footer {
   position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 20px;
 }
 
 .project-cover img {
@@ -2139,4 +2212,33 @@ footer {
   .pinterest-feed {
     height: auto;
   }
+}
+
+/* Responsive Video Container for YouTube Embeds */
+.video-embed-container {
+  width: 100%;
+  max-width: 960px;
+  margin: 48px auto;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.video-aspect-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-aspect-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
