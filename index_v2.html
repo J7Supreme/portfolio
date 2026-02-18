@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Hou</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Header (Frame 2) -->
+        <header>
+            <a href="index.html" class="logo">James Hou</a>
+            <nav>
+                <a href="about.html">About</a>
+                <a href="playground.html">Playground</a>
+            </nav>
+        </header>
+
+        <div class="home-content">
+            <!-- Hero Left (Frame 3) -->
+            <div class="hero-left" id="heroFrame">
+                <!-- Digital Aurora Shader Background -->
+                <div id="auroraShaderBg"
+                    style="position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; background: #000;"
+                    aria-hidden="true">
+                    <!-- Canvas will be injected here by WebGL script -->
+                    <div
+                        style="pointer-events: none; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.30), transparent, rgba(0,0,0,0.20)); z-index: 1;">
+                    </div>
+                </div>
+                <!-- Hero Tagline -->
+                <div class="hero-tagline" id="heroTagline">
+                    Toronto based designer,<br>for AI, WEB3 AND FINTECH
+                </div>
+                <div class="hero-image-container" id="heroImage"></div>
+                <!-- Monitor Wrapper for Huawei Agentic Cloud Console Demo -->
+                <div class="monitor-wrapper" id="huaweiMonitor"
+                    style="margin: 0; width: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 5;">
+                    <div class="monitor-frame">
+                        <div class="monitor-screen">
+                            <img src="assets/images/projects/huawei-agentic/general%20demo.gif"
+                                alt="Huawei Cloud Agentic Console Demo"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="monitor-stand"></div>
+                    <div class="monitor-base"></div>
+                </div>
+                <!-- Mobile Wrapper for Huawei Mobile Console App Demo -->
+                <div class="phone-wrapper" id="mobilePhone"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 5; width: 160px; max-width: 160px; min-width: 80px;">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <video id="mobileVideo" src="assets/images/projects/huawei-mobile/project_cover.webm" loop
+                                muted playsinline style="width: 100%; height: auto; object-fit: cover;"></video>
+                        </div>
+                    </div>
+                </div>
+                <!-- RIVO Devices Wrapper -->
+                <div class="rivo-devices-wrapper" id="rivoDevices"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; gap: 12px; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 5; width: 90%;">
+                    <!-- Monitor: RIVO Website -->
+                    <div class="monitor-wrapper" style="flex: 0 1 auto; width: 70%; max-width: 500px; margin: 0;">
+                        <div class="monitor-frame">
+                            <div class="monitor-screen">
+                                <video id="rivoWebsiteVideo" src="assets/images/projects/rivo/rivo-website.webm" loop
+                                    muted playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                        <div class="monitor-stand"></div>
+                        <div class="monitor-base"></div>
+                    </div>
+                    <!-- Phone: Onboarding -->
+                    <div class="phone-wrapper"
+                        style="flex: 0 1 auto; position: relative; opacity: 1; top: auto; left: auto; transform: none; pointer-events: auto; width: 18%; max-width: 120px; min-width: 80px;">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <video id="rivoOnboardingVideo" src="assets/images/projects/rivo/onboarding.webm" loop
+                                    muted playsinline style="width: 100%; height: auto; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- imToken Webapp Devices Wrapper -->
+                <div class="webapp-devices-wrapper" id="webappDevices"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 5;">
+                    <!-- Phone: Tangible -->
+                    <div class="phone-wrapper"
+                        style="position: relative; opacity: 1; top: auto; left: auto; transform: none; pointer-events: auto; width: 160px; max-width: 160px; min-width: 80px;">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <video id="webappTangibleVideo"
+                                    src="assets/images/projects/imtoken-webapp/webapp_on_home.webm" loop muted
+                                    playsinline style="width: 100%; height: auto; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- imToken Card Devices Wrapper -->
+                <div class="card-devices-wrapper" id="cardDevices"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; gap: 12px; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 5; width: 90%;">
+                    <!-- Monitor: Website -->
+                    <div class="monitor-wrapper" style="flex: 0 1 auto; width: 70%; max-width: 500px; margin: 0;">
+                        <div class="monitor-frame">
+                            <div class="monitor-screen">
+                                <video id="cardWebsiteVideo"
+                                    src="assets/images/projects/imtoken-card/v3/imtokencardwebsite.webm" loop muted
+                                    playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                        <div class="monitor-stand"></div>
+                        <div class="monitor-base"></div>
+                    </div>
+                    <!-- Phone: App -->
+                    <div class="phone-wrapper"
+                        style="flex: 0 1 auto; position: relative; opacity: 1; top: auto; left: auto; transform: none; pointer-events: auto; width: 18%; max-width: 120px; min-width: 80px;">
+                        <div class="phone-frame">
+                            <div class="phone-screen">
+                                <video id="cardAppVideo" src="assets/images/projects/imtoken-card/v3/imtokencard.webm"
+                                    loop muted playsinline
+                                    style="width: 100%; height: auto; object-fit: cover;"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project List Right (Frame 9 / 0VXSm) -->
+            <div class="project-list-right">
+                <!-- New Projects -->
+                <!-- Card: Huawei Agentic Cloud Console -->
+                <a href="work-huawei-agentic.html" class="project-card" data-image="project-new-1">
+                    <div class="company-name">Huawei Cloud</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">
+                            <svg class="project-highlight-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-label="Highlight">
+                                <path
+                                    d="M3 12H4M12 3V4M20 12H21M5.6 5.6L6.3 6.3M18.4 5.6L17.7 6.3M9.7 17H14.3M9 16C8.16047 15.3704 7.54033 14.4925 7.22743 13.4908C6.91453 12.4892 6.92473 11.4144 7.25658 10.4189C7.58844 9.4233 8.22512 8.55739 9.07645 7.94379C9.92778 7.33019 10.9506 7 12 7C13.0494 7 14.0722 7.33019 14.9236 7.94379C15.7749 8.55739 16.4116 9.4233 16.7434 10.4189C17.0753 11.4144 17.0855 12.4892 16.7726 13.4908C16.4597 14.4925 15.8395 15.3704 15 16C14.6096 16.3865 14.3156 16.8594 14.1419 17.3806C13.9681 17.9018 13.9195 18.4566 14 19C14 19.5304 13.7893 20.0391 13.4142 20.4142C13.0391 20.7893 12.5304 21 12 21C11.4696 21 10.9609 20.7893 10.5858 20.4142C10.2107 20.0391 10 19.5304 10 19C10.0805 18.4566 10.0319 17.9018 9.85813 17.3806C9.6844 16.8594 9.39043 16.3865 9 16Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Huawei Agentic Cloud Console
+                        </div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>AI</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card: imToken Webapp -->
+                <a href="work-imtoken-webapp.html" class="project-card" data-image="project-new-3">
+                    <div class="company-name">imToken</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">
+                            <svg class="project-highlight-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-label="Highlight">
+                                <path
+                                    d="M3 12H4M12 3V4M20 12H21M5.6 5.6L6.3 6.3M18.4 5.6L17.7 6.3M9.7 17H14.3M9 16C8.16047 15.3704 7.54033 14.4925 7.22743 13.4908C6.91453 12.4892 6.92473 11.4144 7.25658 10.4189C7.58844 9.4233 8.22512 8.55739 9.07645 7.94379C9.92778 7.33019 10.9506 7 12 7C13.0494 7 14.0722 7.33019 14.9236 7.94379C15.7749 8.55739 16.4116 9.4233 16.7434 10.4189C17.0753 11.4144 17.0855 12.4892 16.7726 13.4908C16.4597 14.4925 15.8395 15.3704 15 16C14.6096 16.3865 14.3156 16.8594 14.1419 17.3806C13.9681 17.9018 13.9195 18.4566 14 19C14 19.5304 13.7893 20.0391 13.4142 20.4142C13.0391 20.7893 12.5304 21 12 21C11.4696 21 10.9609 20.7893 10.5858 20.4142C10.2107 20.0391 10 19.5304 10 19C10.0805 18.4566 10.0319 17.9018 9.85813 17.3806C9.6844 16.8594 9.39043 16.3865 9 16Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            imToken Webapp
+                        </div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Web3</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card: RIVO -->
+                <a href="work-rivo.html" class="project-card" data-image="project-new-6">
+                    <div class="company-name">imToken</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">
+                            <svg class="project-highlight-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-label="Highlight">
+                                <path
+                                    d="M3 12H4M12 3V4M20 12H21M5.6 5.6L6.3 6.3M18.4 5.6L17.7 6.3M9.7 17H14.3M9 16C8.16047 15.3704 7.54033 14.4925 7.22743 13.4908C6.91453 12.4892 6.92473 11.4144 7.25658 10.4189C7.58844 9.4233 8.22512 8.55739 9.07645 7.94379C9.92778 7.33019 10.9506 7 12 7C13.0494 7 14.0722 7.33019 14.9236 7.94379C15.7749 8.55739 16.4116 9.4233 16.7434 10.4189C17.0753 11.4144 17.0855 12.4892 16.7726 13.4908C16.4597 14.4925 15.8395 15.3704 15 16C14.6096 16.3865 14.3156 16.8594 14.1419 17.3806C13.9681 17.9018 13.9195 18.4566 14 19C14 19.5304 13.7893 20.0391 13.4142 20.4142C13.0391 20.7893 12.5304 21 12 21C11.4696 21 10.9609 20.7893 10.5858 20.4142C10.2107 20.0391 10 19.5304 10 19C10.0805 18.4566 10.0319 17.9018 9.85813 17.3806C9.6844 16.8594 9.39043 16.3865 9 16Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            RIVO: Crypto-Native Payment Network
+                        </div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Payment</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card: Huawei Cloud Mobile Console App -->
+                <a href="work-huawei-mobile.html" class="project-card" data-image="project-new-2">
+                    <div class="company-name">Huawei Cloud</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">Huawei Cloud Mobile Console App</div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Cloud</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card: imToken Card -->
+                <a href="work-imtoken-card.html" class="project-card" data-image="project-new-4">
+                    <div class="company-name">imToken</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">imToken Card</div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Web3</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+
+
+                <!-- Card 1: Antom Designing -->
+                <a href="work-alipay-plus.html" class="project-card" data-image="project1">
+                    <div class="company-name">Alipay</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">Antom: Designing for a disruptive payment network</div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Fintech</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2: Alipay Internalization -->
+                <a href="work-alipay-intl.html" class="project-card" data-image="project2">
+                    <div class="company-name">Alipay</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">Internalization of Alipay</div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Fintech</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+
+
+                <!-- Card 4: Antom Local Payment -->
+                <a href="work-antom.html" class="project-card" data-image="project4">
+                    <div class="company-name">Alipay</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">Antom: Local payment enablement in Southeast Asia and Latin
+                            America</div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Fintech</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 5: AliExpress -->
+                <a href="work-aliexpress.html" class="project-card" data-image="project5">
+                    <div class="company-name">Alipay</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">User acquisition of AliExpress Wallet in Europe</div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Fintech</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 6: Lazada -->
+                <a href="work-lazada.html" class="project-card" data-image="project6">
+                    <div class="company-name">Alipay</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">Value enhancement of Lazada Wallet in Southeast Asia</div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Fintech</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 7: GE -->
+                <a href="work-ge.html" class="project-card" data-image="project7">
+                    <div class="company-name">GE</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">Client case visualization for GE brilliant manufacturing
+                            solutions</div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Manufacturing</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 8: IBM Cloud -->
+                <a href="work-ibm-cloud.html" class="project-card" data-image="project8">
+                    <div class="company-name">IBM Cloud</div>
+                    <div class="project-details-row">
+                        <div class="project-title-text">Cloud Automation Manager in IBM Cloud</div>
+                        <div class="project-meta-right">
+                            <div class="project-tags">
+                                <span>Cloud</span>
+                            </div>
+                            <svg class="arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <div class="copyright">© 2026 James Hou</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/jameshouux/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                <button class="email-copy-btn" id="emailCopyBtn">Email</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container">
+        <div class="toast" id="toast">
+            <svg class="toast-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd" />
+            </svg>
+            <span class="toast-message">Email copied to clipboard</span>
+        </div>
+    </div>
+
+    <script>
+        // Project hover interaction - display images in hero frame
+        const projectCards = document.querySelectorAll('.project-card');
+        const heroImage = document.getElementById('heroImage');
+        const huaweiMonitor = document.getElementById('huaweiMonitor');
+        const mobilePhone = document.getElementById('mobilePhone');
+        const mobileVideo = document.getElementById('mobileVideo');
+        const rivoDevices = document.getElementById('rivoDevices');
+        const rivoWebsiteVideo = document.getElementById('rivoWebsiteVideo');
+        const rivoOnboardingVideo = document.getElementById('rivoOnboardingVideo');
+        const webappDevices = document.getElementById('webappDevices');
+        const webappTangibleVideo = document.getElementById('webappTangibleVideo');
+        const cardDevices = document.getElementById('cardDevices');
+        const cardWebsiteVideo = document.getElementById('cardWebsiteVideo');
+        const cardAppVideo = document.getElementById('cardAppVideo');
+        const auroraShaderBg = document.getElementById('auroraShaderBg');
+        const heroTagline = document.getElementById('heroTagline');
+
+        // Define project images (you can replace these with actual image URLs)
+        const projectImages = {
+            'project-new-1': 'linear-gradient(135deg, #FF6B6B 0%, #556270 100%)',   // Huawei (placeholder, overridden by script)
+            'project-new-2': 'linear-gradient(135deg, #4E65FF 0%, #92EFFD 100%)',   // Huawei Mobile
+            'project-new-3': 'linear-gradient(135deg, #00C6FF 0%, #0072FF 100%)',   // imToken Web
+            'project-new-4': 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',   // imToken Card
+
+            'project-new-6': 'linear-gradient(135deg, #8E2DE2 0%, #4A00E0 100%)',   // RIVO
+            'project1': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            'project2': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+
+            'project4': 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
+        };
+
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', function () {
+                const imageKey = this.getAttribute('data-image');
+
+                // Fade out aurora shader on any hover
+                if (auroraShaderBg) auroraShaderBg.style.opacity = '0';
+                if (heroTagline) heroTagline.style.opacity = '0';
+
+                if (imageKey === 'project-new-1') {
+                    // Special case for Huawei Agentic Cloud Console
+                    huaweiMonitor.style.opacity = '1';
+                    mobilePhone.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
+                    cardDevices.style.opacity = '0';
+                    heroImage.style.opacity = '0';
+                } else if (imageKey === 'project-new-2') {
+                    // Special case for Huawei Cloud Mobile Console App
+                    mobilePhone.style.opacity = '1';
+                    huaweiMonitor.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
+                    cardDevices.style.opacity = '0';
+                    heroImage.style.opacity = '0';
+                    mobileVideo.play();
+                } else if (imageKey === 'project-new-3') {
+                    // Special case for imToken Webapp
+                    webappDevices.style.opacity = '1';
+                    huaweiMonitor.style.opacity = '0';
+                    mobilePhone.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
+                    cardDevices.style.opacity = '0';
+                    heroImage.style.opacity = '0';
+                    webappTangibleVideo.play();
+                } else if (imageKey === 'project-new-6') {
+                    // Special case for RIVO
+                    rivoDevices.style.opacity = '1';
+                    huaweiMonitor.style.opacity = '0';
+                    mobilePhone.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
+                    cardDevices.style.opacity = '0';
+                    heroImage.style.opacity = '0';
+                    rivoWebsiteVideo.play();
+                    rivoOnboardingVideo.play();
+                } else if (imageKey === 'project-new-4') {
+                    // Special case for imToken Card
+                    cardDevices.style.opacity = '1';
+                    huaweiMonitor.style.opacity = '0';
+                    mobilePhone.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
+                    heroImage.style.opacity = '0';
+                    cardWebsiteVideo.play();
+                    cardAppVideo.play();
+                } else {
+                    // Standard behavior for other projects
+                    huaweiMonitor.style.opacity = '0';
+                    mobilePhone.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
+                    cardDevices.style.opacity = '0';
+                    mobileVideo.pause();
+                    rivoWebsiteVideo.pause();
+                    rivoOnboardingVideo.pause();
+                    webappTangibleVideo.pause();
+                    cardWebsiteVideo.pause();
+                    cardAppVideo.pause();
+                    const imageValue = projectImages[imageKey];
+                    if (imageValue) {
+                        if (imageValue.startsWith('linear-gradient') || imageValue.startsWith('radial-gradient')) {
+                            heroImage.style.backgroundImage = imageValue;
+                        } else {
+                            heroImage.style.backgroundImage = `url(${imageValue})`;
+                        }
+                        heroImage.style.opacity = '1';
+                    }
+                }
+            });
+
+            card.addEventListener('mouseleave', function () {
+                // Fade aurora shader back in
+                if (auroraShaderBg) auroraShaderBg.style.opacity = '1';
+                if (heroTagline) heroTagline.style.opacity = '1';
+                heroImage.style.opacity = '0';
+                huaweiMonitor.style.opacity = '0';
+                mobilePhone.style.opacity = '0';
+                rivoDevices.style.opacity = '0';
+                webappDevices.style.opacity = '0';
+                mobileVideo.pause();
+                mobileVideo.currentTime = 0;
+                rivoWebsiteVideo.pause();
+                rivoWebsiteVideo.currentTime = 0;
+                rivoOnboardingVideo.pause();
+                rivoOnboardingVideo.currentTime = 0;
+                webappTangibleVideo.pause();
+                webappTangibleVideo.currentTime = 0;
+                cardDevices.style.opacity = '0';
+                cardWebsiteVideo.pause();
+                cardWebsiteVideo.currentTime = 0;
+                cardAppVideo.pause();
+                cardAppVideo.currentTime = 0;
+            });
+        });
+
+        // Email copy to clipboard functionality
+        document.getElementById('emailCopyBtn').addEventListener('click', function () {
+            const email = 'j7supreme@gmail.com';
+            navigator.clipboard.writeText(email).then(function () {
+                const toast = document.getElementById('toast');
+                toast.classList.add('show');
+                setTimeout(function () {
+                    toast.classList.remove('show');
+                }, 3000);
+            }).catch(function (err) {
+                console.error('Failed to copy email: ', err);
+            });
+        });
+
+        // ===================== DITHERING SHADER (WAVE) =====================
+        // Ported from React DitheringShader component
+        (function initDitheringShader() {
+            const container = document.getElementById('auroraShaderBg');
+            if (!container) return;
+
+            // Remove existing canvas if any (from previous runs)
+            const existingCanvas = container.querySelector('canvas');
+            if (existingCanvas) existingCanvas.remove();
+
+            // Create new canvas
+            const canvas = document.createElement('canvas');
+            canvas.style.position = 'absolute';
+            canvas.style.top = '0';
+            canvas.style.left = '0';
+            canvas.style.width = '100%';
+            canvas.style.height = '100%';
+            canvas.style.zIndex = '0';
+            container.insertBefore(canvas, container.firstChild); // Insert behind overlay
+
+            const gl = canvas.getContext('webgl2');
+            if (!gl) {
+                console.error('WebGL2 is not supported in this browser.');
+                return;
+            }
+
+            // --- SHADER SOURCES ---
+
+            const declarePI = `
+                #define TWO_PI 6.28318530718
+                #define PI 3.14159265358979323846
+            `;
+
+            const proceduralHash11 = `
+                float hash11(float p) {
+                    p = fract(p * 0.3183099) + 0.1;
+                    p *= p + 19.19;
+                    return fract(p * p);
+                }
+            `;
+
+            const proceduralHash21 = `
+                float hash21(vec2 p) {
+                    p = fract(p * vec2(0.3183099, 0.3678794)) + 0.1;
+                    p += dot(p, p + 19.19);
+                    return fract(p.x * p.y);
+                }
+            `;
+
+            const simplexNoise = `
+                vec3 permute(vec3 x) { return mod(((x * 34.0) + 1.0) * x, 289.0); }
+                float snoise(vec2 v) {
+                    const vec4 C = vec4(0.211324865405187, 0.366025403784439,
+                        -0.577350269189626, 0.024390243902439);
+                    vec2 i = floor(v + dot(v, C.yy));
+                    vec2 x0 = v - i + dot(i, C.xx);
+                    vec2 i1;
+                    i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+                    vec4 x12 = x0.xyxy + C.xxzz;
+                    x12.xy -= i1;
+                    i = mod(i, 289.0);
+                    vec3 p = permute(permute(i.y + vec3(0.0, i1.y, 1.0))
+                        + i.x + vec3(0.0, i1.x, 1.0));
+                    vec3 m = max(0.5 - vec3(dot(x0, x0), dot(x12.xy, x12.xy),
+                            dot(x12.zw, x12.zw)), 0.0);
+                    m = m * m;
+                    m = m * m;
+                    vec3 x = 2.0 * fract(p * C.www) - 1.0;
+                    vec3 h = abs(x) - 0.5;
+                    vec3 ox = floor(x + 0.5);
+                    vec3 a0 = x - ox;
+                    m *= 1.79284291400159 - 0.85373472095314 * (a0 * a0 + h * h);
+                    vec3 g;
+                    g.x = a0.x * x0.x + h.x * x0.y;
+                    g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+                    return 130.0 * dot(m, g);
+                }
+            `;
+
+            const vertexShaderSource = `#version 300 es
+                precision mediump float;
+                layout(location = 0) in vec4 a_position;
+                void main() {
+                    gl_Position = a_position;
+                }
+            `;
+
+            const fragmentShaderSource = `#version 300 es
+                precision mediump float;
+
+                uniform float u_time;
+                uniform vec2 u_resolution;
+                uniform vec4 u_colorBack;
+                uniform vec4 u_colorFront;
+                uniform float u_shape;
+                uniform float u_type;
+                uniform float u_pxSize;
+
+                out vec4 fragColor;
+
+                ${simplexNoise}
+                ${declarePI}
+                ${proceduralHash11}
+                ${proceduralHash21}
+
+                float getSimplexNoise(vec2 uv, float t) {
+                    float noise = .5 * snoise(uv - vec2(0., .3 * t));
+                    noise += .5 * snoise(2. * uv + vec2(0., .32 * t));
+                    return noise;
+                }
+
+                const int bayer2x2[4] = int[4](0, 2, 3, 1);
+                const int bayer4x4[16] = int[16](
+                    0,  8,  2, 10,
+                    12,  4, 14,  6,
+                    3, 11,  1,  9,
+                    15,  7, 13,  5
+                );
+
+                const int bayer8x8[64] = int[64](
+                    0, 32,  8, 40,  2, 34, 10, 42,
+                    48, 16, 56, 24, 50, 18, 58, 26,
+                    12, 44,  4, 36, 14, 46,  6, 38,
+                    60, 28, 52, 20, 62, 30, 54, 22,
+                    3, 35, 11, 43,  1, 33,  9, 41,
+                    51, 19, 59, 27, 49, 17, 57, 25,
+                    15, 47,  7, 39, 13, 45,  5, 37,
+                    63, 31, 55, 23, 61, 29, 53, 21
+                );
+
+                float getBayerValue(vec2 uv, int size) {
+                    ivec2 pos = ivec2(mod(uv, float(size)));
+                    int index = pos.y * size + pos.x;
+
+                    if (size == 2) {
+                        return float(bayer2x2[index]) / 4.0;
+                    } else if (size == 4) {
+                        return float(bayer4x4[index]) / 16.0;
+                    } else if (size == 8) {
+                        return float(bayer8x8[index]) / 64.0;
+                    }
+                    return 0.0;
+                }
+
+                void main() {
+                    float t = .5 * u_time;
+                    vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+                    uv -= .5;
+                    
+                    // Apply pixelization
+                    float pxSize = u_pxSize;
+                    vec2 pxSizeUv = gl_FragCoord.xy;
+                    pxSizeUv -= .5 * u_resolution;
+                    pxSizeUv /= pxSize;
+                    vec2 pixelizedUv = floor(pxSizeUv) * pxSize / u_resolution.xy;
+                    pixelizedUv += .5;
+                    pixelizedUv -= .5;
+                    
+                    vec2 shape_uv = pixelizedUv;
+                    vec2 dithering_uv = pxSizeUv;
+                    vec2 ditheringNoise_uv = uv * u_resolution;
+
+                    float shape = 0.;
+                    if (u_shape < 1.5) {
+                        // Simplex noise
+                        shape_uv *= .001;
+                        shape = 0.5 + 0.5 * getSimplexNoise(shape_uv, t);
+                        shape = smoothstep(0.3, 0.9, shape);
+
+                    } else if (u_shape < 2.5) {
+                        // Warp
+                        shape_uv *= .003;
+                        for (float i = 1.0; i < 6.0; i++) {
+                            shape_uv.x += 0.6 / i * cos(i * 2.5 * shape_uv.y + t);
+                            shape_uv.y += 0.6 / i * cos(i * 1.5 * shape_uv.x + t);
+                        }
+                        shape = .15 / abs(sin(t - shape_uv.y - shape_uv.x));
+                        shape = smoothstep(0.02, 1., shape);
+
+                    } else if (u_shape < 3.5) {
+                        // Dots
+                        shape_uv *= .05;
+                        float stripeIdx = floor(2. * shape_uv.x / TWO_PI);
+                        float rand = hash11(stripeIdx * 10.);
+                        rand = sign(rand - .5) * pow(.1 + abs(rand), .4);
+                        shape = sin(shape_uv.x) * cos(shape_uv.y - 5. * rand * t);
+                        shape = pow(abs(shape), 6.);
+
+                    } else if (u_shape < 4.5) {
+                        // Sine wave
+                        shape_uv *= 4.;
+                        float wave = cos(.5 * shape_uv.x - 2. * t) * sin(1.5 * shape_uv.x + t) * (.75 + .25 * cos(3. * t));
+                        shape = 1. - smoothstep(-1., 1., shape_uv.y + wave);
+
+                    } else if (u_shape < 5.5) {
+                        // Ripple
+                        float dist = length(shape_uv);
+                        float waves = sin(pow(dist, 1.7) * 7. - 3. * t) * .5 + .5;
+                        shape = waves;
+
+                    } else if (u_shape < 6.5) {
+                        // Swirl
+                        float l = length(shape_uv);
+                        float angle = 6. * atan(shape_uv.y, shape_uv.x) + 4. * t;
+                        float twist = 1.2;
+                        float offset = pow(l, -twist) + angle / TWO_PI;
+                        float mid = smoothstep(0., 1., pow(l, twist));
+                        shape = mix(0., fract(offset), mid);
+
+                    } else {
+                        // Sphere
+                        shape_uv *= 2.;
+                        float d = 1. - pow(length(shape_uv), 2.);
+                        vec3 pos = vec3(shape_uv, sqrt(d));
+                        vec3 lightPos = normalize(vec3(cos(1.5 * t), .8, sin(1.25 * t)));
+                        shape = .5 + .5 * dot(lightPos, pos);
+                        shape *= step(0., d);
+                    }
+
+                    int type = int(floor(u_type));
+                    float dithering = 0.0;
+
+                    switch (type) {
+                        case 1: {
+                            dithering = step(hash21(ditheringNoise_uv), shape);
+                        } break;
+                        case 2:
+                            dithering = getBayerValue(dithering_uv, 2);
+                            break;
+                        case 3:
+                            dithering = getBayerValue(dithering_uv, 4);
+                            break;
+                        default:
+                            dithering = getBayerValue(dithering_uv, 8);
+                            break;
+                    }
+
+                    dithering -= .5;
+                    float res = step(.5, shape + dithering);
+
+                    vec3 fgColor = u_colorFront.rgb * u_colorFront.a;
+                    float fgOpacity = u_colorFront.a;
+                    vec3 bgColor = u_colorBack.rgb * u_colorBack.a;
+                    float bgOpacity = u_colorBack.a;
+
+                    vec3 color = fgColor * res;
+                    float opacity = fgOpacity * res;
+
+                    color += bgColor * (1. - opacity);
+                    opacity += bgOpacity * (1. - opacity);
+
+                    fragColor = vec4(color, opacity);
+                }
+            `;
+
+            // --- UTILS ---
+            function createShader(gl, type, source) {
+                const shader = gl.createShader(type);
+                if (!shader) return null;
+                gl.shaderSource(shader, source);
+                gl.compileShader(shader);
+                if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+                    console.error("Shader compile error: " + gl.getShaderInfoLog(shader));
+                    gl.deleteShader(shader);
+                    return null;
+                }
+                return shader;
+            }
+
+            function createProgram(gl, vsSource, fsSource) {
+                const vs = createShader(gl, gl.VERTEX_SHADER, vsSource);
+                const fs = createShader(gl, gl.FRAGMENT_SHADER, fsSource);
+                if (!vs || !fs) return null;
+                const program = gl.createProgram();
+                gl.attachShader(program, vs);
+                gl.attachShader(program, fs);
+                gl.linkProgram(program);
+                if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+                    console.error("Program link error: " + gl.getProgramInfoLog(program));
+                    return null;
+                }
+                return program;
+            }
+
+            function hexToRgba(hex) {
+                const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+                if (!result) return [0, 0, 0, 1];
+                return [
+                    parseInt(result[1], 16) / 255,
+                    parseInt(result[2], 16) / 255,
+                    parseInt(result[3], 16) / 255,
+                    1,
+                ];
+            }
+
+            // --- INIT ---
+            const program = createProgram(gl, vertexShaderSource, fragmentShaderSource);
+            if (!program) return;
+
+            const u_time = gl.getUniformLocation(program, "u_time");
+            const u_resolution = gl.getUniformLocation(program, "u_resolution");
+            const u_colorBack = gl.getUniformLocation(program, "u_colorBack");
+            const u_colorFront = gl.getUniformLocation(program, "u_colorFront");
+            const u_shape = gl.getUniformLocation(program, "u_shape");
+            const u_type = gl.getUniformLocation(program, "u_type");
+            const u_pxSize = gl.getUniformLocation(program, "u_pxSize");
+
+            // Setup buffers
+            const positionBuffer = gl.createBuffer();
+            gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1]), gl.STATIC_DRAW);
+
+            const positionLoc = gl.getAttribLocation(program, "a_position");
+            gl.enableVertexAttribArray(positionLoc);
+            gl.vertexAttribPointer(positionLoc, 2, gl.FLOAT, false, 0, 0);
+
+            // Params
+            const startTime = Date.now();
+            const speed = 0.6;
+            const pxSize = 3;
+            // DitheringShapes: wave = 4
+            const shapeVal = 4;
+            // DitheringTypes: 8x8 = 4
+            const typeVal = 4;
+            const colorBackVal = hexToRgba("#001122");
+            const colorFrontVal = hexToRgba("#ff0088");
+
+            function resize() {
+                canvas.width = container.clientWidth;
+                canvas.height = container.clientHeight;
+                gl.viewport(0, 0, canvas.width, canvas.height);
+                gl.uniform2f(u_resolution, canvas.width, canvas.height);
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            function render() {
+                const currentTime = (Date.now() - startTime) * 0.001 * speed;
+
+                gl.useProgram(program);
+                gl.uniform1f(u_time, currentTime);
+                gl.uniform2f(u_resolution, canvas.width, canvas.height);
+                gl.uniform4fv(u_colorBack, colorBackVal);
+                gl.uniform4fv(u_colorFront, colorFrontVal);
+                gl.uniform1f(u_shape, shapeVal);
+                gl.uniform1f(u_type, typeVal);
+                gl.uniform1f(u_pxSize, pxSize);
+
+                gl.drawArrays(gl.TRIANGLES, 0, 6);
+                requestAnimationFrame(render);
+            }
+            render();
+
+        })();
+    </script>
+</body>
+
+</html>
