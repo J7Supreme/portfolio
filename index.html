@@ -40,7 +40,7 @@
                 </div>
                 <!-- Hero Tagline -->
                 <div class="hero-tagline" id="heroTagline">
-                    Toronto based designer,<br>for AI, WEB3 AND FINTECH
+                    Toronto based designer,<br>for AI, Web3 and Payment
                 </div>
                 <div class="hero-image-container" id="heroImage"></div>
                 <!-- Monitor Wrapper for Huawei Agentic Cloud Console Demo -->
@@ -595,6 +595,7 @@
                 uniform float uColorIntensity;
                 uniform float uNoiseLayers;
                 uniform float uMouseInfluence;
+                uniform float uTheme; // 0.0 for Light, 1.0 for Dark
 
                 #define MARCH_STEPS 32
 
@@ -643,9 +644,16 @@
                         float density = map(p);
                         if (density > 0.0) {
                             // --- COLOR PALETTE CONFIGURATION ---
-                            // Change the numbers in vec3(0, 2, 4) to shift colors.
-                            // Try: vec3(0,1,2) for Fire, vec3(2,0,1) for Neon, vec3(3,2,1) for Ocean
-                            vec3 auroraColor = 0.5 + 0.5 * cos(iTime * 0.5 + p.y * 2.0 + vec3(0,2,4));
+                            vec3 auroraColor;
+                            
+                            if (uTheme < 0.5) {
+                                // LIGHT THEME: Sky Blue & Cloud White
+                                auroraColor = mix(vec3(0.1, 0.6, 1.0), vec3(1.0, 1.0, 1.0), 0.5 + 0.5 * sin(iTime + p.y * 3.0));
+                            } else {
+                                // DARK THEME: Forest/Nature (Green/Gold/Purple mix) - vec3(1,0,2)
+                                auroraColor = 0.5 + 0.5 * cos(iTime * 0.5 + p.y * 2.0 + vec3(2, 0, 1));
+                            }
+                            
                             col += auroraColor * density * 0.1 * uColorIntensity;
                         }
                         t += 0.1;
@@ -701,10 +709,29 @@
             const uColorIntensityLoc = gl.getUniformLocation(program, 'uColorIntensity');
             const uNoiseLayersLoc = gl.getUniformLocation(program, 'uNoiseLayers');
             const uMouseInfluenceLoc = gl.getUniformLocation(program, 'uMouseInfluence');
+            const uThemeLoc = gl.getUniformLocation(program, 'uTheme');
 
             const startTime = performance.now();
             let animationFrameId;
             let mouseX = 0.5, mouseY = 0.5;
+            let isDarkTheme = false;
+
+            // Check initial theme
+            function updateThemeState() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                isDarkTheme = currentTheme === 'dark';
+            }
+            updateThemeState();
+
+            // Observe theme changes
+            const observer = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    if (mutation.attributeName === 'data-theme') {
+                        updateThemeState();
+                    }
+                });
+            });
+            observer.observe(document.documentElement, { attributes: true });
 
             // Mouse tracking
             window.addEventListener('mousemove', function (e) {
@@ -734,6 +761,9 @@
                 gl.uniform1f(uColorIntensityLoc, colorIntensity);
                 gl.uniform1f(uNoiseLayersLoc, noiseLayers);
                 gl.uniform1f(uMouseInfluenceLoc, mouseInfluence);
+
+                // Pass theme uniform (0.0 for Light, 1.0 for Dark)
+                gl.uniform1f(uThemeLoc, isDarkTheme ? 1.0 : 0.0);
 
                 gl.drawArrays(gl.TRIANGLES, 0, 6);
                 animationFrameId = requestAnimationFrame(renderLoop);
