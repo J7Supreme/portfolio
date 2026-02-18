@@ -142,6 +142,12 @@
                     <img src="assets/images/projects/antom/description-bkg.png" alt="Local Payment"
                         style="width: 100%; height: auto; object-fit: contain; border-radius: 12px;">
                 </div>
+                <!-- AliExpress Wrapper -->
+                <div class="aliexpress-wrapper" id="aliexpressImage"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: flex-end; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 5; width: 90%; padding: 0 20px;">
+                    <img src="assets/images/projects/aliexpress/ae-1.png" alt="AliExpress"
+                        style="width: 100%; height: auto; object-fit: contain; border-radius: 12px;">
+                </div>
             </div>
 
             <!-- Project List Right (Frame 9 / 0VXSm) -->
@@ -401,6 +407,7 @@
         const alipayIntlDevices = document.getElementById('alipayIntlDevices');
         const alipayPlusImage = document.getElementById('alipayPlusImage');
         const localPaymentImage = document.getElementById('localPaymentImage');
+        const aliexpressImage = document.getElementById('aliexpressImage');
 
         // Define project images (you can replace these with actual image URLs)
         const projectImages = {
@@ -413,7 +420,10 @@
             'project1': 'assets/images/projects/alipay-plus/antom-2.png',
             'project2': 'alipay-intl',  // Special handler
 
-            'project4': 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'
+            'project4': 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+            'project5': 'aliexpress',  // Special handler
+
+            'project8': 'assets/images/projects/ibm-cloud/ibm-1.png'
         };
 
         projectCards.forEach(card => {
@@ -430,6 +440,7 @@
                     alipayIntlDevices.style.opacity = '0';
                     alipayPlusImage.style.opacity = '0';
                     localPaymentImage.style.opacity = '0';
+                    aliexpressImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                 } else if (imageKey === 'project-new-2') {
                     // Special case for Huawei Cloud Mobile Console App
@@ -441,6 +452,7 @@
                     alipayIntlDevices.style.opacity = '0';
                     alipayPlusImage.style.opacity = '0';
                     localPaymentImage.style.opacity = '0';
+                    aliexpressImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     mobileVideo.play();
                 } else if (imageKey === 'project-new-3') {
@@ -453,6 +465,7 @@
                     alipayIntlDevices.style.opacity = '0';
                     alipayPlusImage.style.opacity = '0';
                     localPaymentImage.style.opacity = '0';
+                    aliexpressImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     webappTangibleVideo.play();
                 } else if (imageKey === 'project-new-6') {
@@ -465,6 +478,7 @@
                     alipayIntlDevices.style.opacity = '0';
                     alipayPlusImage.style.opacity = '0';
                     localPaymentImage.style.opacity = '0';
+                    aliexpressImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     rivoWebsiteVideo.play();
                     rivoOnboardingVideo.play();
@@ -478,6 +492,7 @@
                     alipayIntlDevices.style.opacity = '0';
                     alipayPlusImage.style.opacity = '0';
                     localPaymentImage.style.opacity = '0';
+                    aliexpressImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                     cardWebsiteVideo.play();
                     cardAppVideo.play();
@@ -491,6 +506,7 @@
                     cardDevices.style.opacity = '0';
                     alipayPlusImage.style.opacity = '0';
                     localPaymentImage.style.opacity = '0';
+                    aliexpressImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                 } else if (imageKey === 'project1') {
                     // Special case for Alipay Plus
@@ -502,6 +518,7 @@
                     cardDevices.style.opacity = '0';
                     alipayIntlDevices.style.opacity = '0';
                     localPaymentImage.style.opacity = '0';
+                    aliexpressImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
                 } else if (imageKey === 'project4') {
                     // Special case for Local Payment
@@ -514,6 +531,19 @@
                     alipayIntlDevices.style.opacity = '0';
                     alipayPlusImage.style.opacity = '0';
                     heroImage.style.opacity = '0';
+                    aliexpressImage.style.opacity = '0';
+                } else if (imageKey === 'project5') {
+                    // Special case for AliExpress
+                    aliexpressImage.style.opacity = '1';
+                    huaweiMonitor.style.opacity = '0';
+                    mobilePhone.style.opacity = '0';
+                    rivoDevices.style.opacity = '0';
+                    webappDevices.style.opacity = '0';
+                    cardDevices.style.opacity = '0';
+                    alipayIntlDevices.style.opacity = '0';
+                    alipayPlusImage.style.opacity = '0';
+                    localPaymentImage.style.opacity = '0';
+                    heroImage.style.opacity = '0';
                 } else {
                     // Standard behavior for other projects
                     huaweiMonitor.style.opacity = '0';
@@ -524,6 +554,7 @@
                     alipayIntlDevices.style.opacity = '0';
                     alipayPlusImage.style.opacity = '0';
                     localPaymentImage.style.opacity = '0';
+                    aliexpressImage.style.opacity = '0';
                     mobileVideo.pause();
                     rivoWebsiteVideo.pause();
                     rivoOnboardingVideo.pause();
@@ -553,6 +584,7 @@
                 alipayIntlDevices.style.opacity = '0';
                 alipayPlusImage.style.opacity = '0';
                 localPaymentImage.style.opacity = '0';
+                aliexpressImage.style.opacity = '0';
                 mobileVideo.pause();
                 mobileVideo.currentTime = 0;
                 rivoWebsiteVideo.pause();
