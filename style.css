@@ -658,6 +658,7 @@ footer {
   flex-direction: column;
   gap: 24px;
   width: 100%;
+  background-color: transparent;
   /* Full container width */
 }
 
@@ -675,6 +676,10 @@ footer {
 }
 
 .work-icon.imtoken-icon {
+  background-color: transparent;
+}
+
+.work-icon.ibm-icon {
   background-color: transparent;
 }
 
@@ -838,6 +843,7 @@ footer {
   height: 20px;
   margin-right: 6px;
   vertical-align: text-bottom;
+  color: var(--text-secondary);
 }
 
 /* Weblink Preview Card */
@@ -1991,7 +1997,6 @@ footer {
   position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 20px;
 }
 
 .project-cover img {
