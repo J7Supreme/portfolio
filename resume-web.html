@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songyan (James) Hou – Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 20px;
+            font-family: 'Outfit', sans-serif;
+            color: #000;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .resume-frame {
+            width: 595px;
+            height: 842px;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ===== LEFT COLUMN ===== */
+
+        /* Name block – top-left */
+        .name-block {
+            position: absolute;
+            left: 38px;
+            top: 66px;
+        }
+
+        .name-block .name-line {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+        }
+
+        /* Website */
+        .website {
+            position: absolute;
+            left: 38px;
+            top: 172px;
+            font-size: 8px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .section-title-multiline {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-section {
+            position: absolute;
+            left: 38px;
+            top: 411px;
+        }
+
+        .contact-info {
+            margin-top: 12px;
+        }
+
+        .contact-info p {
+            font-size: 8px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* ===== EDUCATION ===== */
+        .education-section {
+            position: absolute;
+            left: 38px;
+            top: 505px;
+        }
+
+        .education-details {
+            margin-top: 12px;
+        }
+
+        .education-details .edu-year {
+            font-size: 8px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .education-details .edu-school {
+            font-size: 8px;
+            font-weight: 700;
+            line-height: 1.6;
+        }
+
+        .education-details .edu-degree {
+            font-size: 8px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* ===== CLIENTS & EXTERNAL INFLUENCES ===== */
+        .clients-section {
+            position: absolute;
+            left: 38px;
+            top: 612px;
+        }
+
+        .clients-item {
+            margin-top: 16px;
+        }
+
+        .clients-item p {
+            font-size: 8px;
+            line-height: 1.6;
+        }
+
+        .clients-item p.bold {
+            font-weight: 700;
+        }
+
+        .clients-item p.normal {
+            font-weight: 400;
+        }
+
+        /* ===== RIGHT COLUMN – EXPERIENCE ===== */
+
+        /* Each experience entry */
+        .exp-entry {
+            position: absolute;
+            left: 297px;
+        }
+
+        .exp-logo {
+            width: auto;
+            height: 14px;
+            display: block;
+            /* placeholder for missing bitmap logos */
+        }
+
+        .exp-logo-placeholder {
+            width: 64px;
+            height: 14px;
+            background: #f0f0f0;
+            border: 1px dashed #ccc;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6px;
+            color: #999;
+        }
+
+        .exp-date {
+            font-size: 8px;
+            font-weight: 400;
+            margin-top: 6px;
+        }
+
+        .exp-role {
+            font-size: 12px;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+
+        .exp-bullets {
+            margin-top: 6px;
+        }
+
+        .exp-bullets p {
+            font-size: 8px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* Separator line for each section */
+        .section-divider {
+            width: 260px;
+            height: 1px;
+            background: #eee;
+            margin-bottom: 14px;
+        }
+
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+            z-index: 100;
+        }
+
+        .download-btn:hover {
+            opacity: 0.75;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+
+            .resume-frame {
+                box-shadow: none;
+            }
+
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume-frame">
+
+        <!-- ===== LEFT COLUMN ===== -->
+
+        <!-- Name -->
+        <div class="name-block">
+            <div class="name-line">Songyan</div>
+            <div class="name-line">(James)</div>
+            <div class="name-line">Hou</div>
+        </div>
+
+        <!-- Website -->
+        <div class="website">jameshou.xyz</div>
+
+        <!-- Contact -->
+        <div class="contact-section">
+            <div class="section-title">Contact</div>
+            <div class="contact-info">
+                <p>J7Supreme@gmail.com</p>
+                <p>+1 6473210824</p>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="education-section">
+            <div class="section-title">Education</div>
+            <div class="education-details">
+                <p class="edu-year">2011 - 2014</p>
+                <p class="edu-school">Beijing Institute of Technology</p>
+                <p class="edu-degree">MFA, Artistic Design (Industrial Design)</p>
+            </div>
+        </div>
+
+        <!-- Clients & External Influences -->
+        <div class="clients-section">
+            <div class="section-title-multiline">Clients & External<br>Influences</div>
+
+            <div class="clients-item">
+                <p class="bold">Client engagement with design thinking for business and</p>
+                <p class="normal">educational outcomes. Clients include: ICBC, China Post,</p>
+                <p class="normal">P&G, SAIC-GM, Bank of Shanghai, BB&T, China Three</p>
+                <p class="normal">Gorges, BOE, Jiangxi Mobile, etc</p>
+            </div>
+
+            <div class="clients-item">
+                <p class="bold">Workshop speaker at IxDC (most influential design</p>
+                <p class="normal">conference in China) for two times (2017, 2019)</p>
+            </div>
+
+            <div class="clients-item">
+                <p class="bold">Lecturer at Zhejiang University and Shanghai Jiaotong</p>
+                <p class="normal">University for joint programmes</p>
+            </div>
+        </div>
+
+        <!-- ===== RIGHT COLUMN – EXPERIENCE ===== -->
+
+        <!-- 1. Huawei Cloud -->
+        <div class="exp-entry" style="top: 65px;">
+            <!-- Logo bitmap placeholder – will be edited later -->
+            <div class="exp-logo-placeholder">Huawei Cloud logo</div>
+            <p class="exp-date">Oct 2023 - Present</p>
+            <p class="exp-role">Sr Staff Product Designer</p>
+            <div class="exp-bullets">
+                <p>- Led design revamp for Huawei Cloud mobile console, achieving</p>
+                <p>CSAT rate of 87%</p>
+                <p>- Initiate and push AI tools integration in new design process,</p>
+                <p>accelerated concept building 250% faster</p>
+                <p>- Led design for next gen agentic console experience</p>
+            </div>
+        </div>
+
+        <!-- 2. imToken -->
+        <div class="exp-entry" style="top: 233px;">
+            <!-- Logo bitmap placeholder – will be edited later -->
+            <div class="exp-logo-placeholder">imToken logo</div>
+            <p class="exp-date">Jul 2022 - Oct 2023</p>
+            <p class="exp-role">Senior Product Designer, imToken</p>
+            <div class="exp-bullets">
+                <p>- Led design for imToken Web, featuring smart contract account and</p>
+                <p>multi-chain web application</p>
+                <p>- Led design for RIVO.network, its payment experience for customer</p>
+                <p>and merchant end</p>
+            </div>
+        </div>
+
+        <!-- 3. Ant Group (Alipay) -->
+        <div class="exp-entry" style="top: 386px;">
+            <!-- Alipay logo (SVG path from original – use placeholder for now) -->
+            <div class="exp-logo-placeholder">Alipay logo</div>
+            <p class="exp-date">Feb 2018 - Jun 2022</p>
+            <p class="exp-role">Lead UX Designer, Ant Group（Alipay）</p>
+            <div class="exp-bullets">
+                <p>- Led the design for Alipay+ payment solutions</p>
+                <p>- Led the design for global payment experience in Southeast Asia,</p>
+                <p>Europe and Brazil</p>
+                <p>- Design for internalization & global remittance of Alipay app</p>
+            </div>
+        </div>
+
+        <!-- 4. GE -->
+        <div class="exp-entry" style="top: 540px;">
+            <!-- Logo bitmap placeholder – will be edited later -->
+            <div class="exp-logo-placeholder">GE logo</div>
+            <p class="exp-date">Jul 2017 - Jan 2018</p>
+            <p class="exp-role">Senior UX Designer, GE</p>
+            <div class="exp-bullets">
+                <p>- Innovated Supply Chain Management experience</p>
+                <p>- Design thinking facilitator for clients' digital transformation</p>
+                <p>sessions</p>
+            </div>
+        </div>
+
+        <!-- 5. IBM -->
+        <div class="exp-entry" style="top: 686px;">
+            <!-- Logo bitmap placeholder – will be edited later -->
+            <div class="exp-logo-placeholder">IBM logo</div>
+            <p class="exp-date">Jun 2014 - Jun 2017</p>
+            <p class="exp-role">UX Designer, IBM</p>
+            <div class="exp-bullets">
+                <p>- Design research, innovation and implementation on IBM Bluemix &</p>
+                <p>PureApplication Services</p>
+                <p>- Led scalable Design Thinking transformation in Greater China</p>
+                <p>Group and client engagement with sales team</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/dist/fontkit.umd.min.js"></script>
+
+    <button class="download-btn" id="downloadBtn">Download PDF</button>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', async function () {
+            const btn = this;
+            btn.textContent = 'Generating…';
+            btn.style.pointerEvents = 'none';
+
+            try {
+                const { PDFDocument, rgb } = PDFLib;
+                const pdfDoc = await PDFDocument.create();
+                pdfDoc.registerFontkit(fontkit);
+
+                // Fetch Outfit font files (woff from fontsource CDN)
+                const fontBase = 'https://cdn.jsdelivr.net/npm/@fontsource/outfit@5.1.1/files/outfit-latin-';
+                const [regBytes, medBytes, boldBytes] = await Promise.all([
+                    fetch(fontBase + '400-normal.woff').then(r => r.arrayBuffer()),
+                    fetch(fontBase + '500-normal.woff').then(r => r.arrayBuffer()),
+                    fetch(fontBase + '700-normal.woff').then(r => r.arrayBuffer()),
+                ]);
+
+                const fontReg = await pdfDoc.embedFont(regBytes);
+                const fontMed = await pdfDoc.embedFont(medBytes);
+                const fontBold = await pdfDoc.embedFont(boldBytes);
+
+                const PH = 842; // page height matching PEN frame
+                const page = pdfDoc.addPage([595.28, PH]);
+                const black = rgb(0, 0, 0);
+                const gray50 = rgb(0.5, 0.5, 0.5);
+                const placeholderFill = rgb(0.94, 0.94, 0.94);
+                const placeholderBorder = rgb(0.8, 0.8, 0.8);
+
+                // Helper: PEN top-left (x,y) → PDF baseline coords
+                function dt(text, x, y, size, font, color) {
+                    color = color || black;
+                    page.drawText(text, { x, y: PH - y - size * 0.82, size, font, color });
+                }
+
+                // Helper: draw logo placeholder rectangle
+                function drawPlaceholder(x, y, w, h) {
+                    page.drawRectangle({
+                        x, y: PH - y - h, width: w, height: h,
+                        color: placeholderFill, borderColor: placeholderBorder, borderWidth: 0.5
+                    });
+                }
+
+                // ===== LEFT COLUMN =====
+
+                // Name
+                dt('Songyan', 38, 66, 20, fontBold);
+                dt('(James)', 38, 98, 20, fontBold);
+                dt('Hou', 38, 130, 20, fontBold);
+
+                // Website
+                dt('jameshou.xyz', 38, 172, 8, fontReg, gray50);
+
+                // Contact
+                dt('Contact', 38, 411, 16, fontMed);
+                dt('J7Supreme@gmail.com', 38, 442, 8, fontReg);
+                dt('+1 6473210824', 38, 455, 8, fontReg);
+
+                // Education
+                dt('Education', 38, 505, 16, fontMed);
+                dt('2011 - 2014', 38, 536, 8, fontReg);
+                dt('Beijing Institute of Technology', 38, 549, 8, fontBold);
+                dt('MFA, Artistic Design (Industrial Design)', 38, 562, 8, fontReg);
+
+                // Clients & External Influences
+                dt('Clients & External', 38, 612, 16, fontMed);
+                dt('Influences', 38, 636, 16, fontMed);
+
+                dt('Client engagement with design thinking for business and', 38, 671, 8, fontBold);
+                dt('educational outcomes. Clients include: ICBC, China Post,', 38, 684, 8, fontReg);
+                dt('P&G, SAIC-GM, Bank of Shanghai, BB&T, China Three', 38, 697, 8, fontReg);
+                dt('Gorges, BOE, Jiangxi Mobile, etc', 38, 710, 8, fontReg);
+
+                dt('Workshop speaker at IxDC (most influential design', 38, 731, 8, fontBold);
+                dt('conference in China) for two times (2017, 2019)', 38, 744, 8, fontReg);
+
+                dt('Lecturer at Zhejiang University and Shanghai Jiaotong', 38, 765, 8, fontBold);
+                dt('University for joint programmes', 38, 778, 8, fontReg);
+
+                // ===== RIGHT COLUMN =====
+
+                // Huawei Cloud
+                drawPlaceholder(297, 65, 64, 14);
+                dt('Oct 2023 - Present', 297, 87, 8, fontReg);
+                dt('Sr Staff Product Designer', 297, 100, 12, fontBold);
+                dt('- Led design revamp for Huawei Cloud mobile console, achieving', 297, 120, 8, fontReg);
+                dt('CSAT rate of 87%', 297, 133, 8, fontReg);
+                dt('- Initiate and push AI tools integration in new design process,', 297, 146, 8, fontReg);
+                dt('accelerated concept building 250% faster', 297, 159, 8, fontReg);
+                dt('- Led design for next gen agentic console experience', 297, 172, 8, fontReg);
+
+                // imToken
+                drawPlaceholder(297, 233, 64, 14);
+                dt('Jul 2022 - Oct 2023', 297, 253, 8, fontReg);
+                dt('Senior Product Designer, imToken', 297, 266, 12, fontBold);
+                dt('- Led design for imToken Web, featuring smart contract account and', 297, 286, 8, fontReg);
+                dt('multi-chain web application', 297, 299, 8, fontReg);
+                dt('- Led design for RIVO.network, its payment experience for customer', 297, 312, 8, fontReg);
+                dt('and merchant end', 297, 325, 8, fontReg);
+
+                // Ant Group (Alipay)
+                drawPlaceholder(297, 386, 64, 14);
+                dt('Feb 2018 - Jun 2022', 297, 407, 8, fontReg);
+                dt('Lead UX Designer, Ant Group (Alipay)', 297, 420, 12, fontBold);
+                dt('- Led the design for Alipay+ payment solutions', 297, 440, 8, fontReg);
+                dt('- Led the design for global payment experience in Southeast Asia,', 297, 453, 8, fontReg);
+                dt('Europe and Brazil', 297, 466, 8, fontReg);
+                dt('- Design for internalization & global remittance of Alipay app', 297, 479, 8, fontReg);
+
+                // GE
+                drawPlaceholder(297, 540, 64, 14);
+                dt('Jul 2017 - Jan 2018', 297, 566, 8, fontReg);
+                dt('Senior UX Designer, GE', 297, 579, 12, fontBold);
+                dt('- Innovated Supply Chain Management experience', 297, 599, 8, fontReg);
+                dt('- Design thinking facilitator for clients\' digital transformation', 297, 612, 8, fontReg);
+                dt('sessions', 297, 625, 8, fontReg);
+
+                // IBM
+                drawPlaceholder(297, 686, 64, 14);
+                dt('Jun 2014 - Jun 2017', 297, 706, 8, fontReg);
+                dt('UX Designer, IBM', 297, 719, 12, fontBold);
+                dt('- Design research, innovation and implementation on IBM Bluemix &', 297, 739, 8, fontReg);
+                dt('PureApplication Services', 297, 752, 8, fontReg);
+                dt('- Led scalable Design Thinking transformation in Greater China', 297, 765, 8, fontReg);
+                dt('Group and client engagement with sales team', 297, 778, 8, fontReg);
+
+                // Save and download
+                const pdfBytes = await pdfDoc.save();
+                const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'James_Hou_Resume.pdf';
+                a.click();
+                URL.revokeObjectURL(url);
+            } catch (err) {
+                console.error('PDF generation failed:', err);
+                alert('PDF generation failed: ' + err.message);
+            }
+
+            btn.textContent = 'Download PDF';
+            btn.style.pointerEvents = 'auto';
+        });
+    </script>
+
+</body>
+
+</html>
