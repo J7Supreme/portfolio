@@ -1,0 +1,1669 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "nUlS4",
+      "x": -25,
+      "y": -456,
+      "name": "CB RESUME 1",
+      "clip": true,
+      "width": 595,
+      "height": 842,
+      "fill": {
+        "type": "color",
+        "color": "#ffffffff",
+        "enabled": false
+      },
+      "stroke": {
+        "align": "inside",
+        "thickness": 1
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "group",
+          "id": "3FtEp",
+          "x": 0,
+          "y": 0,
+          "name": "English-for-CAFB备份-4-Copy-3",
+          "children": [
+            {
+              "type": "path",
+              "id": "wY2lG",
+              "x": 0,
+              "y": 0,
+              "name": "Vector",
+              "geometry": "M0 0l595 0 0 842-595 0 0-842z",
+              "fill": "#ffffffff",
+              "width": 595,
+              "height": 842,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "group",
+              "id": "VCVe6",
+              "x": 38,
+              "y": 411,
+              "name": "编组-6",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "svbKr",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Contact",
+                  "fill": "#000000ff",
+                  "content": "Contact",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "group",
+                  "id": "NfF69",
+                  "x": 0,
+                  "y": 31,
+                  "name": "J7Supreme@gmail.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "un2Gs",
+                      "x": 0,
+                      "y": 0,
+                      "name": "J7Supreme@gmail.com",
+                      "fill": "#000000ff",
+                      "content": "J7Supreme@gmail.com",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "6J9uE",
+                      "x": 0,
+                      "y": 13,
+                      "name": "+1 6473210824",
+                      "fill": "#000000ff",
+                      "content": "+1 6473210824",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "9YPDW",
+              "x": 38,
+              "y": 505,
+              "name": "编组-7",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "5GbA3",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Education",
+                  "fill": "#000000ff",
+                  "content": "Education",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 16,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "group",
+                  "id": "nRAE3",
+                  "x": 0,
+                  "y": 31,
+                  "name": "2011---2014-Beijing",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "4IM6n",
+                      "x": 0,
+                      "y": 0,
+                      "name": "2011 - 2014",
+                      "fill": "#000000ff",
+                      "content": "2011 - 2014 ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "US08y",
+                      "x": 0,
+                      "y": 13,
+                      "name": "Beijing Institute of Technology",
+                      "fill": "#000000ff",
+                      "content": "Beijing Institute of Technology",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "RqAbt",
+                      "x": 0,
+                      "y": 26,
+                      "name": "MFA, Artistic Design (Industrial Design)",
+                      "fill": "#000000ff",
+                      "content": "MFA, Artistic Design (Industrial Design)",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "wyiys",
+              "x": 38,
+              "y": 612,
+              "name": "编组-5",
+              "children": [
+                {
+                  "type": "group",
+                  "id": "qw9Gf",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Clients-&-External-I",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "PAjoq",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Clients & External",
+                      "fill": "#000000ff",
+                      "content": "Clients & External ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "iVcGz",
+                      "x": 0,
+                      "y": 24,
+                      "name": "Influences",
+                      "fill": "#000000ff",
+                      "content": "Influences",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "id": "XsH64",
+                  "x": 0,
+                  "y": 59,
+                  "name": "Client-engagement-wi",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "slDeh",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Client engagement with design thinking for business and",
+                      "fill": "#000000ff",
+                      "content": "Client engagement with design thinking for business and ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Qj5Sz",
+                      "x": 0,
+                      "y": 13,
+                      "name": "educational outcomes. Clients include: ICBC, China Post,",
+                      "fill": "#000000ff",
+                      "content": "educational outcomes. Clients include: ICBC, China Post, ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AiWyD",
+                      "x": 0,
+                      "y": 26,
+                      "name": "P&G, SAIC-GM, Bank of Shanghai, BB&T, China Three",
+                      "fill": "#000000ff",
+                      "content": "P&G, SAIC-GM, Bank of Shanghai, BB&T, China Three ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "P1tDD",
+                      "x": 0,
+                      "y": 39,
+                      "name": "Gorges, BOE, Jiangxi Mobile, etc",
+                      "fill": "#000000ff",
+                      "content": "Gorges, BOE, Jiangxi Mobile, etc",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "id": "eTTCs",
+                  "x": 0,
+                  "y": 119,
+                  "name": "Workshop-speaker-at",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "eMweM",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Workshop speaker at IxDC (most influential design",
+                      "fill": "#000000ff",
+                      "content": "Workshop speaker at IxDC (most influential design ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "sDkM9",
+                      "x": 0,
+                      "y": 13,
+                      "name": "conference in China) for two times (2017, 2019)",
+                      "fill": "#000000ff",
+                      "content": "conference in China) for two times (2017, 2019)",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "id": "JCqXW",
+                  "x": 0,
+                  "y": 153,
+                  "name": "Lecturer-at-Zhejiang",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vu4CY",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Lecturer at Zhejiang University and Shanghai Jiaotong",
+                      "fill": "#000000ff",
+                      "content": "Lecturer at Zhejiang University and Shanghai Jiaotong ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "KPmmy",
+                      "x": 0,
+                      "y": 13,
+                      "name": "University for joint programmes",
+                      "fill": "#000000ff",
+                      "content": "University for joint programmes",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "lZblk",
+              "x": 297,
+              "y": 386,
+              "name": "编组-4",
+              "children": [
+                {
+                  "type": "group",
+                  "id": "wW9Yz",
+                  "x": 0,
+                  "y": 54,
+                  "name": "--Led-the-design-for",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Prslv",
+                      "x": 0,
+                      "y": 0,
+                      "name": "- Led the design for Alipay+ payment solutions",
+                      "fill": "#000000ff",
+                      "content": "- Led the design for Alipay+ payment solutions",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "Ki0dV",
+                      "x": 0,
+                      "y": 13,
+                      "name": "- Led the design for global payment experience in Southeast Asia,",
+                      "fill": "#000000ff",
+                      "content": "- Led the design for global payment experience in Southeast Asia, ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "igmuC",
+                      "x": 0,
+                      "y": 26,
+                      "name": "Europe and Brazil",
+                      "fill": "#000000ff",
+                      "content": "Europe and Brazil",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ryee1",
+                      "x": 0,
+                      "y": 39,
+                      "name": "- Design for internalization & global remittance of Alipay app",
+                      "fill": "#000000ff",
+                      "content": "- Design for internalization & global remittance of Alipay app",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "X3W8O",
+                  "x": 0,
+                  "y": 21,
+                  "name": "Feb-2018---Jun-2022",
+                  "fill": "#000000ff",
+                  "content": "Feb 2018 - Jun 2022",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "group",
+                  "id": "rNFha",
+                  "x": 0,
+                  "y": 0,
+                  "name": "编组-9",
+                  "children": [
+                    {
+                      "type": "path",
+                      "id": "9pDvL",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Fill-397",
+                      "geometry": "M11.33898 0l-9.17622 0c-1.19501 0-2.16276 0.9321-2.16276 2.08265l0 8.83507c0 1.14982 0.96774 2.08228 2.16276 2.08228l9.17622 0c1.19476 0 2.16199-0.93247 2.16199-2.08228l0-8.83507c0-1.15055-0.96723-2.08265-2.16199-2.08265z",
+                      "fillRule": "evenodd",
+                      "fill": "#1677ffff",
+                      "width": 13.500972747802734,
+                      "height": 13,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "Tx7tX",
+                      "x": 0.9990248680114746,
+                      "y": 1.723580002784729,
+                      "name": "Fill-398",
+                      "geometry": "M2.64906 8.27349c-2.10039 0-2.72137-1.59304-1.68335-2.46462 0.34639-0.29455 0.97948-0.43835 1.31681-0.47062 1.24769-0.11872 2.40265 0.3396 3.76576 0.9802-0.95818 1.20339-2.17844 1.95504-3.39922 1.95504z m7.46774-1.83425c-0.54012-0.17424-1.26516-0.44066-2.07258-0.72194 0.48502-0.81168 0.87222-1.73599 1.12678-2.74054l-2.6613 0 0-0.92297 3.26008 0 0-0.51518-3.26008 0 0-1.53861-1.33046 0c-0.23339 0-0.23339 0.22185-0.23339 0.22185l0 1.31676-3.29719 0 0 0.51518 3.29719 0 0 0.92297-2.72225 0 0 0.51506 5.27974 0c-0.19322 0.64097-0.45263 1.24272-0.7605 1.78945-1.71319-0.54428-3.54129-0.98544-4.68976-0.71391-0.73435 0.17424-1.20738 0.48523-1.48541 0.81107-1.27549 1.49429-0.36067 3.76397 2.33302 3.76397 1.59267 0 3.12693-0.85503 4.3162-2.26408 1.77352 0.82093 5.2851 2.23047 5.2851 2.23047l0-2.00886c0 0-0.44102-0.03385-2.38519-0.66069z",
+                      "fillRule": "evenodd",
+                      "fill": "#ffffffff",
+                      "width": 12.501985549926758,
+                      "height": 9.1423978805542,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "mPqCX",
+                      "x": 29.31621551513672,
+                      "y": 0.7777546644210815,
+                      "name": "Fill-399",
+                      "geometry": "M0 1.12534c0 0.6725 0.51473 1.12522 1.23276 1.12522 0.71803 0 1.23277-0.45272 1.23277-1.12522 0-0.6596-0.51474-1.12534-1.23277-1.12534-0.71803 0-1.23276 0.46575-1.23276 1.12534z",
+                      "fillRule": "evenodd",
+                      "fill": "#1677ffff",
+                      "width": 2.4655284881591797,
+                      "height": 2.2505621910095215,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "U6n3m",
+                      "x": 25.875226974487305,
+                      "y": 1.0624386072158813,
+                      "name": "Fill-400",
+                      "geometry": "M0 9.44182l2.14044 0 0-9.44182-2.14044 0 0 9.44182z",
+                      "fillRule": "evenodd",
+                      "fill": "#3e3a39ff",
+                      "width": 2.1404380798339844,
+                      "height": 9.441815376281738,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "JM4ra",
+                      "x": 16.039846420288086,
+                      "y": 1.3857461214065552,
+                      "name": "Fill-401",
+                      "geometry": "M2.96687 5.84613l1.27345-4.20354 0.0542 0 1.20573 4.20354-2.53338 0z m3.11596-5.84613l-2.87211 0-3.21072 9.11853 1.97796 0 0.5419-1.78493 3.40037 0 0.51473 1.78493 2.53338 0-2.88551-9.11853z",
+                      "fillRule": "evenodd",
+                      "fill": "#3e3a39ff",
+                      "width": 8.968339920043945,
+                      "height": 9.118532180786133,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "VLW5a",
+                      "x": 29.478759765625,
+                      "y": 3.571627140045166,
+                      "name": "Fill-402",
+                      "geometry": "M0 6.93263l2.14044 0 0-6.93263-2.14044 0 0 6.93263z",
+                      "fillRule": "evenodd",
+                      "fill": "#3e3a39ff",
+                      "width": 2.1404380798339844,
+                      "height": 6.932627201080322,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "wmjJ1",
+                      "x": 46.77928924560547,
+                      "y": 3.5715785026550293,
+                      "name": "Fill-403",
+                      "geometry": "M7.20719 0.01291l0.01352-0.01291-2.01851 0-1.27345 4.21644-0.06772 0-1.4631-4.21644-2.39793 0 2.88563 6.95856-1.20573 2.12113 0 0.05175 1.88308 0 3.64421-9.11853z",
+                      "fillRule": "evenodd",
+                      "fill": "#3e3a39ff",
+                      "width": 7.220710754394531,
+                      "height": 9.131439208984375,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "r8yiq",
+                      "x": 32.716915130615234,
+                      "y": 3.429321765899658,
+                      "name": "Fill-404",
+                      "geometry": "M2.87199 5.88497c-0.24372 0-0.47418-0.02581-0.73143-0.1035l0-3.75081c0.44701-0.29747 0.81279-0.43981 1.27333-0.43981 0.7994 0 1.43605 0.60797 1.43605 1.90134 0 1.6555-0.93471 2.39278-1.97795 2.39278z m1.35481-5.88497c-0.78575 0-1.39538 0.28456-2.08624 0.82775l0-0.68553-2.14056 0 0 9.13144 2.14056 0 0-2.26347c0.40633 0.1035 0.78562 0.15525 1.24629 0.15525 1.91011 0 3.6307-1.34513 3.6307-3.73791 0-2.14706-1.24641-3.42753-2.79075-3.42753z",
+                      "fillRule": "evenodd",
+                      "fill": "#3e3a39ff",
+                      "width": 7.017547607421875,
+                      "height": 9.273658752441406,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "1Q8RM",
+                      "x": 40.032894134521484,
+                      "y": 3.4293582439422607,
+                      "name": "Fill-405",
+                      "geometry": "M4.18599 5.39341c-0.56894 0.29747-0.89416 0.41388-1.27332 0.41388-0.51486 0-0.83995-0.32328-0.83995-0.84066 0-0.19409 0.04055-0.38806 0.20316-0.54319 0.25737-0.24584 0.75871-0.4269 1.91011-0.68553l0 1.6555z m2.14044-0.05175l0-2.89713c0-1.57806-0.97527-2.44453-2.69573-2.44453-1.09745 0-1.85603 0.18094-3.23789 0.58191l0.3793 1.59097c1.25993-0.54331 1.81535-0.77612 2.39793-0.77613 0.70451 0 1.01595 0.47853 1.01595 1.21582l0 0.05175c-2.45201 0.43981-3.21072 0.68553-3.68477 1.13824-0.35225 0.33631-0.50122 0.81484-0.50122 1.37094 0 1.33222 1.0838 2.04368 2.09988 2.04369 0.75858 0 1.36808-0.27165 2.19465-0.86672l0.14896 0.72438 2.14044 0-0.2575-1.73319z",
+                      "fillRule": "evenodd",
+                      "fill": "#3e3a39ff",
+                      "width": 6.583927154541016,
+                      "height": 7.217188835144043,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "zzA2S",
+                  "x": 0,
+                  "y": 34,
+                  "name": "Lead-UX-Designer,-An",
+                  "fill": "#000000ff",
+                  "content": "Lead UX Designer, Ant Group（Alipay）",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "sgXa3",
+              "x": 297,
+              "y": 540,
+              "name": "编组-2",
+              "children": [
+                {
+                  "type": "group",
+                  "id": "VdRNZ",
+                  "x": 0,
+                  "y": 59,
+                  "name": "--Innovated-Supply-C",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GqXi6",
+                      "x": 0,
+                      "y": 0,
+                      "name": "- Innovated Supply Chain Management experience",
+                      "fill": "#000000ff",
+                      "content": "- Innovated Supply Chain Management experience",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "8M2Bd",
+                      "x": 0,
+                      "y": 13,
+                      "name": "- Design thinking facilitator for clients’ digital transformation",
+                      "fill": "#000000ff",
+                      "content": "- Design thinking facilitator for clients’ digital transformation ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "t6RNT",
+                      "x": 0,
+                      "y": 26,
+                      "name": "sessions",
+                      "fill": "#000000ff",
+                      "content": "sessions ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "xYtYz",
+                  "x": 0,
+                  "y": 26,
+                  "name": "Jul-2017---Jan-2018",
+                  "fill": "#000000ff",
+                  "content": "Jul 2017 - Jan 2018",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "UQMrT",
+                  "x": 0,
+                  "y": 39,
+                  "name": "Senior-UX-Designer,",
+                  "fill": "#000000ff",
+                  "content": "Senior UX Designer, GE",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "OUmWP",
+                  "x": 0,
+                  "y": 0,
+                  "name": "位图",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "",
+                    "mode": "stretch"
+                  },
+                  "width": 18,
+                  "height": 18,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  }
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "lZ8EH",
+              "x": 297,
+              "y": 685.999997112654,
+              "name": "编组-3",
+              "children": [
+                {
+                  "type": "group",
+                  "id": "j4BBa",
+                  "x": 0,
+                  "y": 53.000002887346,
+                  "name": "--Design-research,-i",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zz1ZR",
+                      "x": 0,
+                      "y": 0,
+                      "name": "- Design research, innovation and implementation on IBM Bluemix &",
+                      "fill": "#000000ff",
+                      "content": "- Design research, innovation and implementation on IBM Bluemix & ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "6vBdM",
+                      "x": 0,
+                      "y": 13,
+                      "name": "PureApplication Services",
+                      "fill": "#000000ff",
+                      "content": "PureApplication Services",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "hWpfK",
+                      "x": 0,
+                      "y": 26,
+                      "name": "- Led scalable Design Thinking transformation in Greater China",
+                      "fill": "#000000ff",
+                      "content": "- Led scalable Design Thinking transformation in Greater China ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "RG8wz",
+                      "x": 0,
+                      "y": 39,
+                      "name": "Group and client engagement with sales team",
+                      "fill": "#000000ff",
+                      "content": "Group and client engagement with sales team",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "mqUtt",
+                  "x": 0,
+                  "y": 20.000002887346,
+                  "name": "Jun-2014---Jun-2017",
+                  "fill": "#000000ff",
+                  "content": "Jun 2014 - Jun 2017",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "mV6a9",
+                  "x": 0,
+                  "y": 33.000002887346,
+                  "name": "UX-Designer,-IBM",
+                  "fill": "#000000ff",
+                  "content": "UX Designer, IBM",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "group",
+                  "id": "QuxZP",
+                  "x": 0,
+                  "y": 0,
+                  "name": "编组",
+                  "children": [
+                    {
+                      "type": "group",
+                      "id": "gcCVO",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Group",
+                      "children": [
+                        {
+                          "type": "path",
+                          "id": "whptU",
+                          "x": 0,
+                          "y": 11.164558436967582,
+                          "name": "矩形",
+                          "geometry": "M0 0l5.83333 0 0 1-5.83333 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 5.833331108093262,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "YFYQQ",
+                          "x": 0,
+                          "y": 9.569611575700492,
+                          "name": "矩形",
+                          "geometry": "M0 0l5.83333 0 0 1-5.83333 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 5.833331108093262,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "9kfpL",
+                          "x": 1.6666593551635742,
+                          "y": 7.974674251176566,
+                          "name": "矩形",
+                          "geometry": "M0 0l2.5 0 0 1-2.5 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 2.5000033378601074,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "WrhVe",
+                          "x": 1.6666593551635742,
+                          "y": 6.379745986558646,
+                          "name": "矩形",
+                          "geometry": "M0 0l2.5 0 0 1-2.5 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 2.5000033378601074,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "YOpSN",
+                          "x": 1.6666593551635742,
+                          "y": 4.784799125291556,
+                          "name": "矩形",
+                          "geometry": "M0 0l2.5 0 0 1-2.5 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 2.5000033378601074,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "XWExJ",
+                          "x": 1.6666593551635742,
+                          "y": 3.1898713375107945,
+                          "name": "矩形",
+                          "geometry": "M0 0l2.5 0 0 1-2.5 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 2.5000033378601074,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "j4O5C",
+                          "x": 0,
+                          "y": 1.5949338937775792,
+                          "name": "矩形",
+                          "geometry": "M0 0l5.83333 0 0 1-5.83333 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 5.833331108093262,
+                          "height": 0.9999998807907104,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "1UJVd",
+                          "x": 0,
+                          "y": 0.000002887345999624813,
+                          "name": "矩形",
+                          "geometry": "M0 0l5.83333 0 0 1-5.83333 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 5.833331108093262,
+                          "height": 0.9999999403953552,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "ilgKH",
+                          "x": 6.666675090789795,
+                          "y": 9.569611575700492,
+                          "name": "路径",
+                          "geometry": "M0 0.83544l8.89144 0c0.15086-0.26106 0.26374-0.54238 0.33525-0.83544l-9.22669 0 0 0.83544z",
+                          "fill": "#000000ff",
+                          "width": 9.226686477661133,
+                          "height": 0.835444450378418,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "Rrbe8",
+                          "x": 8.333306312561035,
+                          "y": 6.379708793260306,
+                          "name": "路径",
+                          "geometry": "M6.52875 0l-6.52875 0 0 0.83543 7.22388 0c-0.18249-0.31618-0.41759-0.59874-0.69513-0.83543z",
+                          "fill": "#000000ff",
+                          "width": 7.223877906799316,
+                          "height": 0.8354349136352539,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "Ie7W3",
+                          "x": 8.333333969116211,
+                          "y": 4.784799125291556,
+                          "name": "路径",
+                          "geometry": "M0 0l0 0.83549 6.52875 0c0.27755-0.2367 0.51266-0.51926 0.69516-0.83544l-7.22391-0.00005z",
+                          "fill": "#000000ff",
+                          "width": 7.223906517028809,
+                          "height": 0.8354916572570801,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "wJioL",
+                          "x": 6.666675090789795,
+                          "y": 1.5949338937775792,
+                          "name": "路径",
+                          "geometry": "M8.89144 0l-8.89144 0 0 0.83543 9.22669 0c-0.07151-0.29306-0.1844-0.57437-0.33525-0.83543z",
+                          "fill": "#000000ff",
+                          "width": 9.226686477661133,
+                          "height": 0.8354254961013794,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "7VobY",
+                          "x": 6.666675090789795,
+                          "y": 0,
+                          "name": "路径",
+                          "geometry": "M6.13635 0l-6.13635 0 0 0.83544 8.28281 0c-0.58575-0.53835-1.35182-0.83651-2.14646-0.83544z",
+                          "fill": "#000000ff",
+                          "width": 8.282812118530273,
+                          "height": 0.8354406952857971,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "xHSNC",
+                          "x": 8.333333969116211,
+                          "y": 3.1898713375107945,
+                          "name": "矩形",
+                          "geometry": "M0 0l2.5 0 0 1-2.5 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 2.5000038146972656,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "DdMov",
+                          "x": 13.181821823120117,
+                          "y": 3.1898806358353795,
+                          "name": "路径",
+                          "geometry": "M0 0.83544l2.69156 0c0.07384-0.27231 0.11133-0.55325 0.11147-0.83544l-2.80303 0 0 0.83544z",
+                          "fill": "#000000ff",
+                          "width": 2.8030309677124023,
+                          "height": 0.8354442119598389,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "bifM0",
+                          "x": 8.333333969116211,
+                          "y": 7.974674251176566,
+                          "name": "矩形",
+                          "geometry": "M0 0l2.5 0 0 1-2.5 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 2.5000038146972656,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "TME6R",
+                          "x": 13.181821823120117,
+                          "y": 7.974674251176566,
+                          "name": "路径",
+                          "geometry": "M0 0l0 0.83545 2.80303 0c-0.00014-0.2822-0.03762-0.56314-0.11147-0.83545l-2.69156 0z",
+                          "fill": "#000000ff",
+                          "width": 2.8030309677124023,
+                          "height": 0.835453987121582,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "LdjjS",
+                          "x": 6.666675090789795,
+                          "y": 11.164521243669242,
+                          "name": "路径",
+                          "geometry": "M0 0.82717l6.13635 0.00826c0.79486 0.0022 1.56133-0.29612 2.14649-0.83543l-8.28284 0 0 0.82717z",
+                          "fill": "#000000ff",
+                          "width": 8.282840728759766,
+                          "height": 0.8354470133781433,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "V2f1w",
+                          "x": 23.043655395507812,
+                          "y": 11.164511706926078,
+                          "name": "路径",
+                          "geometry": "M0.28838 0.83545l0.291-0.83545-0.57938 0 0.28838 0.83545z",
+                          "fill": "#000000ff",
+                          "width": 0.579376220703125,
+                          "height": 0.835453987121582,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "8GssT",
+                          "x": 22.485187530517578,
+                          "y": 9.569640185929984,
+                          "name": "路径",
+                          "geometry": "M0.2925 0.83545l1.11131 0 0.2925-0.83545-1.69631 0 0.2925 0.83545z",
+                          "fill": "#000000ff",
+                          "width": 1.6963119506835938,
+                          "height": 0.8354530334472656,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "zuZBM",
+                          "x": 21.926624298095703,
+                          "y": 7.974674251176566,
+                          "name": "路径",
+                          "geometry": "M0.29259 0.83545l2.22826 0 0.29259-0.83545-2.81344 0 0.29259 0.83545z",
+                          "fill": "#000000ff",
+                          "width": 2.8134384155273438,
+                          "height": 0.835453987121582,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "myxnh",
+                          "x": 21.36815643310547,
+                          "y": 6.379708793260306,
+                          "name": "路径",
+                          "geometry": "M0.2925 0.83545l3.34537 0 0.2925-0.83545-3.93037 0 0.2925 0.83545z",
+                          "fill": "#000000ff",
+                          "width": 3.9303741455078125,
+                          "height": 0.8354535102844238,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "NfBJN",
+                          "x": 18.333375930786133,
+                          "y": 3.1898713375107945,
+                          "name": "路径",
+                          "geometry": "M0 0.83545l4.50225 0-0.28978-0.83545-4.21247 0 0 0.83545z",
+                          "fill": "#000000ff",
+                          "width": 4.502248764038086,
+                          "height": 0.8354535102844238,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "mwQuU",
+                          "x": 24.384281158447266,
+                          "y": 1.5949056411759557,
+                          "name": "路径",
+                          "geometry": "M0 0.83545l5.61572 0 0-0.83545-5.32594 0-0.28978 0.83545z",
+                          "fill": "#000000ff",
+                          "width": 5.615718841552734,
+                          "height": 0.8354537487030029,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "stsjV",
+                          "x": 24.9375,
+                          "y": 0.000033986516882578144,
+                          "name": "路径",
+                          "geometry": "M0.28978 0l-0.28978 0.83545 5.0625 0 0-0.83545-4.77272 0z",
+                          "fill": "#000000ff",
+                          "width": 5.0625,
+                          "height": 0.8354536890983582,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "Rl9qA",
+                          "x": 16.666677474975586,
+                          "y": 11.164558436967582,
+                          "name": "矩形",
+                          "geometry": "M0 0l4.16667 0 0 1-4.16667 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 4.1666717529296875,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "8BvUx",
+                          "x": 16.666677474975586,
+                          "y": 9.569611575700492,
+                          "name": "矩形",
+                          "geometry": "M0 0l4.16667 0 0 1-4.16667 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 4.1666717529296875,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "ImLCx",
+                          "x": 18.333337783813477,
+                          "y": 7.974674251176566,
+                          "name": "矩形",
+                          "geometry": "M0 0l2.5 0 0 1-2.5 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 2.500001907348633,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "9DXQf",
+                          "x": 18.333337783813477,
+                          "y": 6.379745986558646,
+                          "name": "矩形",
+                          "geometry": "M0 0l2.5 0 0 1-2.5 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 2.500001907348633,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "pthYx",
+                          "x": 23.83106231689453,
+                          "y": 3.1898713375107945,
+                          "name": "路径",
+                          "geometry": "M4.50225 0l-4.21247 0-0.28978 0.83545 4.50225 0 0-0.83545z",
+                          "fill": "#000000ff",
+                          "width": 4.502250671386719,
+                          "height": 0.8354535102844238,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "Re0HD",
+                          "x": 18.333375930786133,
+                          "y": 4.784836795427054,
+                          "name": "路径",
+                          "geometry": "M7.5 0.83545l2.49994 0 0-0.83545-2.49994 0-2.26584 0-0.23419 0.6753-0.23428-0.6753-2.26575 0-2.49994 0 0 0.83545 2.49994 0 0-0.76778 0.26887 0.76778 4.46231 0 0.26888-0.76768 0 0.76768z",
+                          "fill": "#000000ff",
+                          "width": 9.999937057495117,
+                          "height": 0.835453987121582,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "Gm2TW",
+                          "x": 25.833328247070312,
+                          "y": 6.379745986558646,
+                          "name": "矩形",
+                          "geometry": "M0 0l2.5 0 0 1-2.5 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 2.5000038146972656,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "XseOs",
+                          "x": 25.833328247070312,
+                          "y": 7.974674251176566,
+                          "name": "矩形",
+                          "geometry": "M0 0l2.5 0 0 1-2.5 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 2.5000038146972656,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "K4AnJ",
+                          "x": 25.833328247070312,
+                          "y": 9.569611575700492,
+                          "name": "矩形",
+                          "geometry": "M0 0l4.16667 0 0 1-4.16667 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 4.1666717529296875,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "eaciO",
+                          "x": 25.833328247070312,
+                          "y": 11.164558436967582,
+                          "name": "矩形",
+                          "geometry": "M0 0l4.16667 0 0 1-4.16667 0 0-1z",
+                          "fill": "#000000ff",
+                          "width": 4.1666717529296875,
+                          "height": 1,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "gbGn9",
+                          "x": 16.66668701171875,
+                          "y": 1.5949056411759557,
+                          "name": "路径",
+                          "geometry": "M5.61572 0.83545l-0.28978-0.83545-5.32594 0 0 0.83545 5.61572 0z",
+                          "fill": "#000000ff",
+                          "width": 5.615718841552734,
+                          "height": 0.8354537487030029,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "q4Apg",
+                          "x": 16.66668701171875,
+                          "y": 0.000033986516882578144,
+                          "name": "路径",
+                          "geometry": "M5.0625 0.83545l-0.28978-0.83545-4.77272 0 0 0.83545 5.0625 0z",
+                          "fill": "#000000ff",
+                          "width": 5.0625,
+                          "height": 0.8354536890983582,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "UalVG",
+              "x": 297,
+              "y": 233,
+              "name": "编组-3-copy",
+              "children": [
+                {
+                  "type": "group",
+                  "id": "VuyUg",
+                  "x": 1.8189894035458565e-12,
+                  "y": 53,
+                  "name": "--Led-design-for-imT",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "2tzAo",
+                      "x": 0,
+                      "y": 0,
+                      "name": "- Led design for imToken Web, featuring smart contract account and",
+                      "fill": "#000000ff",
+                      "content": "- Led design for imToken Web, featuring smart contract account and ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "G1edH",
+                      "x": 0,
+                      "y": 13,
+                      "name": "multi-chain web application",
+                      "fill": "#000000ff",
+                      "content": "multi-chain web application",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oruyS",
+                      "x": 0,
+                      "y": 26,
+                      "name": "- Led design for RIVO.network, its payment experience for customer",
+                      "fill": "#000000ff",
+                      "content": "- Led design for RIVO.network, its payment experience for customer ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "i26d9",
+                      "x": 0,
+                      "y": 39,
+                      "name": "and merchant end",
+                      "fill": "#000000ff",
+                      "content": "and merchant end",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "b1HJQ",
+                  "x": 1.8189894035458565e-12,
+                  "y": 20,
+                  "name": "Jul-2022---Oct-2023",
+                  "fill": "#000000ff",
+                  "content": "Jul 2022 - Oct 2023 ",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "6Pzcd",
+                  "x": 1.8189894035458565e-12,
+                  "y": 33,
+                  "name": "Senior-Product-Desig",
+                  "fill": "#000000ff",
+                  "content": "Senior Product Designer, imToken",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "group",
+                  "id": "riRZp",
+                  "x": 0,
+                  "y": 0,
+                  "name": "imToken---Logo-with-dark-text",
+                  "children": [
+                    {
+                      "type": "path",
+                      "id": "mB1Jm",
+                      "x": 22.467601776123047,
+                      "y": 0.4137931168079376,
+                      "name": "Shape",
+                      "geometry": "M37.15792 3.23419c-0.07608 0.13938-0.15637 0.27878-0.24553 0.42641l0.00136 0c-0.75148 1.2408-1.74218 2.28933-2.94338 3.11745l3.55638 3.82609-1.92967 0-0.00346-0.00344-2.84925-3.09479c-0.13908 0.07073-0.27951 0.13803-0.41859 0.20119l0 2.89704-1.49183 0 0-10.60414 1.49183 0 0 6.21362c0.26778-0.1442 0.53061-0.30145 0.78035-0.46899 0.58684-0.39277 1.12091-0.84597 1.58596-1.34724 0.34447-0.37149 0.66006-0.77799 0.93747-1.20783l0.01322-0.02061 1.55048 0-0.03534 0.06524z m-36.97043-0.06524l1.49168 0 0 7.43587-1.49168 0 0-7.43587z m0.74577-3.12159c-0.27124 0-0.49678 0.09064-0.67104 0.26849-0.17366 0.17785-0.26222 0.39895-0.26222 0.65713 0 0.25819 0.08781 0.4944 0.26222 0.67224 0.17426 0.17854 0.3998 0.26849 0.67104 0.26849 0.27124 0 0.49678-0.09063 0.67119-0.26849 0.17366-0.17784 0.26222-0.40444 0.26222-0.67224 0-0.2678-0.08781-0.47929-0.26222-0.65713-0.17441-0.17853-0.39995-0.26849-0.67119-0.26849z m11.34586 2.96708c0.54459 0 1.03926 0.11605 1.47033 0.34539l0.00075 0.00068c0.43107 0.22935 0.77975 0.55758 1.03776 0.97508 0.25741 0.41817 0.38822 0.92492 0.38822 1.50791l0 4.76201-1.50762 0 0-4.48323c0-0.53148-0.16614-0.95447-0.49272-1.25934-0.32717-0.30557-0.7396-0.46007-1.22389-0.46007-0.33424 0-0.63871 0.07142-0.9065 0.2115-0.26703 0.14007-0.4843 0.33783-0.64548 0.58778-0.16058 0.24994-0.24222 0.55413-0.24222 0.90433l0 4.49903-1.49168 0 0-4.48323c0-0.53148-0.16614-0.95515-0.49272-1.25934-0.32793-0.30557-0.74441-0.46007-1.23983-0.46007-0.33349 0-0.63586 0.07073-0.89808 0.21081-0.26222 0.14007-0.47678 0.33783-0.63796 0.58778-0.16043 0.24994-0.24207 0.55413-0.24207 0.90433l0 4.49902-1.49259 0 0-7.43588 1.49259 0 0 0.77801c0.20403-0.23209 0.44896-0.42712 0.72847-0.57886 0.43032-0.23485 0.9307-0.35364 1.45515-0.35364 0.52444 0 1.00603 0.11605 1.43154 0.34539 0.41513 0.22386 0.74997 0.54109 0.99565 0.94417 0.2747-0.39483 0.63029-0.70933 1.05791-0.93661 0.44069-0.23417 0.91055-0.35296 1.45499-0.35295z m10.68851-2.96708l-8.89506 0 0 1.41865 3.67816 0 0 9.13811 1.55408 0 0-9.13811 3.66282 0 0-1.41865z m4.44693 3.47385l0.0027 0.00137 0.00151 0c0.59075 0.33783 1.06542 0.80407 1.41079 1.38499 0.34522 0.5816 0.52023 1.22913 0.52023 1.95562 0 0.72649-0.17501 1.39255-0.52023 1.97896-0.34537 0.58641-0.82004 1.05746-1.41079 1.4001-0.59165 0.34265-1.24691 0.51637-1.97899 0.51637-0.73193 0-1.40041-0.17372-1.98635-0.51637-0.58609-0.34265-1.0579-0.8137-1.40327-1.4001-0.34522-0.58641-0.52023-1.26278-0.52024-1.97896 0-0.7162 0.17502-1.37127 0.52024-1.94806 0.34462-0.57611 0.81643-1.04167 1.40252-1.38431 0.58609-0.34265 1.26615-0.51638 1.9865-0.51638 0.72021 0 1.38448 0.1703 1.97538 0.50677z m-1.97613 5.80366c0.45738 0 0.86906-0.10711 1.22405-0.31861 0.35499-0.21148 0.63796-0.50538 0.84063-0.87274 0.20268-0.36875 0.30582-0.80614 0.30583-1.27033 0-0.46418-0.10525-0.88305-0.31349-1.24629-0.20824-0.36257-0.49121-0.65096-0.84124-0.85764-0.35018-0.2067-0.75975-0.31107-1.21639-0.31107-0.45663 0-0.86846 0.10506-1.22404 0.31107-0.35499 0.20599-0.63796 0.49439-0.84064 0.85695-0.20268 0.36324-0.30583 0.77181-0.30583 1.24698 0 0.47517 0.10315 0.90227 0.30658 1.27033 0.20268 0.36804 0.48565 0.66126 0.84064 0.87274 0.35484 0.2115 0.76667 0.31861 1.2239 0.31861z m27.43756-4.77986c-0.25185-0.45252-0.59992-0.82468-1.03581-1.10622-0.43663-0.28153-0.94514-0.42436-1.51258-0.42435-0.56729 0-1.08286 0.12979-1.53318 0.38453-0.30101 0.1703-0.56113 0.38453-0.77493 0.63723l0-0.86727-1.49184 0 0 7.43588 1.49184 0 0-4.32871c0-0.36188 0.08164-0.68735 0.24357-0.96751 0.16118-0.28086 0.38671-0.50401 0.66894-0.664 0.28312-0.16001 0.61105-0.24172 0.97566-0.24172 0.54594 0 0.99641 0.17785 1.33952 0.52805 0.34326 0.35088 0.51752 0.8034 0.51753 1.34586l0 4.32873 1.49183 0 0-4.60751c0-0.51089-0.1287-0.99978-0.38055-1.45299z m-11.55486-1.53399c0.68923-0.04051 1.31607 0.08102 1.86336 0.36119l0-0.00137c1.51453 0.77593 2.01552 2.39232 1.84036 3.64961l-0.00346 0.02404-0.0221 0.01029c-0.01383 0.00618-1.40252 0.618-3.10726 0.71893-1.4586 0.08653-2.43276-0.22935-2.72415-0.34057 0.28928 1.49211 1.72699 1.95492 2.62657 1.90205 0.40746-0.02404 0.78245-0.1181 1.11399-0.27946 0.33063-0.16069 0.613-0.3921 0.83928-0.68804l0.02902-0.03846c0.01038-0.0158 0.05262-0.09271 0.05263-0.09271l1.09519 0.81576-0.02135 0.03433-0.00376 0.00585c-0.03202 0.0517-0.0648 0.10451-0.09938 0.15414l-0.02421 0.03228c-0.33078 0.43671-0.75418 0.78348-1.25863 1.03206-0.50369 0.24788-1.05505 0.3914-1.63903 0.42573-0.74171 0.04394-1.42884-0.0872-2.04394-0.38865-0.6151-0.30145-1.12016-0.73816-1.49935-1.29849-0.3798-0.56031-0.59436-1.21745-0.63856-1.95286-0.0436-0.72443 0.08916-1.39667 0.39363-1.99751 0.30447-0.60014 0.74246-1.09316 1.30208-1.46465 0.55978-0.37079 1.20886-0.58092 1.92907-0.62349z m-2.14348 3.11677c0.1902 0.07485 1.11459 0.40238 2.63815 0.31243 1.01926-0.06043 1.63647-0.24582 1.77059-0.29047-0.02556-0.19021-0.11818-0.65439-0.42956-1.05951-0.39649-0.51568-0.99701-0.75326-1.78443-0.70657-1.16105 0.06867-2.06198 0.78485-2.19475 1.74412z",
+                      "fillRule": "evenodd",
+                      "fill": "#111d4aff",
+                      "width": 53.256534576416016,
+                      "height": 10.758620262145996,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "Q9B12",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Path",
+                      "geometry": "M17.4294 0.41212c0.5763 7.58621-4.44085 11.17208-8.93896 11.55419-4.18169 0.35598-8.11796-2.14132-8.46333-5.97849-0.28471-3.16998 1.73099-4.52019 3.31515-4.65445 1.62897-0.13908 2.99804 0.95292 3.11663 2.2749 0.11442 1.27103-0.70179 1.84939-1.26913 1.89758-0.44878 0.03856-1.01336-0.22653-1.06438-0.79525-0.04343-0.48885 0.14753-0.55495 0.10065-1.0741-0.08272-0.92401-0.91202-1.03142-1.36563-0.99355-0.54942 0.04682-1.54625 0.66993-1.4063 2.22188 0.14063 1.56572 1.68481 2.80232 3.70946 2.63018 2.18459-0.18522 3.70603-1.83906 3.82047-4.15802-0.00138-0.12256 0.0255-0.24442 0.07788-0.35597l0-0.00275c0.02413-0.04888 0.05171-0.09503 0.08274-0.13978 0.04687-0.06817 0.10615-0.1432 0.18336-0.22515l0.00207-0.00207c0.05585-0.06127 0.1241-0.12806 0.20061-0.19967 0.95407-0.87511 4.39125-2.93933 7.64224-2.28591 0.06906 0.01446 0.13108 0.04957 0.17722 0.10121 0.04614 0.05164 0.0737 0.11567 0.07925 0.18384l0 0.00138z",
+                      "fill": {
+                        "type": "gradient",
+                        "gradientType": "linear",
+                        "enabled": true,
+                        "rotation": -248.21220846834376,
+                        "size": {
+                          "height": 79.55317029304463
+                        },
+                        "colors": [
+                          {
+                            "color": "#0cc5ffff",
+                            "position": 0
+                          },
+                          {
+                            "color": "#007fffff",
+                            "position": 1
+                          }
+                        ],
+                        "center": {
+                          "x": 52.7511095124678,
+                          "y": 52.4365849403885
+                        }
+                      },
+                      "width": 17.47480010986328,
+                      "height": 12,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "kD4C1",
+              "x": 297,
+              "y": 65,
+              "name": "编组-3-copy-2",
+              "children": [
+                {
+                  "type": "group",
+                  "id": "Xzm2E",
+                  "x": 0,
+                  "y": 55,
+                  "name": "--Led-design-revamp",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jbiKF",
+                      "x": 0,
+                      "y": 0,
+                      "name": "- Led design revamp for Huawei Cloud mobile console, achieving",
+                      "fill": "#000000ff",
+                      "content": "- Led design revamp for Huawei Cloud mobile console, achieving ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "W2fjP",
+                      "x": 0,
+                      "y": 13,
+                      "name": "CSAT rate of 87%",
+                      "fill": "#000000ff",
+                      "content": "CSAT rate of 87%",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "rSgTD",
+                      "x": 0,
+                      "y": 26,
+                      "name": "- Initiate and push AI tools integration in new design process,",
+                      "fill": "#000000ff",
+                      "content": "- Initiate and push AI tools integration in new design process, ",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "RHZNY",
+                      "x": 0,
+                      "y": 39,
+                      "name": "accelerated concept building 250% faster",
+                      "fill": "#000000ff",
+                      "content": "accelerated concept building 250% faster",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pwX8g",
+                      "x": 0,
+                      "y": 52,
+                      "name": "- Led design for next gen agentic console experience",
+                      "fill": "#000000ff",
+                      "content": "- Led design for next gen agentic console experience",
+                      "fontFamily": "Alibaba PuHuiTi",
+                      "fontSize": 8,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "KzycR",
+                  "x": 0,
+                  "y": 22,
+                  "name": "Oct-2023---Present",
+                  "fill": "#000000ff",
+                  "content": "Oct 2023 - Present",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 8,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "4nroN",
+                  "x": 0,
+                  "y": 35,
+                  "name": "Sr-Staff-Product-Des",
+                  "fill": "#000000ff",
+                  "content": "Sr Staff Product Designer",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 12,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "QusZ8",
+                  "x": 0.8688327074050903,
+                  "y": 0,
+                  "name": "Bitmap",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "",
+                    "mode": "stretch"
+                  },
+                  "width": 63.90132522583008,
+                  "height": 14,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  }
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "70Cvx",
+              "x": 38,
+              "y": 66,
+              "name": "Songyan-(James)-Hou",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EMvLg",
+                  "x": 0,
+                  "y": 0,
+                  "name": "Songyan",
+                  "fill": "#000000ff",
+                  "content": "Songyan ",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "eszFZ",
+                  "x": 0,
+                  "y": 32,
+                  "name": "(James)",
+                  "fill": "#000000ff",
+                  "content": "(James) ",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "4WWhX",
+                  "x": 0,
+                  "y": 64,
+                  "name": "Hou",
+                  "fill": "#000000ff",
+                  "content": "Hou",
+                  "fontFamily": "Alibaba PuHuiTi",
+                  "fontSize": 20,
+                  "fontWeight": "700"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "SpSVL",
+              "x": 38,
+              "y": 172,
+              "name": "jameshou.xyz",
+              "fill": "#00000080",
+              "content": "jameshou.xyz",
+              "fontFamily": "Alibaba PuHuiTi",
+              "fontSize": 8,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
