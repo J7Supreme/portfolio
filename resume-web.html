@@ -31,9 +31,12 @@
             width: 595px;
             height: 842px;
             background: #fff;
-            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: top left;
             overflow: hidden;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            /* box-shadow moved to wrapper */
         }
 
         /* ===== LEFT COLUMN ===== */
@@ -231,145 +234,170 @@
             }
 
             .resume-frame {
+                position: relative !important;
+                left: auto !important;
+                top: auto !important;
+                margin: 0 !important;
                 box-shadow: none;
+                transform: none !important;
             }
 
             .download-btn {
                 display: none;
             }
+
+            .preview-wrapper {
+                height: auto !important;
+                width: auto !important;
+                box-shadow: none !important;
+                overflow: visible !important;
+            }
+        }
+
+        .preview-wrapper {
+            position: relative;
+            width: 595px;
+            height: 842px;
+            margin: 0 auto;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            /* Shadow on wrapper */
+            overflow: hidden;
+            /* Canvas for custom scaling */
         }
     </style>
 </head>
 
 <body>
 
-    <div class="resume-frame">
+    <div class="preview-wrapper" id="previewWrapper">
+        <div class="resume-frame" id="resumeFrame">
 
-        <!-- ===== LEFT COLUMN ===== -->
+            <!-- ===== LEFT COLUMN ===== -->
 
-        <!-- Name -->
-        <div class="name-block">
-            <div class="name-line">Songyan</div>
-            <div class="name-line">(James)</div>
-            <div class="name-line">Hou</div>
+            <!-- Name -->
+            <div class="name-block">
+                <div class="name-line">Songyan</div>
+                <div class="name-line">(James)</div>
+                <div class="name-line">Hou</div>
+            </div>
+
+            <!-- Website -->
+            <div class="website">jameshou.xyz</div>
+
+            <!-- Contact -->
+            <div class="contact-section">
+                <div class="section-title">Contact</div>
+                <div class="contact-info">
+                    <p>J7Supreme@gmail.com</p>
+                    <p>+1 6473210824</p>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="education-section">
+                <div class="section-title">Education</div>
+                <div class="education-details">
+                    <p class="edu-year">2011 - 2014</p>
+                    <p class="edu-school">Beijing Institute of Technology</p>
+                    <p class="edu-degree">MFA, Artistic Design (Industrial Design)</p>
+                </div>
+            </div>
+
+            <!-- Clients & External Influences -->
+            <div class="clients-section">
+                <div class="section-title-multiline">Clients & External<br>Influences</div>
+
+                <div class="clients-item">
+                    <p class="bold">Client engagement with design thinking for business and</p>
+                    <p class="normal">educational outcomes. Clients include: ICBC, China Post,</p>
+                    <p class="normal">P&G, SAIC-GM, Bank of Shanghai, BB&T, China Three</p>
+                    <p class="normal">Gorges, BOE, Jiangxi Mobile, etc</p>
+                </div>
+
+                <div class="clients-item">
+                    <p class="bold">Workshop speaker at IxDC (most influential design</p>
+                    <p class="normal">conference in China) for two times (2017, 2019)</p>
+                </div>
+
+                <div class="clients-item">
+                    <p class="bold">Lecturer at Zhejiang University and Shanghai Jiaotong</p>
+                    <p class="normal">University for joint programmes</p>
+                </div>
+            </div>
+
+            <!-- ===== RIGHT COLUMN – EXPERIENCE ===== -->
+
+            <!-- 1. Huawei Cloud -->
+            <div class="exp-entry" style="top: 65px;">
+                <!-- Logo bitmap placeholder – will be edited later -->
+                <div class="exp-logo-placeholder">Huawei Cloud logo</div>
+                <p class="exp-date">Oct 2023 - Present</p>
+                <p class="exp-role">Sr Staff Product Designer</p>
+                <div class="exp-bullets">
+                    <p>- Led design revamp for Huawei Cloud mobile console, achieving</p>
+                    <p>CSAT rate of 87%</p>
+                    <p>- Initiate and push AI tools integration in new design process,</p>
+                    <p>accelerated concept building 250% faster</p>
+                    <p>- Led design for next gen agentic console experience</p>
+                </div>
+            </div>
+
+            <!-- 2. imToken -->
+            <div class="exp-entry" style="top: 233px;">
+                <!-- Logo bitmap placeholder – will be edited later -->
+                <div class="exp-logo-placeholder">imToken logo</div>
+                <p class="exp-date">Jul 2022 - Oct 2023</p>
+                <p class="exp-role">Senior Product Designer, imToken</p>
+                <div class="exp-bullets">
+                    <p>- Led design for imToken Web, featuring smart contract account and</p>
+                    <p>multi-chain web application</p>
+                    <p>- Led design for RIVO.network, its payment experience for customer</p>
+                    <p>and merchant end</p>
+                </div>
+            </div>
+
+            <!-- 3. Ant Group (Alipay) -->
+            <div class="exp-entry" style="top: 386px;">
+                <!-- Alipay logo (SVG path from original – use placeholder for now) -->
+                <div class="exp-logo-placeholder">Alipay logo</div>
+                <p class="exp-date">Feb 2018 - Jun 2022</p>
+                <p class="exp-role">Lead UX Designer, Ant Group（Alipay）</p>
+                <div class="exp-bullets">
+                    <p>- Led the design for Alipay+ payment solutions</p>
+                    <p>- Led the design for global payment experience in Southeast Asia,</p>
+                    <p>Europe and Brazil</p>
+                    <p>- Design for internalization & global remittance of Alipay app</p>
+                </div>
+            </div>
+
+            <!-- 4. GE -->
+            <div class="exp-entry" style="top: 540px;">
+                <!-- Logo bitmap placeholder – will be edited later -->
+                <div class="exp-logo-placeholder">GE logo</div>
+                <p class="exp-date">Jul 2017 - Jan 2018</p>
+                <p class="exp-role">Senior UX Designer, GE</p>
+                <div class="exp-bullets">
+                    <p>- Innovated Supply Chain Management experience</p>
+                    <p>- Design thinking facilitator for clients' digital transformation</p>
+                    <p>sessions</p>
+                </div>
+            </div>
+
+            <!-- 5. IBM -->
+            <div class="exp-entry" style="top: 686px;">
+                <!-- Logo bitmap placeholder – will be edited later -->
+                <div class="exp-logo-placeholder">IBM logo</div>
+                <p class="exp-date">Jun 2014 - Jun 2017</p>
+                <p class="exp-role">UX Designer, IBM</p>
+                <div class="exp-bullets">
+                    <p>- Design research, innovation and implementation on IBM Bluemix &</p>
+                    <p>PureApplication Services</p>
+                    <p>- Led scalable Design Thinking transformation in Greater China</p>
+                    <p>Group and client engagement with sales team</p>
+                </div>
+            </div>
+
         </div>
-
-        <!-- Website -->
-        <div class="website">jameshou.xyz</div>
-
-        <!-- Contact -->
-        <div class="contact-section">
-            <div class="section-title">Contact</div>
-            <div class="contact-info">
-                <p>J7Supreme@gmail.com</p>
-                <p>+1 6473210824</p>
-            </div>
-        </div>
-
-        <!-- Education -->
-        <div class="education-section">
-            <div class="section-title">Education</div>
-            <div class="education-details">
-                <p class="edu-year">2011 - 2014</p>
-                <p class="edu-school">Beijing Institute of Technology</p>
-                <p class="edu-degree">MFA, Artistic Design (Industrial Design)</p>
-            </div>
-        </div>
-
-        <!-- Clients & External Influences -->
-        <div class="clients-section">
-            <div class="section-title-multiline">Clients & External<br>Influences</div>
-
-            <div class="clients-item">
-                <p class="bold">Client engagement with design thinking for business and</p>
-                <p class="normal">educational outcomes. Clients include: ICBC, China Post,</p>
-                <p class="normal">P&G, SAIC-GM, Bank of Shanghai, BB&T, China Three</p>
-                <p class="normal">Gorges, BOE, Jiangxi Mobile, etc</p>
-            </div>
-
-            <div class="clients-item">
-                <p class="bold">Workshop speaker at IxDC (most influential design</p>
-                <p class="normal">conference in China) for two times (2017, 2019)</p>
-            </div>
-
-            <div class="clients-item">
-                <p class="bold">Lecturer at Zhejiang University and Shanghai Jiaotong</p>
-                <p class="normal">University for joint programmes</p>
-            </div>
-        </div>
-
-        <!-- ===== RIGHT COLUMN – EXPERIENCE ===== -->
-
-        <!-- 1. Huawei Cloud -->
-        <div class="exp-entry" style="top: 65px;">
-            <!-- Logo bitmap placeholder – will be edited later -->
-            <div class="exp-logo-placeholder">Huawei Cloud logo</div>
-            <p class="exp-date">Oct 2023 - Present</p>
-            <p class="exp-role">Sr Staff Product Designer</p>
-            <div class="exp-bullets">
-                <p>- Led design revamp for Huawei Cloud mobile console, achieving</p>
-                <p>CSAT rate of 87%</p>
-                <p>- Initiate and push AI tools integration in new design process,</p>
-                <p>accelerated concept building 250% faster</p>
-                <p>- Led design for next gen agentic console experience</p>
-            </div>
-        </div>
-
-        <!-- 2. imToken -->
-        <div class="exp-entry" style="top: 233px;">
-            <!-- Logo bitmap placeholder – will be edited later -->
-            <div class="exp-logo-placeholder">imToken logo</div>
-            <p class="exp-date">Jul 2022 - Oct 2023</p>
-            <p class="exp-role">Senior Product Designer, imToken</p>
-            <div class="exp-bullets">
-                <p>- Led design for imToken Web, featuring smart contract account and</p>
-                <p>multi-chain web application</p>
-                <p>- Led design for RIVO.network, its payment experience for customer</p>
-                <p>and merchant end</p>
-            </div>
-        </div>
-
-        <!-- 3. Ant Group (Alipay) -->
-        <div class="exp-entry" style="top: 386px;">
-            <!-- Alipay logo (SVG path from original – use placeholder for now) -->
-            <div class="exp-logo-placeholder">Alipay logo</div>
-            <p class="exp-date">Feb 2018 - Jun 2022</p>
-            <p class="exp-role">Lead UX Designer, Ant Group（Alipay）</p>
-            <div class="exp-bullets">
-                <p>- Led the design for Alipay+ payment solutions</p>
-                <p>- Led the design for global payment experience in Southeast Asia,</p>
-                <p>Europe and Brazil</p>
-                <p>- Design for internalization & global remittance of Alipay app</p>
-            </div>
-        </div>
-
-        <!-- 4. GE -->
-        <div class="exp-entry" style="top: 540px;">
-            <!-- Logo bitmap placeholder – will be edited later -->
-            <div class="exp-logo-placeholder">GE logo</div>
-            <p class="exp-date">Jul 2017 - Jan 2018</p>
-            <p class="exp-role">Senior UX Designer, GE</p>
-            <div class="exp-bullets">
-                <p>- Innovated Supply Chain Management experience</p>
-                <p>- Design thinking facilitator for clients' digital transformation</p>
-                <p>sessions</p>
-            </div>
-        </div>
-
-        <!-- 5. IBM -->
-        <div class="exp-entry" style="top: 686px;">
-            <!-- Logo bitmap placeholder – will be edited later -->
-            <div class="exp-logo-placeholder">IBM logo</div>
-            <p class="exp-date">Jun 2014 - Jun 2017</p>
-            <p class="exp-role">UX Designer, IBM</p>
-            <div class="exp-bullets">
-                <p>- Design research, innovation and implementation on IBM Bluemix &</p>
-                <p>PureApplication Services</p>
-                <p>- Led scalable Design Thinking transformation in Greater China</p>
-                <p>Group and client engagement with sales team</p>
-            </div>
-        </div>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
@@ -521,6 +549,39 @@
             btn.textContent = 'Download PDF';
             btn.style.pointerEvents = 'auto';
         });
+    </script>
+
+    <script>
+        // Responsive Scaling Script
+        function resizeResume() {
+            const frame = document.getElementById('resumeFrame');
+            const wrapper = document.getElementById('previewWrapper');
+            if (!frame || !wrapper) return;
+
+            const originalWidth = 595;
+            const originalHeight = 842;
+            const padding = 40; // 20px on each side
+
+            // Calculate available width
+            const availableWidth = window.innerWidth - padding;
+
+            // Determine scale (max 1, fit to width)
+            let scale = Math.min(1, availableWidth / originalWidth);
+
+            // Apply scale
+            frame.style.transform = `scale(${scale})`;
+            frame.style.transformOrigin = 'top left'; // Align to top-left of wrapper
+
+            // Adjust wrapper size to match scaled content
+            wrapper.style.width = `${originalWidth * scale}px`;
+            wrapper.style.height = `${originalHeight * scale}px`;
+        }
+
+        // Initialize and listen for resize
+        window.addEventListener('resize', resizeResume);
+        window.addEventListener('load', resizeResume);
+        // Also call immediately in case load already fired
+        resizeResume();
     </script>
 
 </body>
