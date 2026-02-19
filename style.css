@@ -570,7 +570,7 @@ footer {
 .section-header {
   font-family: var(--font-nav);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   color: var(--text-primary);
   letter-spacing: 0.15px;
 }
@@ -589,7 +589,7 @@ footer {
 }
 
 .exp-year {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-primary);
 }
 
@@ -609,8 +609,24 @@ footer {
 .exp-role {
   font-family: var(--font-nav);
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   color: #898989;
+}
+
+
+.exp-company-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.exp-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 4px;
 }
 
 .about-right-col-image {
@@ -618,11 +634,15 @@ footer {
   /* Responsive width (408/1200 ≈ 34%) */
   max-width: 408px;
   /* Cap at Pencil design size */
-  height: 642px;
+  align-self: stretch;
   background-color: var(--card-bg);
+  background-image: url('assets/images/sky.JPG');
+  background-size: cover;
+  background-position: center;
   border-radius: 24px;
   flex-shrink: 0;
   /* Prevent compression */
+  overflow: hidden;
 }
 
 /* Work Detail Layout (800:000) */
