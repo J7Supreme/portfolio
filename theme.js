@@ -74,3 +74,48 @@
         init();
     }
 })();
+
+/* Lazy Load Video Logic */
+document.addEventListener("DOMContentLoaded", function() {
+    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-video"));
+
+    if ("IntersectionObserver" in window) {
+        var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(function(video) {
+                if (video.isIntersecting) {
+                    // For videos with source tags
+                    for (var source in video.target.children) {
+                        var videoSource = video.target.children[source];
+                        if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                            videoSource.src = videoSource.dataset.src;
+                        }
+                    }
+
+                    // For direct src attribute on video tag
+                    if (video.target.hasAttribute('data-src')) {
+                         video.target.src = video.target.dataset.src;
+                    }
+
+                    video.target.classList.remove("lazy-video");
+                    
+                    // Handle autoplay data attribute
+                    if (video.target.dataset.autoplay === "true") {
+                        video.target.muted = true; // Ensure muted for autoplay
+                        var playPromise = video.target.play();
+                        if (playPromise !== undefined) {
+                            playPromise.catch(function(error) {
+                                console.log("Autoplay prevented:", error);
+                            });
+                        }
+                    }
+                    
+                    lazyVideoObserver.unobserve(video.target);
+                }
+            });
+        });
+
+        lazyVideos.forEach(function(lazyVideo) {
+            lazyVideoObserver.observe(lazyVideo);
+        });
+    }
+});
