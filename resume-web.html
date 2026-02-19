@@ -444,8 +444,8 @@
                 const pdfDoc = await PDFDocument.create();
                 pdfDoc.registerFontkit(fontkit);
 
-                // Fetch Outfit font files (woff from fontsource CDN)
-                const fontBase = 'https://cdn.jsdelivr.net/npm/@fontsource/outfit@5.1.1/files/outfit-latin-';
+                // Fetch Outfit font files from local assets (no CDN dependency)
+                const fontBase = 'assets/fonts/outfit/outfit-latin-';
                 const [regBytes, medBytes, boldBytes] = await Promise.all([
                     fetch(fontBase + '400-normal.woff').then(r => r.arrayBuffer()),
                     fetch(fontBase + '500-normal.woff').then(r => r.arrayBuffer()),
