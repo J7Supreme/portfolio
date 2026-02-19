@@ -400,8 +400,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/dist/fontkit.umd.min.js" defer></script>
+    <script src="assets/libs/pdf-lib.min.js" defer></script>
+    <script src="assets/libs/fontkit.umd.min.js" defer></script>
 
     <button class="download-btn" id="downloadBtn">Download PDF</button>
 
@@ -423,13 +423,21 @@
             btn.style.pointerEvents = 'none';
 
             try {
-                // Ensure pdf-lib and fontkit are loaded (handles cases where CDN scripts
-                // haven't finished loading yet, or failed on slow/restricted networks)
+                // Ensure pdf-lib and fontkit are loaded.
+                // Tries local copy first, then falls back to CDN.
                 if (typeof PDFLib === 'undefined') {
-                    await loadScript('https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js');
+                    try {
+                        await loadScript('assets/libs/pdf-lib.min.js');
+                    } catch (_) {
+                        await loadScript('https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js');
+                    }
                 }
                 if (typeof fontkit === 'undefined') {
-                    await loadScript('https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/dist/fontkit.umd.min.js');
+                    try {
+                        await loadScript('assets/libs/fontkit.umd.min.js');
+                    } catch (_) {
+                        await loadScript('https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/dist/fontkit.umd.min.js');
+                    }
                 }
 
                 const { PDFDocument, rgb } = PDFLib;
