@@ -636,9 +636,6 @@ footer {
   /* Cap at Pencil design size */
   align-self: stretch;
   background-color: var(--card-bg);
-  background-image: url('assets/images/sky.JPG');
-  background-size: cover;
-  background-position: center;
   border-radius: 24px;
   flex-shrink: 0;
   /* Prevent compression */
