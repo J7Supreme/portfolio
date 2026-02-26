@@ -9,8 +9,6 @@ import { generatePapercraft } from './lib/aiService'
 import './App.css'
 import './components/styles.css'
 
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
-
 function App() {
   const [isGenerating, setIsGenerating] = useState(false)
   const [templateData, setTemplateData] = useState<any | null>(null)
@@ -23,7 +21,7 @@ function App() {
     setError(null)
 
     try {
-      const result = await generatePapercraft(GEMINI_API_KEY, prompt)
+      const result = await generatePapercraft(prompt)
 
       const resultData = {
         url: result.textureUrl,
