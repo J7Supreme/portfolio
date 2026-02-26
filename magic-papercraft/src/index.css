@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+:root {
+  /* Child-friendly vibrant color palette */
+  --color-primary: #FF6B6B;
+  /* Bright coral/red */
+  --color-primary-hover: #FF5252;
+  --color-secondary: #4ECDC4;
+  /* Mint teal */
+  --color-secondary-hover: #45B7AF;
+  --color-accent: #FFE66D;
+  /* Sunny yellow */
+  --color-accent-hover: #FFD93D;
+  --color-background: #F4F9F9;
+  /* Off-white cyan tint */
+  --color-surface: #FFFFFF;
+  --color-text: #2D3436;
+  /* Dark navy/gray */
+  --color-text-light: #636E72;
+
+  --color-blue: #74B9FF;
+  --color-purple: #A29BFE;
+  --color-green: #55E6C1;
+  --color-orange: #FFA502;
+
+  --shadow-sm: 0 4px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 0 rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 24px rgba(0, 0, 0, 0.1);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-full: 9999px;
+
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100svh;
+  /* use small viewport height to account for mobile browser chrome */
+  background-color: var(--color-background);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Base button styles for child-friendly chunky look */
+.btn-chunky {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  transform: translateY(0);
+}
+
+.btn-chunky:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-chunky:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.btn-blue {
+  background-color: var(--color-blue);
+}
+
+.btn-purple {
+  background-color: var(--color-purple);
+}
+
+/* Utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  border: 4px solid white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
