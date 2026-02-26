@@ -9,7 +9,7 @@ import { generatePapercraft } from './lib/aiService'
 import './App.css'
 import './components/styles.css'
 
-const GEMINI_API_KEY = 'REDACTED_GEMINI_API_KEY'
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || '';
 
 function App() {
   const [isGenerating, setIsGenerating] = useState(false)
