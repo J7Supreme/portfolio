@@ -1200,14 +1200,47 @@ footer {
 
   /* Playground Mobile */
   .playground-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     position: relative;
     margin-top: 100px;
   }
 
-  .playground-row {
-    flex-direction: column;
-    gap: 24px;
+  .playground-layout .playground-intro {
+    order: 0;
   }
+
+  .playground-row {
+    display: contents;
+  }
+
+  /* Specific Card Ordering on Mobile */
+  .mobile-order-1 {
+    order: 1;
+  }
+
+  /* Mini App */
+  .mobile-order-2 {
+    order: 2;
+  }
+
+  /* AI Skill */
+  .mobile-order-3 {
+    order: 3;
+  }
+
+  /* Music */
+  .mobile-order-4 {
+    order: 4;
+  }
+
+  /* Social */
+  .mobile-order-5 {
+    order: 5;
+  }
+
+  /* More Coming */
 
   .playground-card,
   .playground-card.small,
@@ -2244,4 +2277,38 @@ footer {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* Magic Paper Toys card — mobile stacked layout */
+@media (max-width: 768px) {
+  .playground-card.large {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 0 0 24px 0 !important;
+    gap: 20px !important;
+    height: auto !important;
+    overflow: hidden;
+  }
+
+  /* Image fills full width at top, fixed height on mobile */
+  .playground-card.large>div:first-of-type {
+    width: 100% !important;
+    height: 160px !important;
+    border-radius: 0 !important;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .playground-card.large>div:first-of-type img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Text/button block gets side padding */
+  .playground-card.large .card-content {
+    padding: 0 24px !important;
+  }
 }

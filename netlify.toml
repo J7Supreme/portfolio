@@ -1,0 +1,14 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/magic-papercraft"
+  to = "https://magic-paper-toys-james.netlify.app"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/magic-papercraft/*"
+  to = "https://magic-paper-toys-james.netlify.app/:splat"
+  status = 301
+  force = true

@@ -36,20 +36,31 @@
             <!-- Row 1: App Showcase + Music -->
             <div class="playground-row">
                 <!-- Featured Tool (Large) -->
-                <div class="playground-card large"
-                    style="display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; overflow: hidden;">
-                    <span class="chip chip-ai">AI Tool</span>
-                    <div class="card-content" style="padding: 40px; text-align: center; z-index: 2;">
-                        <h2 style="font-size: 32px; font-weight: 500; margin: 0 0 10px 0; color: var(--text-primary);">
-                            PaperCraft Generator</h2>
-                        <p style="color: var(--text-p-grey); margin-bottom: 30px; font-size: 16px;">A custom Gemini Gem
-                            that helps you create amazing papercraft designs.</p>
-                        <a href="https://gemini.google.com/gems" target="_blank" class="btn-primary">Try the Gem ↗</a>
+                <div class="playground-card large mobile-order-1"
+                    style="display: flex; flex-direction: row; align-items: center; position: relative; overflow: hidden; gap: 32px; padding: 32px;">
+                    <span class="chip chip-ai">MINI APP</span>
+                    <!-- Screenshot on the left -->
+                    <div
+                        style="flex-shrink: 0; width: 220px; height: 100%; display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/images/magic app .png" alt="Magic Paper Toys App Screenshot"
+                            style="width: 100%; height: auto; border-radius: 12px; object-fit: cover; box-shadow: 0 8px 24px rgba(0,0,0,0.12);">
+                    </div>
+                    <!-- Text content on the right, left-aligned -->
+                    <div class="card-content"
+                        style="z-index: 2; text-align: left; display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
+                        <h2 style="font-size: 20px; font-weight: 500; margin: 0 0 10px 0; color: var(--text-primary);">
+                            Magic Paper Toys</h2>
+                        <p
+                            style="color: var(--text-p-grey); margin-bottom: 24px; font-size: 14px; line-height: 1.6; max-width: 340px;">
+                            An AI toy maker app for generating printable papercraft toys. I built this to let my son's
+                            imagination come alive in real time through AI.</p>
+                        <a href="https://magic-paper-toys-james.netlify.app" target="_blank" rel="noopener noreferrer"
+                            class="btn-primary">Open the app ↗</a>
                     </div>
                 </div>
 
                 <!-- Music Player with Playlist -->
-                <div class="playground-card music-player-card" style="overflow: hidden;">
+                <div class="playground-card music-player-card mobile-order-3" style="overflow: hidden;">
                     <div class="custom-audio-player">
                         <!-- Audio Visualization Canvas -->
                         <canvas id="audioVisualizer" class="audio-visualizer-canvas"></canvas>
@@ -111,9 +122,9 @@
             <!-- Row 2: Blog + Others -->
             <div class="playground-row">
                 <!-- Blog Post (Small) -->
-                <a href="posts/welcome.html" class="playground-card small"
+                <a href="posts/welcome.html" class="playground-card small mobile-order-2"
                     style="width: 384px; text-decoration: none; display: block; transition: box-shadow 0.2s; overflow: hidden; position: relative;">
-                    <span class="chip chip-social">Social Observation</span>
+                    <span class="chip chip-ai">AI SKILL</span>
                     <div
                         style="padding: 24px; padding-top: 56px; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                         <div>
@@ -128,7 +139,7 @@
                 </a>
 
                 <!-- Blog Post: Shaxian (Small) -->
-                <a href="posts/shaxian.html" class="playground-card small"
+                <a href="posts/shaxian.html" class="playground-card small mobile-order-4"
                     style="width: 384px; text-decoration: none; display: block; transition: box-shadow 0.2s; overflow: hidden; position: relative;">
                     <span class="chip chip-social">Social Observation</span>
                     <div style="width: 100%; height: 140px; overflow: hidden;">
@@ -150,7 +161,7 @@
                 </a>
 
                 <!-- Placeholder 2 (Small) -->
-                <div class="playground-card small"
+                <div class="playground-card small mobile-order-5"
                     style="width: 384px; display: flex; align-items: center; justify-content: center;">
                     <span style="color: var(--text-secondary);">More Coming Soon</span>
                 </div>
