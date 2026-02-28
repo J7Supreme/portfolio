@@ -1,5 +1,9 @@
 # React + TypeScript + Vite
 
+## Environment variables
+
+The Gemini API key must stay server-side. Configure `GEMINI_API_KEY` for Netlify Functions and do not expose it as a Vite `VITE_*` variable.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

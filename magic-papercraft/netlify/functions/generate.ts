@@ -132,12 +132,18 @@ export default async (req: Request, context: Context) => {
         return new Response("Method Not Allowed", { status: 405 });
     }
 
-    // The secret API key is securely injected by Netlify from its environment variables at runtime.
-    // We check 'GEMINI_API_KEY' for production, or 'VITE_GEMINI_API_KEY' if testing locally.
-    const apiKey = Netlify.env.get("GEMINI_API_KEY") || Netlify.env.get("VITE_GEMINI_API_KEY") || process.env.VITE_GEMINI_API_KEY;
+    // Only read the server-side secret name here so the key never needs to be exposed to Vite.
+    const apiKey = process.env.GEMINI_API_KEY || Netlify.env.get("GEMINI_API_KEY");
 
     if (!apiKey) {
-        return new Response(JSON.stringify({ error: "Server API Key configuration error" }), {
+        const hasLegacyClientKey =
+            Boolean(process.env.VITE_GEMINI_API_KEY) || Boolean(Netlify.env.get("VITE_GEMINI_API_KEY"));
+
+        return new Response(JSON.stringify({
+            error: hasLegacyClientKey
+                ? 'Server API key is misconfigured. Rename VITE_GEMINI_API_KEY to GEMINI_API_KEY.'
+                : "Server API Key configuration error"
+        }), {
             status: 500,
             headers: { "Content-Type": "application/json" }
         });
